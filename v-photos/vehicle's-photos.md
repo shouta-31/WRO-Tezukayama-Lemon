@@ -1,4 +1,4 @@
 Vehicle's photos
 ====
 
-[ロボット全面.pdf](https://github.com/user-attachments/files/30930006/default.pdf)
+[vehicle's_photos.pdf](https://github.com/user-attachments/files/30930006/default.pdf)
