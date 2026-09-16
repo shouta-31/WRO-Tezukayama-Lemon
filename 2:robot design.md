@@ -7,5 +7,3 @@ Additionally, shown below is a 3D model of our robot created in Studio 2.0; this
 The robot was designed to be compact overall to minimize contact with traffic signs during the Obstacle Challenge rounds. Stability was also enhanced by lowering the chassis height and eliminating internal hollow spaces.
 
 Furthermore, the center of gravity (indicated by the red circle) was positioned slightly toward the front wheels rather than directly over the rear wheels to prevent slipping.
-||Front-wheel drive|Rear-wheel drive|
-|——-|—--|——-|
