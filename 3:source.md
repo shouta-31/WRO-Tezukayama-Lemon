@@ -10,4 +10,3 @@ We used a camera with the front part of the distance sensor removed and an OpenM
 <img width="1216" height="809" alt="IMG_0408" src="https://github.com/user-attachments/assets/a4cf96ad-8d9e-4b4c-bb55-0a9699268195" />
 As you can see from this table, we chose openMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section 2.7.）
-The following is the program we created.
