@@ -18,9 +18,9 @@ Communication methodThe main program within Open MV receives data from three Ope
 ## 3.2:Gyro
 We attempted to precisely control the aircraft's trajectory using the "yaw angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" in the gyro sensor, we were only successful in 4 out of 10 attempts.Measures are taken based on the following iterative cycle.I did it.
 
-• Risk "Drift Error":The angle changes slightly when turning, and in the latter half of the competition...
+• Risk "Drift Error" : The angle changes slightly when turning, and in the latter half of the competition.
 Straight-line accuracy decreases.
 
-• Countermeasure:Incorporate code to automatically reset the gyroscope's current angle to 0° in software when the robot is completely stationary (such as immediately after starting or after detecting a wall).
+• Countermeasure : Incorporate code to automatically reset the gyroscope's current angle to 0° in software when the robot is completely stationary (such as immediately after starting or after detecting a wall).
 
 These measures resulted in a success rate of 9 out of 10 attempts, reducing the trajectory deviation of the aircraft due to the gyro.We were able to increase the success rate.
