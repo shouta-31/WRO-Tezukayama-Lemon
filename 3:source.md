@@ -26,3 +26,13 @@ These measures resulted in a success rate of 9 out of 10 attempts, reducing the 
 
 ## 3.3:Design considerations for the Open Challenge rounds
 In the Open Challenge rounds, which have no obstacles, precise straight-line driving and 90° turns are required.We have introduced an algorithm that optimizes the trade-off between "driving speed" and "recovery accuracy".I did.
+<img width="1126" height="884" alt="IMG_0424" src="https://github.com/user-attachments/assets/af71fd45-adcf-491f-b119-8c4593d38cc6" />
+
+### 3.3.1:P control using a gyro sensor
+To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.
+<img width="1233" height="184" alt="IMG_0425" src="https://github.com/user-attachments/assets/4c2e0a42-385c-4021-b1c7-db41bc9a1ceb" />
+Initially, we used PID control with added differentiation and integration,Results of actually running it on the courseIn this competition, it was found that incorporating differential and integral calculus into the control system actually made the robot's behavior unstable. Furthermore, when measuring the lateral deviation over a straight 5m distance, the deviation was 7cm with PID control and 5cm with PD control, but the deviation was reduced to within 3cm with P control alone. Therefore, for the purpose of simplifying the system and stabilizing the behavior, ultimately, we adopted "P control".
+
+### 3.3.2:Turning method
+According to the variable in line 14 of Image 3, the rotation starts at the fastest speed.It slows down as it approaches the target value.By incorporating this program, we completely eliminated inertial overshoot and achieved precise turning with an accuracy of within ±0.5° of the target value.
+<img width="1242" height="184" alt="IMG_0426" src="https://github.com/user-attachments/assets/24d969de-4038-4685-8ea2-5a6854c2be26" />
