@@ -12,4 +12,5 @@ As you can see from this table, we chose openMV because of its advantages, such 
 
 ### 3.1.3:Communication Method
 <img width="2056" height="1210" alt="IMG_0421" src="https://github.com/user-attachments/assets/d5c9773c-a531-4fde-bfc2-78ca0d4cada8" />
+
 <img width="1371" height="1140" alt="IMG_0422" src="https://github.com/user-attachments/assets/0ad3b567-a031-48e7-85db-4fabb50f9b42" />
