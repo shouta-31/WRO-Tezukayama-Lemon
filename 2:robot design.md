@@ -10,4 +10,6 @@ Furthermore, the center of gravity (indicated by the red circle) was positioned 
 <img width="1205" height="537" alt="image" src="https://github.com/user-attachments/assets/cef562ec-1e1e-4291-a276-66949b6a4136" />
 
 We selected a rear-wheel drive configuration. This choice reduces the load on the front tires, thereby minimizing measurement errors at the front wheels. In contrast, a front-wheel drive setup tends to drift outward during turns, creating a risk of colliding with obstacles. To improve straight-line accuracy, we positioned the wheel hubs slightly toward the front, effectively eliminating wheel spin.
-## 2.3:Power Supply and Wiring
+## 2.3:Power Supply and Wiring. 
+### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
+Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.
