@@ -11,3 +11,4 @@ As you can see from this table, we chose openMV because of its advantages, such 
 （For the reasons for its use (from a robot's perspective), please refer to section 2.7.）
 
 ### 3.1.3:Communication Method
+<img width="2056" height="1210" alt="IMG_0421" src="https://github.com/user-attachments/assets/d5c9773c-a531-4fde-bfc2-78ca0d4cada8" />
