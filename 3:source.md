@@ -23,3 +23,6 @@ We attempted to precisely control the aircraft's trajectory using the "yaw angle
 • Countermeasure : Incorporate code to automatically reset the gyroscope's current angle to 0° in software when the robot is completely stationary (such as immediately after starting or after detecting a wall).
 
 These measures resulted in a success rate of 9 out of 10 attempts, reducing the trajectory deviation of the aircraft due to the gyro.We were able to increase the success rate.
+
+## 3.3:Design considerations for the Open Challenge rounds
+In the Open Challenge rounds, which have no obstacles, precise straight-line driving and 90° turns are required.We have introduced an algorithm that optimizes the trade-off between "driving speed" and "recovery accuracy".I did.
