@@ -15,13 +15,13 @@ We selected a rear-wheel drive configuration. This choice reduces the load on th
 Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.
 ### 2.3.2:Power Balance
 The table below summarizes the actual measured power consumption for each device.  
-Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe. 
-※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100. 
+Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
+※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100   
 $. 
 ## 2.4:Motor
 <img width="1177" height="865" alt="image" src="https://github.com/user-attachments/assets/c9e81d66-03cd-4705-acef-0b75573ad09e" />
 As described in section 2.2, we used the SPIKE Prime Hub; consequently, we limited our motor selection to SPIKE Prime motors and chose specific motors for the drive and steering systems based on the aforementioned considerations. Calculations regarding the robot's weight (650.8 g) and torque—factoring in a safety margin—indicated that the required torque was 7.7 Ncm for the front wheels and 5.4 Ncm for the rear wheels.  
 
-※The formula for calculating torque is "Torque = Applied force x Distance from rotation axis to point of force.". 
-The speed calculation formula was "Speed = π x Diameter of rotating body x Number of revolutions per minute / 60". 
+※The formula for calculating torque is "Torque = Applied force x Distance from rotation axis to point of force."  
+The speed calculation formula was "Speed = π x Diameter of rotating body x Number of revolutions per minute / 60"  
 Calculation of the required torque at the front wheels is "Frictional resistance moment = coefficient of friction x weight on one front wheel x scrub radius."
