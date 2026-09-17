@@ -13,3 +13,4 @@ We selected a rear-wheel drive configuration. This choice reduces the load on th
 ## 2.3:Power Supply and Wiring. 
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
 Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.
+### 2.3.2:Power Balance
