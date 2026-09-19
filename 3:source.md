@@ -36,3 +36,6 @@ Initially, we used PID control with added differentiation and integration,Result
 ### 3.3.2:Turning method
 According to the variable in line 14 of Image 3, the rotation starts at the fastest speed.It slows down as it approaches the target value.By incorporating this program, we completely eliminated inertial overshoot and achieved precise turning with an accuracy of within ±0.5° of the target value.
 <img width="1242" height="184" alt="IMG_0426" src="https://github.com/user-attachments/assets/24d969de-4038-4685-8ea2-5a6854c2be26" />
+
+## 3.4:Design considerations for Obstacle Challenge rounds
+In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.
