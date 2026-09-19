@@ -39,3 +39,8 @@ $.
 　For this competition, we employed the Ackermann-Jeantaud steering mechanism. We had previously used the rack-and-pinion system—which is easier to implement—but poor meshing between the pinion and rack caused lateral slipping and resistance during turns, resulting in a success rate of only about 50%.
 Switching to the Ackermann-Jeantaud mechanism reduced the number of failures, raising our success rate to approximately 90%. Since turning accuracy is crucial for this competition, we decided to adopt this mechanism.
 Additionally, by installing a physical stopper on the steering assembly, we eliminated the need to limit the steering range via programming.
+
+## 2.6:Tires
+###  2.6.1:Front wheel
+For the front wheels, I used tires with design ID 55976, a diameter of 56 mm, and a width of 26 mm. Although the width is 26 mm—making them nearly the same size as the rear tires—I chose them because they have a smaller contact area with the ground; this reduces friction, making it easier to steer the vehicle left and right.
+
