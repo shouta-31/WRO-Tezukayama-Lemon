@@ -17,13 +17,18 @@ $
  
 ## 2.3:Power Supply and Wiring. 
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
+$  
  Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.
- 
+$  
+$  
+ With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.
+
 ### 2.3.2:Power Balance
  The table below summarizes the actual measured power consumption for each device.  
 Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
 ※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100   
-$. 
+$  
+
 ## 2.4:Motor
 <img width="677" alt="image" src="https://github.com/user-attachments/assets/c9e81d66-03cd-4705-acef-0b75573ad09e" />
 
