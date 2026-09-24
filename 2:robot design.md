@@ -87,5 +87,4 @@ $
  We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached.  
 
  The OpenMV Cam H7 Plus has the advantages of lower power consumption, a larger memory capacity (making it less likely to crash), and high image quality (reducing the likelihood of failing to read traffic signs). In addition, it has no packet loss or OS overhead delays. The table below compares the cameras we considered.  
-$  
-$  
+<img width="1225" height="739" alt="IMG_0417" src="https://github.com/user-attachments/assets/8c2f6672-50a0-420d-8091-32b4a7ce8812" />
