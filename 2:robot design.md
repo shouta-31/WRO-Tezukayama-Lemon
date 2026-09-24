@@ -7,7 +7,8 @@
 ## 2.2:Robot Structure and Actuation
 <img width="399" alt="IMG_0427" src="https://github.com/user-attachments/assets/31360c6c-fa7c-43ed-9386-0d519ea2efbf" />
 
-$  
+<img width="1077" height="810" alt="image" src="https://github.com/user-attachments/assets/b01a47f7-0323-48e4-afb8-c4a44958c64c" />
+
  The robot was designed to be compact overall to minimize contact with traffic signs during the Obstacle Challenge rounds. Stability was also enhanced by lowering the chassis height and eliminating internal hollow spaces.  
 
  Furthermore, the center of gravity (indicated by the red circle) was positioned slightly toward the front wheels rather than directly over the rear wheels to prevent slipping.  
