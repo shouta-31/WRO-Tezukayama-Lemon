@@ -5,7 +5,7 @@
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
  
 ## 2.2:Robot Structure and Actuation
-<img width="499" height="416" alt="IMG_0427" src="https://github.com/user-attachments/assets/31360c6c-fa7c-43ed-9386-0d519ea2efbf" />
+<img width="399" alt="IMG_0427" src="https://github.com/user-attachments/assets/31360c6c-fa7c-43ed-9386-0d519ea2efbf" />
 
 $  
  The robot was designed to be compact overall to minimize contact with traffic signs during the Obstacle Challenge rounds. Stability was also enhanced by lowering the chassis height and eliminating internal hollow spaces.  
