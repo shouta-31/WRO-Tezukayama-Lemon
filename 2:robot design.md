@@ -5,7 +5,7 @@
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
  
 ## 2.2:Robot Structure and Actuation
-<img width="399" alt="IMG_0427" src="https://github.com/user-attachments/assets/31360c6c-fa7c-43ed-9386-0d519ea2efbf" />
+<img width="599" alt="IMG_0427" src="https://github.com/user-attachments/assets/31360c6c-fa7c-43ed-9386-0d519ea2efbf" />
 
 <img width="681" alt="image" src="https://github.com/user-attachments/assets/ff01cee0-06ad-47a6-a6f4-e2ac6951378d" />
 
