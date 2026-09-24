@@ -70,15 +70,17 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 
 ## 2.7:Sensors and Sensor Architecture
 <img width="1256" height="1098" alt="IMG_0430" src="https://github.com/user-attachments/assets/e708f746-7482-4457-b785-3cc193ba4d20" />
-
 ### 2.7.1:Forward
-$  
+<img width="277" height="293" alt="IMG_0431" src="https://github.com/user-attachments/assets/a3691dec-2f30-4e80-991a-2518eaf4d411" />
+
  Through repeated testing with this robot, it was discovered that during the Open Challenge rounds, the angle of incidence error would be at least ±5° when completing the corner section.  
  Therefore, to ensure that the wall could be read even with this error, a distance sensor with a wide measurement range was used, as can be seen in Graph 1.  
  
 ### 2.7.2:Left and right
-$  
+<img width="430" height="288" alt="IMG_0432" src="https://github.com/user-attachments/assets/a9f84f56-5a69-4ce2-959d-f1c226110ec8" />
+
  The left and right distance sensors are used to determine the proximity to the left and right walls, confirm the direction of rotation, and act as a safety device to prevent contact with the walls. (See 3.4.4 for details.) Therefore, by mounting the distance sensors vertically as shown in the image above, the error is reduced. The reason for using distance sensors is that they can read within 30 cm when performing high-speed detection, so we judged them to be suitable sensors for use as a safety device.  
+ 
 ## 2.8:Camera
 $  
  We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached.  
