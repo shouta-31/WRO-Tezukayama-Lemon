@@ -71,6 +71,7 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 ## 2.7:Sensors and Sensor Architecture
 <img width="1256" height="1098" alt="IMG_0430" src="https://github.com/user-attachments/assets/e708f746-7482-4457-b785-3cc193ba4d20" />
 ### 2.7.1:Forward
+
 <img width="277" height="293" alt="IMG_0431" src="https://github.com/user-attachments/assets/a3691dec-2f30-4e80-991a-2518eaf4d411" />
 
  Through repeated testing with this robot, it was discovered that during the Open Challenge rounds, the angle of incidence error would be at least ±5° when completing the corner section.  
