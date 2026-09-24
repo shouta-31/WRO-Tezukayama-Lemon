@@ -18,7 +18,8 @@ $
  
 ## 2.3:Power Supply and Wiring. 
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
-$  
+<img width="1211" height="372" alt="IMG_0414" src="https://github.com/user-attachments/assets/eb4c1120-a182-4412-9657-2020a6df0e03" />
+
  Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.  
 $  
 $  
