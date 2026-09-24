@@ -30,7 +30,7 @@ $
  The table below summarizes the actual measured power consumption for each device.  
 Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
 ※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100   
-$  
+<img width="1216" height="709" alt="IMG_0415" src="https://github.com/user-attachments/assets/58fa5709-6be0-42e0-b0f9-d63807b62309" />
 
 ## 2.4:Motor
 <img width="677" alt="image" src="https://github.com/user-attachments/assets/c9e81d66-03cd-4705-acef-0b75573ad09e" />
