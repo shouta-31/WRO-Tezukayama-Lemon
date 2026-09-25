@@ -3,6 +3,8 @@
  By constructing the majority of our robot using LEGO bricks and incorporating some 3D-printed parts, we were able to rebuild the robot quickly and dedicate more time to programming. The use of 3D-printed components also allowed for immediate repairs in the event of breakage.  
 
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
+
+3D modelを貼るところ
  
 ## 2.2:Robot Structure and Actuation
 <img width="599" alt="IMG_0427" src="https://github.com/user-attachments/assets/31360c6c-fa7c-43ed-9386-0d519ea2efbf" />
