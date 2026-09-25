@@ -1,4 +1,4 @@
-# 1:strategy
+# 1:Strategy
  To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
 ## 1.1:Open-challenge-rounds
  For the Open Challenge rounds, we programmed a strategy aiming for a lap time of 35 seconds: driving at maximum speed on straight sections and decelerating when approaching corners.
