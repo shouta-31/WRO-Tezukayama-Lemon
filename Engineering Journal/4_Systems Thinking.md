@@ -16,6 +16,6 @@ Because the weight limit at the competition was 1.5 kg, the number of things on 
 
 ## 4.3:Risk Identification and Mitigation Measures
 <img width="1064" height="601" alt="IMG_0441" src="https://github.com/user-attachments/assets/d8ee7cc0-894b-4410-b92d-e2a279366637" />
-
 　　　　　　　　　[A place where everyone can check the corrections in Japanese]
+
 By consistently identifying and analyzing these risks and ensuring that everyone is aware of them, we are able to improve the robots’ accuracy. In addition, by working together to tackle problems that are difficult to solve through programming, we are reducing the burden on programmers.  
