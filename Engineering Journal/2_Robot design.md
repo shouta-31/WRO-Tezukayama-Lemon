@@ -4,6 +4,8 @@
 
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
 
+[ Robot Assembly Instructions ]
+
 3D modelを貼るところ
  
 ## 2.2:Robot Structure and Actuation
