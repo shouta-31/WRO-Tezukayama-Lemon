@@ -12,8 +12,11 @@ To make it easier to identify where changes would have an impact when redesignin
 Furthermore, this diagram allows others to easily understand the interrelationships and interactions among our robot’s subsystems at a glance.  
 
 ## 4.2:Vehicle Restrictions
+Because the weight limit at the competition was 1.5 kg, the number of things on the robot was limited. Although the robot originally made did not exceed the restrictions, it weighed 689.2g. Therefore, the time to capture was limited, but it was a little longer. Therefore, by reducing the number of parts used for fixing by lowering the height of the robot, the weight of the robot can be 650.8g, and the capture time can be reduced by an average of 15 seconds, making it possible to capture quickly and accurately. I did.
 
 ## 4.3:Risk Identification and Mitigation Measures
-$   
-$  
+<img width="1064" height="601" alt="IMG_0441" src="https://github.com/user-attachments/assets/d8ee7cc0-894b-4410-b92d-e2a279366637" />
+
+[A place where everyone can check the corrections in Japanese]
+
 By consistently identifying and analyzing these risks and ensuring that everyone is aware of them, we are able to improve the robots’ accuracy. In addition, by working together to tackle problems that are difficult to solve through programming, we are reducing the burden on programmers.  
