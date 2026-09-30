@@ -11,7 +11,7 @@
 ## 2.2:Robot Structure and Actuation
 <img height="448" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
 
-<img width="681" alt="image" src="https://github.com/user-attachments/assets/ff01cee0-06ad-47a6-a6f4-e2ac6951378d" />
+$
 
  The robot was designed to be compact overall to minimize contact with traffic signs during the Obstacle Challenge rounds. Stability was also enhanced by lowering the chassis height and eliminating internal hollow spaces.  
 
