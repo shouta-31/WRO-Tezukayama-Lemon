@@ -5,8 +5,7 @@
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
 
 ### [“Robot Assembly Instructions”](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Robot%20Assembly%20Instructions.pdf)
-
-3D modelを貼るところ
+### [3D model]()
  
 ## 2.2:Robot Structure and Actuation
 <img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
