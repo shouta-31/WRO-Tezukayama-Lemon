@@ -9,7 +9,7 @@
 3D modelを貼るところ
  
 ## 2.2:Robot Structure and Actuation
-<img height="448" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
+<img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
 
 <img height="483" alt="image" src="https://github.com/user-attachments/assets/011e5ad8-d051-45bb-bc8e-9cb0471abf96" />
 
