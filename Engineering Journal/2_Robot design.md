@@ -30,6 +30,8 @@
 <img width="1104" height="660" alt="IMG_0434" src="https://github.com/user-attachments/assets/d2936727-a5f5-4118-beb7-8ad10aeb0bf0" />
 
 <img width="2037" height="645" alt="IMG_0401" src="https://github.com/user-attachments/assets/ae9079a7-c838-4897-bd8e-98a3eea6d24b" />
+
+
 For more details, please visit the link below.
 ### [“Robot circuit diagram”](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes.md#electromechanical-diagrams)
 
