@@ -26,10 +26,12 @@ $
 <img width="1211" height="372" alt="IMG_0414" src="https://github.com/user-attachments/assets/eb4c1120-a182-4412-9657-2020a6df0e03" />
 
  Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.  
+ 
 <img width="1104" height="660" alt="IMG_0434" src="https://github.com/user-attachments/assets/d2936727-a5f5-4118-beb7-8ad10aeb0bf0" />
 
 <img width="2037" height="645" alt="IMG_0401" src="https://github.com/user-attachments/assets/ae9079a7-c838-4897-bd8e-98a3eea6d24b" />
 
+### [“Robot circuit diagram”]()
  With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.  
 
 ### 2.3.2:Power Balance
