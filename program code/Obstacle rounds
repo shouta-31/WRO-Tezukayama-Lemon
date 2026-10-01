@@ -1,3 +1,4 @@
+```python
 #緑は左、赤は右
 #payload[2]は赤のpixel数,payload[5]は緑のpixel数
 #payload[0]は赤のx座標,payload[1]は赤のy座標
