@@ -33,6 +33,7 @@
 
 For more details, please visit the link below.
 ### [“Robot circuit diagram”](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes.md#electromechanical-diagrams)
+
  With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.  
 
 ### 2.3.2:Power Balance
