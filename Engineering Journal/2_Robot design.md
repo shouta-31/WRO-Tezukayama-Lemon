@@ -4,8 +4,8 @@
 
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
  
-### [3D model](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/models/robot%203D%20model.io)
-### [“Robot Assembly Instructions”](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Robot%20Assembly%20Instructions.pdf)
+### ["3D model"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/models/robot%203D%20model.io)
+### ["Robot Assembly Instructions"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Robot%20Assembly%20Instructions.pdf)
  
 ## 2.2:Robot Structure and Actuation
 <img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
@@ -32,7 +32,7 @@
 
 
 For more details, please visit the link below.
-### [“Robot circuit diagram”](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes.md#electromechanical-diagrams)
+### ["Robot circuit diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes.md#electromechanical-diagrams)
 
  With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.  
 
