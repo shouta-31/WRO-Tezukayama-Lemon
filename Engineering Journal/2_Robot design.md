@@ -3,9 +3,9 @@
  Our robot wasn’t made using a 3D printer; we built it completely out of LEGO. When we tried making parts with a 3D printer, there would be a few millimeters of error, so things like the steering didn’t work properly. By using LEGO, we were able to rebuild the robot quickly and spend more time on programming.
 
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
-
+ 
+### [3D model](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/models/robot%203D%20model.io)
 ### [“Robot Assembly Instructions”](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Robot%20Assembly%20Instructions.pdf)
-### [3D model]()
  
 ## 2.2:Robot Structure and Actuation
 <img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
