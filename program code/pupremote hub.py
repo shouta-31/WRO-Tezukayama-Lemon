@@ -1,4 +1,3 @@
-```python
 # Trimmed version of pupremote that only runs on Pybricks hubs
 
 import ustruct as struct
