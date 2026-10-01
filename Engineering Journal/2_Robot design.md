@@ -1,6 +1,6 @@
 # 2:Robot design
 ## 2.1:Robot materials
- By constructing the majority of our robot using LEGO bricks and incorporating some 3D-printed parts, we were able to rebuild the robot quickly and dedicate more time to programming. The use of 3D-printed components also allowed for immediate repairs in the event of breakage.  
+ Our robot wasn’t made using a 3D printer; we built it completely out of LEGO. When we tried making parts with a 3D printer, there would be a few millimeters of error, so things like the steering didn’t work properly. By using LEGO, we were able to rebuild the robot quickly and spend more time on programming.
 
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
 
