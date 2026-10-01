@@ -11,6 +11,9 @@
 <img width="329" alt="IMG_0396" src="https://github.com/user-attachments/assets/4902cd1f-1dea-48a8-8247-e0e43beadcc0" />. 
 
 ## 1.2:Obstacle challenge rounds
+　The strategy for the Obstacle Challenge rounds of this tournament is primarily based on the Open Challenge rounds.oundsIt is based on the following. Also, the goal is1 week 30 secondsI created the program with that goal in mind.
+Also, as a strategy, in the parking lotChoosing a parking spotI did that. I will proceed with departing from the parking lot. However, regarding parking, initially I was focused on accuracy and didn't have much time to dedicate to it. Therefore, I focused all my efforts on maximizing the accuracy of other missions. However, ultimately, both accuracy improved and I was able to allocate sufficient time for parking, so I decided to proceed with parking. Also,Obstacle detection logicIt operates according to the following state transition diagram.For details about the program, see section 3.4.)
+
 <img width="1727" height="1140" alt="IMG_0449" src="https://github.com/user-attachments/assets/34b8b339-ef37-48a1-b065-92d481be2a02" />
 
 ## 1.3:Testing, Tuning, and Trade-offs
