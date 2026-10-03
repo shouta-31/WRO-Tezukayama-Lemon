@@ -6,3 +6,5 @@
 * `schemes` contains two schematic diagrams in form of PNG of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
 * `program code` contains code of control software for all components which were programmed.
 * `models` is a model file used to manufacture vehicle parts.
+
+# Engineering Journal
