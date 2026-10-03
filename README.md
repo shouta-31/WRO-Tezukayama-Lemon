@@ -39,6 +39,7 @@
     - #### [3.3.1:P control using a gyro sensor](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#331p-control-using-a-gyro-sensor)
     - #### [3.3.2:Turning method](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#332turning-method)
   - ### [3.4:Design considerations for Obstacle Challenge rounds](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#34design-considerations-for-obstacle-challenge-rounds)
-### 
-### 
-### 
+- ## [4:Systems Thinking](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#4systems-thinking)
+  - ### [4.1:Interactions Between Subsystems](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#41interactions-between-subsystems)
+  - ### [4.2:Vehicle Restrictions](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#42vehicle-restrictions)
+  - ### [4.3:Risk Identification and Mitigation Measures](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#43risk-identification-and-mitigation-measures)
