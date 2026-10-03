@@ -9,7 +9,7 @@
 
 # Engineering Journal
 ## [1:Strategy](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#1strategy)
-### [1.1:Open challenge rounds](#open-challenge-rounds)
+### [1.1:Open challenge rounds](#open challenge rounds)
 ### [1.2:Obstacle challenge rounds](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#12obstacle-challenge-rounds)
 ### [1.3:Testing, Tuning, and Trade-offs](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#13testing-tuning-and-trade-offs)
 
