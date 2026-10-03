@@ -29,3 +29,16 @@
     - #### [2.7.1:Forward](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#271forward)
     - #### [2.7.2:Left and right](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#272left-and-right)
   - ### [2.8:Camera](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#28camera)
+- ## [3:Program]()
+  - ### [3.1:Programming Software (Pybricks, OpenMV)](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#3program)
+    - #### [3.1.1:About Pybricks](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#311about-pybricks)
+    - #### [3.1.2:About OpenMV](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#312about-openmv)
+    - #### [3.1.3:Communication Method](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#313communication-method)
+  - ### [3.2:Gyro](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#32gyro)
+  - ### [3.3:Design considerations for the Open Challenge rounds](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#33design-considerations-for-the-open-challenge-rounds)
+    - #### [3.3.1:P control using a gyro sensor](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#331p-control-using-a-gyro-sensor)
+    - #### [3.3.2:Turning method](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#332turning-method)
+  - ### [3.4:Design considerations for Obstacle Challenge rounds](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#34design-considerations-for-obstacle-challenge-rounds)
+### 
+### 
+### 
