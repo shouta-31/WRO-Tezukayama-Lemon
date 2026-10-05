@@ -43,3 +43,10 @@
   - ### [4.1:Interactions Between Subsystems](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#41interactions-between-subsystems)
   - ### [4.2:Vehicle Restrictions](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#42vehicle-restrictions)
   - ### [4.3:Risk Identification and Mitigation Measures](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/4_Systems%20Thinking.md#43risk-identification-and-mitigation-measures)
+
+# How to build a robot
+*Purchasing parts for the Robot Assembly Instructions and the OpenMV H7 Plus
+*Building a robot
+*Downloading Pybricks and OpenMV
+*Download all program code file's
+*
