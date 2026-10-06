@@ -6,7 +6,7 @@
 <img height="830" alt="スクリーンショット 2026-10-06 204439" src="https://github.com/user-attachments/assets/fd890b4e-ae6c-43f8-95ce-28df9be01c8f" />
 
 * Click "File" in the top-left corner.
-<img height="1184" alt="スクリーンショット 2026-10-06 204506" src="https://github.com/user-attachments/assets/6f1c7357-aa06-4680-b7d9-958bbeef61c9" />
+<img height="9084" alt="スクリーンショット 2026-10-06 204506" src="https://github.com/user-attachments/assets/6f1c7357-aa06-4680-b7d9-958bbeef61c9" />
 
 * Click "Open…" the second option from the top.
 * Click "3Dmodel.ldr"
