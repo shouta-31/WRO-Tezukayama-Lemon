@@ -3,10 +3,10 @@
 <img height="575" alt="スクリーンショット 2026-10-06 204651" src="https://github.com/user-attachments/assets/ef15a155-7226-4fe6-aea0-06ea44b6889d" />
 
 * Click "Create new" at the top left.
-<img height="582" alt="スクリーンショット 2026-10-06 205957" src="https://github.com/user-attachments/assets/1ec76324-734d-4799-9a97-a9f05ec916e8" />
+<img height="382" alt="スクリーンショット 2026-10-06 205957" src="https://github.com/user-attachments/assets/1ec76324-734d-4799-9a97-a9f05ec916e8" />
 
 * Click "File" in the top-left corner.
-<img height="643" alt="スクリーンショット 2026-10-06 205929" src="https://github.com/user-attachments/assets/b5547c68-54bf-4783-9357-988ed22fba2f" />
+<img height="443" alt="スクリーンショット 2026-10-06 205929" src="https://github.com/user-attachments/assets/b5547c68-54bf-4783-9357-988ed22fba2f" />
 
 * Click "Open…" the second option from the top.
 * Click "3Dmodel.ldr"
