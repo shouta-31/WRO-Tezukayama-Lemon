@@ -9,12 +9,17 @@
 
 # Engineering Journal
 - ## [1:Strategy](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#1strategy)
-  In tackling the Open Challenge rounds and the Obstacle Challenge rounds, we developed strategies for each and built our robots and programs accordingly. I will now explain them.
+In tackling the Open Challenge rounds and the Obstacle Challenge rounds, we developed strategies for each and built our robots and programs accordingly. I will now explain them.
   - ### [1.1:Open challenge rounds](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#11open-challenge-rounds)
+In the straightaway of the Open Challenge roundsStart by driving at top speed, then slow down when you enter a corner.I wrote the following program.
+Also, the operationMake it a functionThis allows for quick adjustment of values ​​during the adjustment time. Furthermore, by setting a program to decelerate when turning 90 degrees with the gyro, the following occurs after turning in a corner section.We reduced the numerical error.
   - ### [1.2:Obstacle challenge rounds](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#12obstacle-challenge-rounds)
+This large as part of the organization's Obstacle Challenge rounds strategy,Choosing a parking spotI did. Initially, I didn't have much time to dedicate to parking. So, I focused all my efforts on improving the accuracy of the other missions as much as possible. However, in the end, my accuracy improved and I was able to secure enough time for parking, so I decided to do it.
   - ### [1.3:Testing, Tuning, and Trade-offs](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/1_Strategy.md#13testing-tuning-and-trade-offs)
+JustIn order to successfully complete the mission,Based on indicators、Test WorkflowofRun it multiple timesdeath,tuningI did that too. Also thisWe made trade-offs between parts and programs based on testing.
 - ## [2:Robot design](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#2robot-design)
   - ### [2.1:Robot materials](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#22robot-structure-and-actuation)
+Most of our robots are made with LEGO, and some parts are 3D printed.This allowed us to rebuild the robots more quickly and dedicate more time to programming.
   - ### [2.2:Robot Structure and Actuation](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#23power-supply-and-wiring)
   - ### [2.3:Power Supply and Wiring](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#23power-supply-and-wiring)
     - #### [2.3.1:Reasons for Power Supply Selection and Wiring Diagram](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#231reasons-for-power-supply-selection-and-wiring-diagram)
