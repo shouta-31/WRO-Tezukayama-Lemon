@@ -11,7 +11,7 @@
 - [1:Strategy](#1strategy)
   - [1.1:Open challenge rounds](#11open-challenge-rounds)
   -  [1.2:Obstacle challenge rounds](#12obstacle-challenge-rounds)
-  - [1.3:Testing, Tuning, and Trade-offs](#13testing,-tuning,-and-trade-offs)
+  - [1.3:Testing, Tuning, and Trade-offs](#13testing-tunin-and-trade-offs)
 - [2:Robot design](#2robot-design)
   - [2.1:Robot materials](#21robot-materials)
   - [2.2:Robot Structure and Actuation](#22robot-structure-and-actuation)
