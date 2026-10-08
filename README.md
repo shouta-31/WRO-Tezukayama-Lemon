@@ -30,7 +30,7 @@
     - [2.7.2:Left and right](#272left-and-right)
   - [2.8:Camera](#28camera)
 - [3:Program](#3program)
-  - [3.1:Programming Software (Pybricks, OpenMV)](#31programming-software-(pybricks-openmv))
+  - [3.1:Programming Software (Pybricks, OpenMV)](#31programming-software-pybricks-openmv)
     - [3.1.1:About Pybricks](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#311about-pybricks)
     - [3.1.2:About OpenMV](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#312about-openmv)
     - [3.1.3:Communication Method](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#313communication-method)
