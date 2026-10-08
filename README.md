@@ -52,13 +52,13 @@
  For the Open Challenge rounds, we programmed a strategy aiming for a lap time of 35 seconds: driving at maximum speed on straight sections and decelerating when approaching corners.
  
  We also modularized the movements into functions, enabling rapid parameter adjustments during the tuning phase. Furthermore, we implemented a deceleration routine for 90-degree turns using the gyro sensor, thereby minimizing positional errors that occur after navigating corner sections. Based on this strategy, the robot operates according to the state transition diagram shown below.  
- (For details of the program, see section [3.3](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#33design-considerations-for-the-open-challenge-rounds).)
+ (For details of the program, see section [3.3](#33design-considerations-for-the-open-challenge-rounds).)
 
 <img width="329" alt="IMG_0396" src="https://github.com/user-attachments/assets/4902cd1f-1dea-48a8-8247-e0e43beadcc0" />. 
 
 ## 1.2:Obstacle challenge rounds
 　The strategy for the Obstacle Challenge rounds of this tournament is primarily based on the Open Challenge rounds.oundsIt is based on the following. Also, the goal is1 week 30 secondsI created the program with that goal in mind.
-Also, as a strategy, in the parking lotChoosing a parking spotI did that. I will proceed with departing from the parking lot. However, regarding parking, initially I was focused on accuracy and didn't have much time to dedicate to it. Therefore, I focused all my efforts on maximizing the accuracy of other missions. However, ultimately, both accuracy improved and I was able to allocate sufficient time for parking, so I decided to proceed with parking. Also,Obstacle detection logicIt operates according to the following state transition diagram.For details about the program, see section [3.4](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#34design-considerations-for-obstacle-challenge-rounds).)
+Also, as a strategy, in the parking lotChoosing a parking spotI did that. I will proceed with departing from the parking lot. However, regarding parking, initially I was focused on accuracy and didn't have much time to dedicate to it. Therefore, I focused all my efforts on maximizing the accuracy of other missions. However, ultimately, both accuracy improved and I was able to allocate sufficient time for parking, so I decided to proceed with parking. Also,Obstacle detection logicIt operates according to the following state transition diagram.For details about the program, see section [3.4](#34design-considerations-for-obstacle-challenge-rounds).)
 <img width="1749" height="1195" alt="IMG_0450" src="https://github.com/user-attachments/assets/d16fad4d-54ea-4150-bda1-f6ac368767b7" />
 　　　　　　　　　　　　　　　　　　
                    　　　　　　　State machine diagram
