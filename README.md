@@ -75,7 +75,7 @@ The table below shows the scores achieved within the time limit during the Open 
 
  Additionally, shown below is a 3D model of our robot created in Studio 2.0; this model serves as a blueprint, enabling anyone to replicate the design.  
  
-### ["3D model"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/models/Robot%203Dmodel.ldr)
+### ["3D model"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/models/How%20to%20use%20the%20Robot%203Dmodel.ldr%20file.md)
 ### ["Robot Assembly Instructions"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Robot%20Assembly%20Instructions.pdf)
  
 ## 2.2:Robot Structure and Actuation
