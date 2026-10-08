@@ -180,7 +180,7 @@ This robot uses Pybricks.The reason is compared to other program sites, it has t
 We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached. The reasons for this choice (from a programming perspective) are as follows.
 <img width="1216" height="809" alt="IMG_0408" src="https://github.com/user-attachments/assets/a4cf96ad-8d9e-4b4c-bb55-0a9699268195" />
 As you can see from this table, we chose openMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
-（For the reasons for its use (from a robot's perspective), please refer to section [2.8](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/2_Robot%20design.md#28camera).）
+（For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
 
 ### 3.1.3:Communication Method
 <img width="2056" height="1210" alt="IMG_0421" src="https://github.com/user-attachments/assets/d5c9773c-a531-4fde-bfc2-78ca0d4cada8" />
@@ -221,7 +221,7 @@ In the Obstacle Challenge rounds, we believed the key was how to simplify the pr
 <img width="1684" height="1126" alt="IMG_0439" src="https://github.com/user-attachments/assets/610b2512-00f7-47a1-955e-f0f6c0dde551" />
 　　　　　　　　　　　　　　　　　［Subsystem Diagram］
 
-To make it easier to identify where changes would have an impact when redesigning our robot’s subsystems, we created a subsystem diagram illustrating the interrelationships among the drive, sensor, power supply, and processing components mentioned above. From this diagram, we realized that the sensor system utilized various subsystems, so we decided to use OpenMV to reduce the number of lines of code within the camera in order to minimize program execution time as much as possible. In addition, this reduced the load on the Spike Hub and improved the control cycle. (See Section [3.1.2](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Engineering%20Journal/3_Program.md#312about-openmv)) for details.)  
+To make it easier to identify where changes would have an impact when redesigning our robot’s subsystems, we created a subsystem diagram illustrating the interrelationships among the drive, sensor, power supply, and processing components mentioned above. From this diagram, we realized that the sensor system utilized various subsystems, so we decided to use OpenMV to reduce the number of lines of code within the camera in order to minimize program execution time as much as possible. In addition, this reduced the load on the Spike Hub and improved the control cycle. (See Section [3.1.2](#312about-openmv)) for details.)  
 
 Furthermore, this diagram allows others to easily understand the interrelationships and interactions among our robot’s subsystems at a glance.  
 
