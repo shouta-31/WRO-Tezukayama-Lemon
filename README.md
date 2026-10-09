@@ -173,6 +173,18 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 ## 2.9:Starting and stopping in a parking lot
 <img width="500" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
 
+In the Obstacle Challenge rounds, we often struggled to complete the course within the time limit due to the time it took to launch from the parking area and park. Therefore, to increase the distance between parking areas and reduce the time, we added a protrusion (hereinafter referred to as Part A) to the robot, extending from the bottom of the front ultrasonic sensor (as shown by the blue circle in the image above), making it as thin as possible to avoid contact with the parking area.
+To determine the length of Part A, we used the following formula:
+
+(Robot's total length + Length of Part A) * 1.5 >= Distance the robot is closest to the parking area
+
+The robot's total length is 22.5cm, and the closest distance the robot is to the parking area is approximately 36cm. Letting the length of Part A be xcm, we substitute these values ​​into the above formula:
+
+(22.5 + x) * 1.5 >= 36
+               x >= 1.5
+
+Therefore, we determined that Part A should be at least 1.5cm long. We adjusted the length to approximately 4.5cm, ensuring it did not exceed the robot's size limit, providing a margin of safety. Furthermore, by using Part A, we succeeded in reducing both the time it takes to start and the time it takes to park by 8 seconds each. Moreover, while previously we could only complete the course 4 out of 10 times, with Part A installed, we can now complete the course within the time limit every time.
+
 # 3:Program
 ## 3.1:Programming Software (Pybricks, OpenMV)
 ### 3.1.1:About Pybricks
