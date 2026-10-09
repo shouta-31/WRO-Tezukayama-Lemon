@@ -171,7 +171,7 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 <img width="1225" height="739" alt="IMG_0417" src="https://github.com/user-attachments/assets/8c2f6672-50a0-420d-8091-32b4a7ce8812" />
 
 ## 2.9:Starting and stopping in a parking lot
-<img width="778" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
+<img width="700" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
 
 # 3:Program
 ## 3.1:Programming Software (Pybricks, OpenMV)
