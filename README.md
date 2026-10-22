@@ -87,11 +87,11 @@ The table below shows the scores achieved within the time limit during the Open 
 
  Furthermore, the center of gravity (indicated by the red circle) was positioned slightly toward the front wheels rather than directly over the rear wheels to prevent slipping.  
 
- | Front-wheel drive | Rear-wheel drive |  
+ | o | Front-wheel drive | Rear-wheel drive |  
  |---|——-|---|  
- | Mechanism |-| The front wheels are both the drive and steering wheels. | The front wheels steer, and the rear wheels drive. |  
- | Subcomputer |-| Seeed XIAO RP2040 |  
- | LiDAR |-| T-mini Plus 12 |  
+ | Mechanism | The front wheels are both the drive and steering wheels. | The front wheels steer, and the rear wheels drive. |  
+ | Subcomputer | Seeed XIAO RP2040 |  
+ | LiDAR | T-mini Plus 12 |  
  
  We selected a rear-wheel drive configuration. This choice reduces the load on the front tires, thereby minimizing measurement errors at the front wheels. In contrast, a front-wheel drive setup tends to drift outward during turns, creating a risk of colliding with obstacles. To improve straight-line accuracy, we positioned the wheel hubs slightly toward the front, effectively eliminating wheel spin.  
  
