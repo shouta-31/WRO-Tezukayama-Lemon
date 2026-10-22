@@ -91,7 +91,7 @@ The robot was designed to be compact overall to minimize contact with traffic si
 
 Furthermore, the center of gravity (indicated by the red circle) was positioned slightly toward the front wheels rather than directly over the rear wheels to prevent slipping.  
 
- | Item | Front-wheel drive | Rear-wheel drive |  
+ |  | Front-wheel drive | Rear-wheel drive |  
  |:---:|---|---|  
  | **Mechanism** | The front wheels are both the drive and steering wheels. | The front wheels steer, and the rear wheels drive. |
  | **traction** | Expanding outwards | Less likely to expand outwards |
@@ -103,7 +103,7 @@ We selected a rear-wheel drive configuration. This choice reduces the load on th
 ## 2.3:Power Supply and Wiring
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
 
- | Item | SPIKE Prime Hub | Raspberry Pi | EV3 |
+ |  | SPIKE Prime Hub | Raspberry Pi | EV3 |
  |:---:|---|---|---|
  | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4output ports | 1 core |
  | **Clock period** | 100MHz | 1.5GHz | 300MHz |
@@ -126,7 +126,7 @@ The table below summarizes the actual measured power consumption for each device
 Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
 ※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100  
 
- | Item | device | At rest (mA) | During action (mA) |
+ |  | device | At rest (mA) | During action (mA) |
  |:---:|---|---|---|
  | **Hub body** | SPIKE Hub Gyroscope sensor etc. | 50 | 100|
  | **Port A** | Distance sensor | 15 | 30 |
@@ -139,7 +139,7 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
   
 ## 2.4:Motor
 
-| Item | SPIKE Prime M Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/00032b75-2055-453e-a9f2-e9383d24ad08" /> | SPIKE Prime L Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/b349e044-b045-4d70-bab0-5f2c46cf8896" /> |
+|  | SPIKE Prime M Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/00032b75-2055-453e-a9f2-e9383d24ad08" /> | SPIKE Prime L Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/b349e044-b045-4d70-bab0-5f2c46cf8896" /> |
 | :--- | :--- | :--- |
 | **Output /<br>Operating<br>Voltage Range** | Minimum: 5 V<br>Maximum: 9 V | Minimum: 5 V<br>Maximum: 9 V |
 | **Performance** | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 185 RPM ±15%<br>• Current: 110 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 3.5 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 280 mA ±15%<br><br>**Stall:**<br>• Torque: 18 Ncm<br>• Speed: 0 RPM<br>• Current: 800 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 175 RPM ±15%<br>• Current: 135 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 8 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 430 mA ±15%<br><br>**Stall:**<br>• Torque: 25 Ncm<br>• Speed: 0 RPM<br>• Current: 1400 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* |
@@ -179,7 +179,7 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
 ## 2.7:Sensors and Sensor Architecture
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/78838e3b-042f-49ae-bca4-7167ef6f03e3" />
 
- | Item | --- |
+ |  |  |
  | :--- | :--- |
  | **Function** | Distance measurement / LED emission |
  | **Sampling rate** | 100Hz |
@@ -205,7 +205,7 @@ The left and right distance sensors are used to determine the proximity to the l
 We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached.  
 The OpenMV Cam H7 Plus has the advantages of lower power consumption, a larger memory capacity (making it less likely to crash), and high image quality (reducing the likelihood of failing to read traffic signs). In addition, it has no packet loss or OS overhead delays. The table below compares the cameras we considered.  
 
- | Item | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
+ |  | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
  |:---:|---|---|---|---|
  | **Mobility** | Less than 1 second | Approximately 20-40 seconds | Approximately 2-15 seconds | Approximately 2-5 seconds |
  | **Electricity consumption** | Approximately 0.5W to 0.6W | Approximately 3.0W to 6.0W | Approximately 0.5 W to 1.0 W | Approximately 2.5 W to 4.5 W |
@@ -235,7 +235,7 @@ Therefore, we determined that Part A should be at least 1.5cm long. We adjusted 
 ## 3.1:Programming Software (Pybricks, OpenMV)
 ### 3.1.1:About Pybricks
 
- | Item | Pybricks | LEGO Official App | Micro Python |
+ |  | Pybricks | LEGO Official App | Micro Python |
  |:---:|---|---|---|
  | **Programming language** | Python | Visual Language | Python, C++, etc. |
  | **Startup time** | Approximately 0.5 to 1 second | Approximately 5 to 10 seconds | Approximately 2 to 5 seconds |
@@ -249,7 +249,7 @@ This robot used Pybricks. The reason is that compared to other program sites, it
 ### 3.1.2:About OpenMV
 We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached. The reasons for this choice (from a programming perspective) are as follows.
 
- | Item | OpenMV | HuskyLens | Raspberry Pi |
+ |  | OpenMV | HuskyLens | Raspberry Pi |
  |:---:|---|---|---|
  | **Number of program lines required to send data for one obstacle** | Approximately 20 lines | Approximately 50 lines | Approximately 60 lines |
  | **Number of lines of code for the image lines recognition part** | 3 lines | 0 lines | Approximately 15v lines |
