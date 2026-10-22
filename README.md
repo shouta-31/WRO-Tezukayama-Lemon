@@ -192,39 +192,39 @@ Therefore, we determined that Part A should be at least 1.5cm long. We adjusted 
 ## 3.1:Programming Software (Pybricks, OpenMV)
 ### 3.1.1:About Pybricks
 <img width="1218" height="731" alt="IMG_0407" src="https://github.com/user-attachments/assets/d1deb840-45f8-4b11-a0bb-22c190155b49" />
-This robot uses Pybricks.The reason is compared to other program sites, it has the shortest startup time and control loop period.ExcellentWe chose this because of its advantage of having a motor synchronous control with an error of less than 1 degree and virtually no error.
+This robot used Pybricks. The reason is that compared to other program sites, it is the best in terms of start-up time and control loop cycle, and I chose it because of the advantage that the motor synchronous control is less than 1 degree and there is almost no error.
 
 ### 3.1.2:About OpenMV
 We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached. The reasons for this choice (from a programming perspective) are as follows.
 <img width="1216" height="809" alt="IMG_0408" src="https://github.com/user-attachments/assets/a4cf96ad-8d9e-4b4c-bb55-0a9699268195" />
-As you can see from this table, we chose openMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
+As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
 
 ### 3.1.3:Communication Method
 <img width="2056" height="1210" alt="IMG_0421" src="https://github.com/user-attachments/assets/d5c9773c-a531-4fde-bfc2-78ca0d4cada8" />
 <img width="1371" height="1140" alt="IMG_0422" src="https://github.com/user-attachments/assets/0ad3b567-a031-48e7-85db-4fabb50f9b42" />
-Communication methodThe main program within Open MV receives data from three Open MV modules. Open MV then sends this data to pybricks via pupremote.
+As a communication method, the main program in the Open MV receives data from the three modules of Open MV. And Open MV sends the data to pybricks via pupremote.
 
 ## 3.2:Gyro
-We attempted to precisely control the aircraft's trajectory using the "yaw angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" in the gyro sensor, we were only successful in 4 out of 10 attempts.Measures are taken based on the following iterative cycle.I did it.
+We tried to accurately control the course of the aircraft using the "yo angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" that occurs in the gyro sensor, only 4 out of 10 times succeeded. Therefore, we took measures based on the following iteration cycle.
 
 • Risk "Drift Error" : The angle changes slightly when turning, and in the latter half of the competition straight line accuracy decreases.
 
 • Countermeasure : Incorporate code to automatically reset the gyroscope's current angle to 0° in software when the robot is completely stationary (such as immediately after starting or after detecting a wall).
 
-These measures resulted in a success rate of 9 out of 10 attempts, reducing the trajectory deviation of the aircraft due to the gyro.We were able to increase the success rate.
+With these measures, I was able to succeed 9 out of 10 times, and I was able to increase the success rate by reducing the trajectory of the aircraft in the gyro.
 
 ## 3.3:Design considerations for the Open Challenge rounds
-In the Open Challenge rounds, which have no obstacles, precise straight-line driving and 90° turns are required.We have introduced an algorithm that optimizes the trade-off between "driving speed" and "recovery accuracy".I did.
+In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".
 <img width="1126" height="884" alt="IMG_0424" src="https://github.com/user-attachments/assets/af71fd45-adcf-491f-b119-8c4593d38cc6" />
 
 ### 3.3.1:P control using a gyro sensor
 To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.
 <img width="1233" height="184" alt="IMG_0425" src="https://github.com/user-attachments/assets/4c2e0a42-385c-4021-b1c7-db41bc9a1ceb" />
-Initially, we used PID control with added differentiation and integration,Results of actually running it on the courseIn this competition, it was found that incorporating differential and integral calculus into the control system actually made the robot's behavior unstable. Furthermore, when measuring the lateral deviation over a straight 5m distance, the deviation was 7cm with PID control and 5cm with PD control, but the deviation was reduced to within 3cm with P control alone. Therefore, for the purpose of simplifying the system and stabilizing the behavior, ultimately, we adopted "P control".
+At first, I used PID control with the addition of differentials and integration, but as a result of actually running on the course, it was found that in this competition, control that incorporates differentials and integration instead destabilizes the robot's behavior. In addition, when I measured the lateral brak width at 5m straight, the blur was 7cm in PID control and 5cm in PD control, but the blur was reduced to within 3cm with P control alone, so from the above, the system is simplified and the behavior is stabilized. Finally, "P control" was adopted.
 
 ### 3.3.2:Turning method
-According to the variable in line 14 of Image 3, the rotation starts at the fastest speed.It slows down as it approaches the target value.By incorporating this program, we completely eliminated inertial overshoot and achieved precise turning with an accuracy of within ±0.5° of the target value.
+The variable in line 14 of image 3 completely eliminates overshoot due to inertia by incorporating a program that rotates at the fastest speed at the start of turning and slows down as it approaches the target value, and achieves accurate turning with an accuracy of within (target value) ±0.5°.
 <img width="1242" height="184" alt="IMG_0426" src="https://github.com/user-attachments/assets/24d969de-4038-4685-8ea2-5a6854c2be26" />
 
 ## 3.4:Design considerations for Obstacle Challenge rounds
@@ -240,7 +240,7 @@ In the Obstacle Challenge rounds, we believed the key was how to simplify the pr
 
 ### ["Subsystem Diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes/Subsystem%20Diagram.pdf)
 
-To make it easier to identify where changes would have an impact when redesigning our robot’s subsystems, we created a subsystem diagram illustrating the interrelationships among the drive, sensor, power supply, and processing components mentioned above. From this diagram, we realized that the sensor system utilized various subsystems, so we decided to use OpenMV to reduce the number of lines of code within the camera in order to minimize program execution time as much as possible. In addition, this reduced the load on the Spike Hub and improved the control cycle. (See Section [3.1.2](#312about-openmv)) for details.)  
+We created a subsystem diagram that shows the interconnection of the above drive, sensor, power supply, and processing to make it easier to see where the impact will be when remaking our robot subsystem. And from this figure, it can be seen that various subsystems of the sensor system are used, and the number of lines of the program in the camera is reduced by using Open MV to reduce the running time of the program even a little. . In addition, the Spike hub's load has been reduced and the control cycle has been improved.(See Section [3.1.2](#312about-openmv)) for details.)  
 
 Furthermore, this diagram allows others to easily understand the interrelationships and interactions among our robot’s subsystems at a glance.  
 
@@ -251,7 +251,7 @@ Because the weight limit at the competition was 1.5 kg, the number of things on 
 <img width="1064" height="601" alt="IMG_0441" src="https://github.com/user-attachments/assets/d8ee7cc0-894b-4410-b92d-e2a279366637" />
 　　　　　　　　　[A place where everyone can check the corrections in Japanese]
 
-By consistently identifying and analyzing these risks and ensuring that everyone is aware of them, we are able to improve the robots’ accuracy. In addition, by working together to tackle problems that are difficult to solve through programming, we are reducing the burden on programmers.  
+The identification and analysis of such risks is indispensable, and the accuracy of the robot is improved by everyone grasping the risks. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve with the program with everyone.  
 
 # How to build a robot
 * 
