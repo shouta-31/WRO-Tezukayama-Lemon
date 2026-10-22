@@ -196,11 +196,11 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 
  | Item | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
  |:---:|---|---|---|---|
- | Mobility | Less than 1 second | Approximately 20-40 seconds | Approximately 2-15 seconds | Approximately 2-5 seconds |
- | Electricity consumption | Approximately 0.5W to 0.6W | Approximately 3.0W to 6.0W | Approximately 0.5 W to 1.0 W | Approximately 2.5 W to 4.5 W |
- | Memory capacity | 32MB SDRAM + 1MB SRAM | 1GB/2GB/4GB/8GB It varies slightly depending on the model. | 8MB PSRAM + 520KB SRAM | 512MB |
- | Understanding speed | Standard (medium speed) | High speed | Low speed to medium speed | Ultra-high speed |
- | External connection | USB, SPI, I2C, UART, PWM, MicroSD | USB x4, HDMI ×2, LAN, Wi-Fi, Bluetooth, GPIO | Wi-Fi, Bluetooth, MicroSD, GPIO, UART | USB Type-C |
+ | **Mobility** | Less than 1 second | Approximately 20-40 seconds | Approximately 2-15 seconds | Approximately 2-5 seconds |
+ | **Electricity consumption** | Approximately 0.5W to 0.6W | Approximately 3.0W to 6.0W | Approximately 0.5 W to 1.0 W | Approximately 2.5 W to 4.5 W |
+ | **Memory capacity** | 32MB SDRAM + 1MB SRAM | 1GB/2GB/4GB/8GB It varies slightly depending on the model. | 8MB PSRAM + 520KB SRAM | 512MB |
+ | **Understanding speed** | Standard (medium speed) | High speed | Low speed to medium speed | Ultra-high speed |
+ | **External connection** | USB, SPI, I2C, UART, PWM, MicroSD | USB x4, HDMI ×2, LAN, Wi-Fi, Bluetooth, GPIO | Wi-Fi, Bluetooth, MicroSD, GPIO, UART | USB Type-C |
 
 ## 2.9:Starting and stopping in a parking lot
 <img width="500" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
@@ -223,12 +223,29 @@ Therefore, we determined that Part A should be at least 1.5cm long. We adjusted 
 # 3:Program
 ## 3.1:Programming Software (Pybricks, OpenMV)
 ### 3.1.1:About Pybricks
-<img width="1218" height="731" alt="IMG_0407" src="https://github.com/user-attachments/assets/d1deb840-45f8-4b11-a0bb-22c190155b49" />
+
+ | Item | Pybricks | LEGO Official App | Micro Python |
+ |:---:|---|---|---|
+ | **Programming language** | Python | Visual Language | Python, C++, etc. |
+ | **Startup time** | Approximately 0.5 to 1 second | Approximately 5 to 10 seconds | Approximately 2 to 5 seconds |
+ | **Control loop period** | per second Processing 200 to 1000 times | per second 20 to 50 times is the limit. | per second 100-200 processing cycles |
+ | **Motor synchronous control** | Less than once | Degree 3 to 5 | Degree 1 to 3 |
+ | **Compatible devices** | SPIKE, Technic, City, Move, etc. | Each app has a fixed hub. | SPIKE Prime /Robot Inventor only |
+ | **Simultaneous Bluetooth connection** | 7-8 units | Connection unavailable | Construction is extremely difficult. |
+ 
 This robot used Pybricks. The reason is that compared to other program sites, it is the best in terms of start-up time and control loop cycle, and I chose it because of the advantage that the motor synchronous control is less than 1 degree and there is almost no error.
 
 ### 3.1.2:About OpenMV
 We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached. The reasons for this choice (from a programming perspective) are as follows.
-<img width="1216" height="809" alt="IMG_0408" src="https://github.com/user-attachments/assets/a4cf96ad-8d9e-4b4c-bb55-0a9699268195" />
+
+ | Item | OpenMV | HuskyLens | Raspberry Pi |
+ |:---:|---|---|---|
+ | Number of program lines required to send data for one obstacle | Approximately 20 lines | Approximately 50 lines | Approximately 60 lines |
+ | Number of lines of code for the image lines recognition part | 3 lines | 0 lines | Approximately 15v lines |
+ | Number of lines of code required to transmit coordinate data | 1 line | Approximately 15 lines | Approximately 10 lines |
+ | Number of lines of code required to display the debug screen | 0 lines | Indicates no | 3 lines |
+ | Language matching with pybricks | 〇 | × | 〇 |
+
 As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
 
