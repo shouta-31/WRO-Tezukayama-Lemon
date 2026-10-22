@@ -1,5 +1,5 @@
 # WRO 2026 Future Engineers - Tezukayama Lemon 🇯🇵
-<img width="264" alt="全体写真" src="https://github.com/user-attachments/assets/de38bd71-2025-435b-97e2-613d6c119916" />
+<div align="center"><img width="664" alt="全体写真" src="https://github.com/user-attachments/assets/de38bd71-2025-435b-97e2-613d6c119916" /></div>
 
 　This is the official repository of Teizukayama Lemon, a representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. This repository contains comprehensive engineering texts on robot design, strategy, programming, and system thinking. The robot, the program, and this book were created by a team of three students with the support of a coach.
 　
@@ -59,7 +59,7 @@
  We also modularized the movements into functions, enabling rapid parameter adjustments during the tuning phase. Furthermore, we implemented a deceleration routine for 90-degree turns using the gyro sensor, thereby minimizing positional errors that occur after navigating corner sections. Based on this strategy, the robot operates according to the state transition diagram shown below.  
  (For details of the program, see section [3.3](#33design-considerations-for-the-open-challenge-rounds).)
 
-<img width="329" alt="IMG_0396" src="https://github.com/user-attachments/assets/4902cd1f-1dea-48a8-8247-e0e43beadcc0" />. 
+<div align="center"><img width="329" alt="IMG_0396" src="https://github.com/user-attachments/assets/4902cd1f-1dea-48a8-8247-e0e43beadcc0" /></div>
 
 ## 1.2:Obstacle challenge rounds
 　The strategy for the Obstacle Challenge rounds of this tournament is primarily based on the Open Challenge rounds.oundsIt is based on the following. Also, the goal is1 week 30 secondsI created the program with that goal in mind.
@@ -84,9 +84,9 @@ The table below shows the scores achieved within the time limit during the Open 
 ### ["Robot Assembly Instructions"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/Robot%20Assembly%20Instructions.pdf)
  
 ## 2.2:Robot Structure and Actuation
-<img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" />
+<div align="center"><img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" /></div>
 
-<img height="446" alt="image" src="https://github.com/user-attachments/assets/0d12f19a-05b1-4f6d-aa1e-61b9674fa910" />
+<div align="center"><img height="446" alt="image" src="https://github.com/user-attachments/assets/0d12f19a-05b1-4f6d-aa1e-61b9674fa910" /></div>
 
  The robot was designed to be compact overall to minimize contact with traffic signs during the Obstacle Challenge rounds. Stability was also enhanced by lowering the chassis height and eliminating internal hollow spaces.  
 
@@ -180,15 +180,14 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 
 ## 2.7:Sensors and Sensor Architecture
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/78838e3b-042f-49ae-bca4-7167ef6f03e3" />
-
-| Item | --- |
-| :--- | :--- |
-| **Function** | Distance measurement / LED emission |
-| **Sampling rate** | 100Hz |
-| **Distance<br>measurement** | Normal<br>Measurement range: 50–2000 mm +/- 20 mm<br>Incident angle: +/- 35 degrees (varies depending on distance)<br>Resolution: 1 mm<br><br>High-speed detection<br>Measurement range: 50–300 mm +/- 15 mm<br>Incident angle: +/- 35 degrees (varies depending on distance)<br>Resolution: 1 mm |
-| **LED emission** | Color: White (color temperature: 4000K)<br>The illuminated area can be individually controlled in four segments<br>Output power: Adjustable from 0 to 100% in 1% increments |
-| **Wire** | 250 mm / Integrated with sensor (not removable) |
-| **Other** | By removing the screws on the back, the front part of the sensor can be detached, allowing a third-party<br>sensor to be attached (support timing for third-party sensors has not been determined). |
+ | Item | --- |
+ | :--- | :--- |
+ | **Function** | Distance measurement / LED emission |
+ | **Sampling rate** | 100Hz |
+ | **Distance<br>measurement** | Normal<br>Measurement range: 50–2000 mm +/- 20 mm<br>Incident angle: +/- 35 degrees (varies depending on distance)<br>Resolution: 1 mm<br><br>High-speed detection<br>Measurement range: 50–300 mm +/- 15 mm<br>Incident angle: +/- 35 degrees (varies depending on distance)<br>Resolution: 1 mm |
+ | **LED emission** | Color: White (color temperature: 4000K)<br>The illuminated area can be individually controlled in four segments<br>Output power: Adjustable from 0 to 100% in 1% increments |
+ | **Wire** | 250 mm / Integrated with sensor (not removable) |
+ | **Other** | By removing the screws on the back, the front part of the sensor can be detached, allowing a third-party<br>sensor to be attached (support timing for third-party sensors has not been determined). |
 
 ### 2.7.1:Forward
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/d310ef52-c1d7-471b-88f6-9f8c3b2d1c0e" />
@@ -254,11 +253,11 @@ We used a camera with the front part of the distance sensor removed and an OpenM
 
  | Item | OpenMV | HuskyLens | Raspberry Pi |
  |:---:|---|---|---|
- | Number of program lines required to send data for one obstacle | Approximately 20 lines | Approximately 50 lines | Approximately 60 lines |
- | Number of lines of code for the image lines recognition part | 3 lines | 0 lines | Approximately 15v lines |
- | Number of lines of code required to transmit coordinate data | 1 line | Approximately 15 lines | Approximately 10 lines |
- | Number of lines of code required to display the debug screen | 0 lines | Indicates no | 3 lines |
- | Language matching with pybricks | 〇 | × | 〇 |
+ | **Number of program lines required to send data for one obstacle** | Approximately 20 lines | Approximately 50 lines | Approximately 60 lines |
+ | **Number of lines of code for the image lines recognition part** | 3 lines | 0 lines | Approximately 15v lines |
+ | **Number of lines of code required to transmit coordinate data** | 1 line | Approximately 15 lines | Approximately 10 lines |
+ | **Number of lines of code required to display the debug screen** | 0 lines | Indicates no | 3 lines |
+ | **Language matching with pybricks** | 〇 | × | 〇 |
 
 As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
