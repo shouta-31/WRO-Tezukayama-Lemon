@@ -104,11 +104,12 @@ The table below shows the scores achieved within the time limit during the Open 
 ## 2.3:Power Supply and Wiring
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
 
- | Item | SPIKE Prime Hub | Raspberry PI | EV3 |
+ | Item | SPIKE Prime Hub | Raspberry Pi | EV3 |
  |:---:|---|---|---|
  | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4output ports | 1 core |
  | **Clock period** | 100MHz | 1.5GHz | 300MHz |
  | **OS** | none | Linux | Linux-based OS |
+ 
  Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.  
  
 <img width="1104" height="660" alt="IMG_0434" src="https://github.com/user-attachments/assets/d2936727-a5f5-4118-beb7-8ad10aeb0bf0" />
@@ -124,9 +125,19 @@ For more details, please visit the link below.
 ### 2.3.2:Power Balance
  The table below summarizes the actual measured power consumption for each device.  
 Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
-※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100   
-<img width="1216" height="709" alt="IMG_0415" src="https://github.com/user-attachments/assets/58fa5709-6be0-42e0-b0f9-d63807b62309" />
+※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100  
 
+ | Item | device | At rest (mA) | During action (mA) |
+ |:---:|---|---|---|
+ | **Hub body** | SPIKE Hub Gyroscope sensor etc. | 50 | 100|
+ | **Port A** | Distance sensor | 15 | 30 |
+ | **Port B** | Distance sensor | 15 | 30 |
+ | **Port C** | M motor | 50 | 250 |
+ | **Port D** | L motor | 100 | 500 |
+ | **Port E** | Distance sensor | 15 | 30 |
+ | **Port F** | OpenMV H7 Cam Plus | 100 | 200 |
+ | **Total** | Entire system | 345 | 1140 |  
+  
 ## 2.4:Motor
 <img width="677" alt="image" src="https://github.com/user-attachments/assets/c9e81d66-03cd-4705-acef-0b75573ad09e" />
 
@@ -182,7 +193,10 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
  We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached.  
 
  The OpenMV Cam H7 Plus has the advantages of lower power consumption, a larger memory capacity (making it less likely to crash), and high image quality (reducing the likelihood of failing to read traffic signs). In addition, it has no packet loss or OS overhead delays. The table below compares the cameras we considered.  
-<img width="1225" height="739" alt="IMG_0417" src="https://github.com/user-attachments/assets/8c2f6672-50a0-420d-8091-32b4a7ce8812" />
+
+ | Item | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
+ |:---:|---|---|---|---|
+ | Mobility | Less than 1 second | Approximately 20-40 seconds | Approximately 2-15 seconds | Approximately 2-5 seconds |
 
 ## 2.9:Starting and stopping in a parking lot
 <img width="500" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
