@@ -140,7 +140,7 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
   
 ## 2.4:Motor
 
-| Item | SPIKE Prime M Motor | SPIKE Prime L Motor |
+| Item | SPIKE Prime M Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/00032b75-2055-453e-a9f2-e9383d24ad08" /> | SPIKE Prime L Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/b349e044-b045-4d70-bab0-5f2c46cf8896" /> |
 | :--- | :--- | :--- |
 | **Output /<br>Operating<br>Voltage Range** | Minimum: 5 V<br>Maximum: 9 V | Minimum: 5 V<br>Maximum: 9 V |
 | **Performance** | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 185 RPM ±15%<br>• Current: 110 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 3.5 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 280 mA ±15%<br><br>**Stall:**<br>• Torque: 18 Ncm<br>• Speed: 0 RPM<br>• Current: 800 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 175 RPM ±15%<br>• Current: 135 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 8 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 430 mA ±15%<br><br>**Stall:**<br>• Torque: 25 Ncm<br>• Speed: 0 RPM<br>• Current: 1400 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* |
@@ -179,6 +179,7 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
  For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28mm in width. We chose this tire because its large contact surface with the ground increases friction, resulting in greater propulsion and making it easier to increase speed.  
 
 ## 2.7:Sensors and Sensor Architecture
+<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/78838e3b-042f-49ae-bca4-7167ef6f03e3" />
 
 | Item | --- |
 | :--- | :--- |
