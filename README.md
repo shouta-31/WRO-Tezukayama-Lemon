@@ -1,4 +1,4 @@
-# WRO2026 Future Engineers - Tezukayama Lemon🇯🇵
+# WRO 2026 Future Engineers - Tezukayama Lemon🇯🇵
 
 # Content
 * `Engineering Journal` includes strategy, robot structure, programming, and systems thinking.
