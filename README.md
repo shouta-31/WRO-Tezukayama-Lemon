@@ -103,7 +103,7 @@ The table below shows the scores achieved within the time limit during the Open 
 
 
 For more details, please visit the link below.
-### ["Robot circuit diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes.md#electromechanical-diagrams)
+### ["Robot circuit diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes/Schematic.md)
 
  With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.  
 
