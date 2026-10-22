@@ -65,8 +65,7 @@
 　The strategy for the Obstacle Challenge rounds of this tournament is primarily based on the Open Challenge rounds.oundsIt is based on the following. Also, the goal is1 week 30 secondsI created the program with that goal in mind.
 Also, as a strategy, in the parking lotChoosing a parking spotI did that. I will proceed with departing from the parking lot. However, regarding parking, initially I was focused on accuracy and didn't have much time to dedicate to it. Therefore, I focused all my efforts on maximizing the accuracy of other missions. However, ultimately, both accuracy improved and I was able to allocate sufficient time for parking, so I decided to proceed with parking. Also,Obstacle detection logicIt operates according to the following state transition diagram.For details about the program, see section [3.4](#34design-considerations-for-obstacle-challenge-rounds).)
 <img width="1749" height="1195" alt="IMG_0450" src="https://github.com/user-attachments/assets/d16fad4d-54ea-4150-bda1-f6ac368767b7" />
-　　　　　　　　　　　　　　　　　　
-            [State machine diagram]
+<p align="center"><b>[State machine diagram]</b></p>
 
 ## 1.3:Testing, Tuning, and Trade-offs
 To complete the mission more accurately, we consistently aimed to score at least 80% on each challenge and repeatedly ran test workflows such as experiments to measure the distance between the robot and objects to fine-tune our system. We also made trade-offs regarding parts and programming based on these tests.
@@ -159,8 +158,8 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
 　Since the weight of the robot bears down on the steering mechanism, a motor torque greater than 7.7 Ncm was required to operate it. Therefore, the high-torque "SPIKE Prime L-Motor" was used.  
 
 ## 2.5:Front-wheel steering
-<img width="828" alt="image" src="https://github.com/user-attachments/assets/eea00792-96e5-41ae-acad-dc8d2ea9165d" />
-[Steering Section]
+<div align="center"><img width="828" alt="image" src="https://github.com/user-attachments/assets/eea00792-96e5-41ae-acad-dc8d2ea9165d" /></div>
+<p align="center"><b>[Steering Section]</b></p>
 
 　For this competition, we employed the Ackermann-Jeantaud steering mechanism. We had previously used the rack-and-pinion system—which is easier to implement—but poor meshing between the pinion and rack caused lateral slipping and resistance during turns, resulting in a success rate of only about 50%.
 Switching to the Ackermann-Jeantaud mechanism reduced the number of failures, raising our success rate to approximately 90%. Since turning accuracy is crucial for this competition, we decided to adopt this mechanism.  
@@ -232,8 +231,7 @@ x >= 1.5
 
 Therefore, we determined that Part A should be at least 1.5cm long. We adjusted the length to approximately 4.5cm, ensuring it did not exceed the robot's size limit, providing a margin of safety. Furthermore, by using Part A, we succeeded in reducing both the time it takes to start and the time it takes to park by 8 seconds each. Moreover, while previously we could only complete the course 4 out of 10 times, with Part A installed, we can now complete the course within the time limit every time.
 <img width="805" alt="IMG_0456" src="https://github.com/user-attachments/assets/f533c13c-9176-46fd-9062-c8f73f0bfa55" />
-
-                  [A diagram showing how the robot departs from the parking space.]
+<p align="center"><b>[A diagram showing how the robot departs from the parking space.]</b></p>
 
 # 3:Program
 ## 3.1:Programming Software (Pybricks, OpenMV)
