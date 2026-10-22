@@ -139,7 +139,12 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
  | **Total** | Entire system | 345 | 1140 |  
   
 ## 2.4:Motor
-<img width="677" alt="image" src="https://github.com/user-attachments/assets/c9e81d66-03cd-4705-acef-0b75573ad09e" />
+
+| Item | SPIKE Prime M Motor | SPIKE Prime L Motor |
+| :--- | :--- | :--- |
+| **Output /<br>Operating<br>Voltage Range** | Minimum: 5 V<br>Maximum: 9 V | Minimum: 5 V<br>Maximum: 9 V |
+| **Performance** | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 185 RPM ±15%<br>• Current: 110 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 3.5 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 280 mA ±15%<br><br>**Stall:**<br>• Torque: 18 Ncm<br>• Speed: 0 RPM<br>• Current: 800 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 175 RPM ±15%<br>• Current: 135 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 8 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 430 mA ±15%<br><br>**Stall:**<br>• Torque: 25 Ncm<br>• Speed: 0 RPM<br>• Current: 1400 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* |
+| **Rotation Sensor** | Resolution: 1 rotation = 360 counts<br>Accuracy: ±3 degrees<br>Update rate: 100 Hz | Resolution: 1 rotation = 360 counts<br>Accuracy: ±3 degrees<br>Update rate: 100 Hz |
 
  As described in section 2.2, we used the SPIKE Prime Hub; consequently, we limited our motor selection to SPIKE Prime motors and chose specific motors for the drive and steering systems based on the aforementioned considerations. Calculations regarding the robot's weight (650.8 g) and torque—factoring in a safety margin—indicated that the required torque was 7.7 Ncm for the front wheels and 5.4 Ncm for the rear wheels.  
 
@@ -174,7 +179,15 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
  For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28mm in width. We chose this tire because its large contact surface with the ground increases friction, resulting in greater propulsion and making it easier to increase speed.  
 
 ## 2.7:Sensors and Sensor Architecture
-<img width="1256" height="1098" alt="IMG_0430" src="https://github.com/user-attachments/assets/e708f746-7482-4457-b785-3cc193ba4d20" />
+
+| Item | --- |
+| :--- | :--- |
+| **Function** | Distance measurement / LED emission |
+| **Sampling rate** | 100Hz |
+| **Distance<br>measurement** | Normal<br>Measurement range: 50–2000 mm +/- 20 mm<br>Incident angle: +/- 35 degrees (varies depending on distance)<br>Resolution: 1 mm<br><br>High-speed detection<br>Measurement range: 50–300 mm +/- 15 mm<br>Incident angle: +/- 35 degrees (varies depending on distance)<br>Resolution: 1 mm |
+| **LED emission** | Color: White (color temperature: 4000K)<br>The illuminated area can be individually controlled in four segments<br>Output power: Adjustable from 0 to 100% in 1% increments |
+| **Wire** | 250 mm / Integrated with sensor (not removable) |
+| **Other** | By removing the screws on the back, the front part of the sensor can be detached, allowing a third-party<br>sensor to be attached (support timing for third-party sensors has not been determined). |
 
 ### 2.7.1:Forward
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/d310ef52-c1d7-471b-88f6-9f8c3b2d1c0e" />
