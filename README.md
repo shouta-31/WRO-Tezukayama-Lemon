@@ -180,6 +180,7 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 
 ## 2.7:Sensors and Sensor Architecture
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/78838e3b-042f-49ae-bca4-7167ef6f03e3" />
+
  | Item | --- |
  | :--- | :--- |
  | **Function** | Distance measurement / LED emission |
