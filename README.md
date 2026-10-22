@@ -1,3 +1,5 @@
+# WRO2026 Future Engineers - Tezukayama Lemon🇯🇵
+
 # Content
 * `Engineering Journal` includes strategy, robot structure, programming, and systems thinking.
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
