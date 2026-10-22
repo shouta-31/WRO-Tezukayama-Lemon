@@ -197,8 +197,7 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
  | Item | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
  |:---:|---|---|---|---|
  | Mobility | Less than 1 second | Approximately 20-40 seconds | Approximately 2-15 seconds | Approximately 2-5 seconds |
- | Electricity consumption | Approximately 0.5W to 0.6W | Approximately 3.0W to 6.0W | Approximately
-0.5 W to 1.0 W | Approximately 2.5 W to 4.5 W |
+ | Electricity consumption | Approximately 0.5W to 0.6W | Approximately 3.0W to 6.0W | Approximately 0.5 W to 1.0 W | Approximately 2.5 W to 4.5 W |
  | Memory capacity | 32MB SDRAM + 1MB SRAM | 1GB/2GB/4GB/8GB It varies slightly depending on the model. | 8MB PSRAM + 520KB SRAM | 512MB |
  | Understanding speed | Standard (medium speed) | High speed | Low speed to medium speed | Ultra-high speed |
  | External connection | USB, SPI, I2C, UART, PWM, MicroSD | USB x4, HDMI ×2, LAN, Wi-Fi, Bluetooth, GPIO | Wi-Fi, Bluetooth, MicroSD, GPIO, UART | USB Type-C |
