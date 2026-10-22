@@ -1,5 +1,6 @@
-# WRO 2026 Future Engineers - Tezukayama Lemon🇯🇵
-
+# WRO 2026 Future Engineers - Tezukayama Lemon 🇯🇵
+　This is the official repository of Teizukayama Lemon, a representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. This repository contains comprehensive engineering texts on robot design, strategy, programming, and system thinking. The robot, the program, and this book were created by a team of three students with the support of a coach.
+　
 # Content
 * `Engineering Journal` includes strategy, robot structure, programming, and systems thinking.
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
