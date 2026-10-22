@@ -103,8 +103,12 @@ The table below shows the scores achieved within the time limit during the Open 
  
 ## 2.3:Power Supply and Wiring
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
-<img width="1211" height="372" alt="IMG_0414" src="https://github.com/user-attachments/assets/eb4c1120-a182-4412-9657-2020a6df0e03" />
 
+ | Item | SPIKE Prime Hub | Raspberry PI | EV3 |
+ |:---:|---|---|---|
+ | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4output ports | 1 core |
+ | **Clock period** | 100MHz | 1.5GHz | 300MHz |
+ | **OS** | none | Linux | Linux-based OS |
  Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.  
  
 <img width="1104" height="660" alt="IMG_0434" src="https://github.com/user-attachments/assets/d2936727-a5f5-4118-beb7-8ad10aeb0bf0" />
