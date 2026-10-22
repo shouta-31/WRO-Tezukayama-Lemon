@@ -87,7 +87,7 @@ The table below shows the scores achieved within the time limit during the Open 
 
  Furthermore, the center of gravity (indicated by the red circle) was positioned slightly toward the front wheels rather than directly over the rear wheels to prevent slipping.  
  
- |---| Front-wheel drive | Rear-wheel drive | The front wheels steer, and the rear wheels drive. |  
+ | Front-wheel drive | Rear-wheel drive |  
  |---|-—-|---|  
  | Mechanism | The front wheels are both the drive and steering wheels. | The front wheels steer, and the rear wheels drive. |  
  | Subcomputer | Seeed XIAO RP2040 |  
