@@ -364,7 +364,7 @@ The identification and analysis of such risks is indispensable, and the accuracy
 * Click `program code` and download all the files contained within it.
 
 **1 About OpenMV**
-* Download and install OpenMV IDE from here
+* Download and install OpenMV IDE from **[here](https://openmv.io/pages/download)**
 * Launch OpenMV IDE and connect the OpenMV board to your computer using a USB cable (USB Type-A to Micro USB Type-B).
 * If a camera is connected to the SPIKE hub via a cable (i.e., the camera is plugged into a SPIKE port), be sure to disconnect the cable.
 * Press the Windows key, search for "Explorer" (the file management app), and click to open it. Select `pupremote.py` and `lpf2.py` (using Ctrl+Shift+↓), then copy them (Ctrl+C). In the left-hand menu, select "This PC," open the OpenMV drive, and paste the files there (Ctrl+V).
@@ -386,7 +386,7 @@ The identification and analysis of such risks is indispensable, and the accuracy
 
 **2 About Pybricks**
 * First, plug the camera cable into port F on the Spike.
-* Access Pybricks Code and follow the on-screen instructions to flash the firmware.
+* Access **[Pybricks Code](https://pybricks.com/)** and follow the on-screen instructions to flash the firmware.
 <img width="965" alt="image" src="https://github.com/user-attachments/assets/d0995590-e614-4436-878b-b9cc83826c8e" />
 
 * Import all of the following files using the "Import a file" option in the top-left corner: `pupremote_hub.py`, `uartremote.py`, `Obstacle_rounds.py`, and `Open_rounds.py`.
