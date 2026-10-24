@@ -62,16 +62,21 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - Date of birth :January 19th
   - Age :15 years old
 写真入れる
+
 - Shuta Morita :Document preparation
-  - [Date of birth] :March 6th
-  - [Age] :15 years old
+  - Date of birth :March 6th
+  - Age :15 years old
 写真入れる
-- [Shota Ueno] :A builder
-  - [Date of birth] :March 1st
-  - [Age] :15 years old
+
+- Shota Ueno :A builder
+  - Date of birth :March 1st
+  - Age :15 years old
 写真入れる
-- [Mr.Hiroshi Yahiro] :A team coach
-  - [Subject in charge] :Physics
+
+- Mr.Hiroshi Yahiro :A team coach
+  - Subject in charge :Physics
+写真入れる
+
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
 ## 1.1:Open challenge rounds
