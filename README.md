@@ -14,8 +14,8 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 
 # Engineering Journal
 - [0:A team](#0A-team)
- - [0.1:Team introduction](#01Team-introduction)
- - [0.2:Team members](##02Team-members)
+  - [0.1:Team introduction](#01Team-introduction)
+  - [0.2:Team members](##02Team-members)
 - [1:Strategy](#1strategy)
   - [1.1:Open challenge rounds](#11open-challenge-rounds)
   -  [1.2:Obstacle challenge rounds](#12obstacle-challenge-rounds)
@@ -58,11 +58,11 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
 写真入れる
 
 ## 0.2 Team members
-- [Kyosuke Esumi] :A programmer
-  - [Date of birth] :January 19th
-  - [Age] :15 years old
+- Kyosuke Esumi :A programmer
+  - Date of birth :January 19th
+  - Age :15 years old
 写真入れる
-- [Shuta Morita] :Document preparation
+- Shuta Morita :Document preparation
   - [Date of birth] :March 6th
   - [Age] :15 years old
 写真入れる
