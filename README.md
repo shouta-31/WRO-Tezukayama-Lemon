@@ -10,14 +10,14 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
 * `video` contains the video.md file with the link to a video where driving demonstration exists
 * `schemes` contains two schematic diagrams in form of PNG of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `program code` contains code of control software for all components which were programmed.
+* `program code (src)` contains code of control software for all components which were programmed.
 * `models` is a model file used to manufacture vehicle parts.
   
-# 0:A team
-## 0.1 Team introduction
+# A team
+## Team introduction
 Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have been testing many times, tuning each time, and preparing for the world championship by trial and error so that we can get higher scores quickly in time. We will aim to win the championship, which is our goal, by making use of this effort and preparation!
 
-## 0.2 Team members
+## Team members
 - Kyosuke Esumi : A programmer
   - Date of birth : January 19th
   - Age : 15 years old
