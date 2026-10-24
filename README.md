@@ -396,7 +396,7 @@ The identification and analysis of such risks is indispensable, and the accuracy
 * Click the Bluetooth button → click the name you assigned when installing the Pybricks firmware → click "Pair"
 
 **③ Driving**
-* Open `Open_rounds.py’ if you are running Open rounds, or ‘Obstacle_rounds.py’ if you are running obstacle rounds.
+* Open `Open_rounds.py` if you are running Open rounds, or `Obstacle_rounds.py` if you are running obstacle rounds.
 * Place the robot on the course and press the Run button (or F5).
 
 
