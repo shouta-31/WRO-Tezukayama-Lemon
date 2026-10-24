@@ -14,6 +14,7 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 
 # Engineering Journal
 - [0:A team](#0A-team)
+ -[0.1:Team introduction](#01Team-introduction)
 - [1:Strategy](#1strategy)
   - [1.1:Open challenge rounds](#11open-challenge-rounds)
   -  [1.2:Obstacle challenge rounds](#12obstacle-challenge-rounds)
@@ -51,6 +52,8 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
   - [4.3:Risk Identification and Mitigation Measures](#43risk-identification-and-mitigation-measures)
 
 # 0:A team
+## 0.1 Team introduction
+Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have been testing many times, tuning each time, and preparing for the world championship by trial and error so that we can get higher scores quickly in time. We will aim to win the championship, which is our goal, by making use of this effort and preparation!
 
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
