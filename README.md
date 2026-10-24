@@ -109,12 +109,16 @@ We selected a rear-wheel drive configuration. This choice reduces the load on th
 ## 2.3:Power Supply and Wiring
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
 
+<div align="center">
+
  |  | SPIKE Prime Hub | Raspberry Pi | EV3 |
  |:---:|---|---|---|
  | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4output ports | 1 core |
  | **Clock period** | 100MHz | 1.5GHz | 300MHz |
  | **OS** | none | Linux | Linux-based OS |
- 
+
+</div>
+
 Since the robot built this time did not require many sensors or motors, a large number of ports was not necessary. Although the clock speed is the lowest, the absence of an operating system eliminates wasteful processing. Furthermore, because the robot can be quickly reconfigured, more time can be devoted to tasks such as program modification.  
  
 <img width="1104" height="660" alt="IMG_0434" src="https://github.com/user-attachments/assets/d2936727-a5f5-4118-beb7-8ad10aeb0bf0" />
@@ -146,6 +150,7 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
  | **Total** | Entire system | 345 | 1140 |  
 
 </div>
+<p align="center"><b>[Table of electricity balance]</b></p>
 
 ## 2.4:Motor
 
