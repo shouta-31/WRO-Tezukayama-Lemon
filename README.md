@@ -377,5 +377,17 @@ The identification and analysis of such risks is indispensable, and the accuracy
 | <img width="150" alt="image" src="https://github.com/user-attachments/assets/b694c78a-8bfc-4f37-882d-d0b042cf8365" /> | <img width="150" alt="image" src="https://github.com/user-attachments/assets/c938ffab-042f-4242-b412-324d07418876" /> |
 
 * If not connected, press the Connect button or use Ctrl+E.
+* File > Open File (or Ctrl+O) → Click `wro_2026_openMV` → Click Open
+* Press the Run button (or Ctrl+R). (The camera is activated at this point.)
+* Have the system detect the green and red objects.
+* If no bounding box appears around the object, stop execution. Go to Tools > Machine Vision > Threshold Editor at the top, then click "Frame Buffer." Adjust the L-min and L-max values ​​to isolate the object so that only the object itself appears white. (If the object is red, adjusting A-min first—or A-max first if it is green—will make the process easier.) Copy the LAB threshold values. Clear all existing content within "thresholds" (for red) or "thresholds2" (for green), and paste the copied values.
+(Run the program; if a bounding box appears around the object, the setup is correct. If no box appears, readjust the threshold values.)
+* Stop execution.
+* Go to Tools > Save open script to OpenMV Cam (as `main.py`). If a prompt appears asking, "Remove comments and replace spaces/tabs?", select "No" (if it does not appear, you can simply skip this step).
+* The OpenMV camera will light up red; wait until the light turns off.
+
+
+
+
 
 
