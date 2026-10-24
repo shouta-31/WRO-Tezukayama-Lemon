@@ -49,6 +49,8 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
   - [4.2:Vehicle Restrictions](#42vehicle-restrictions)
   - [4.3:Risk Identification and Mitigation Measures](#43risk-identification-and-mitigation-measures)
 
+# 0:
+
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
 ## 1.1:Open challenge rounds
