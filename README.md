@@ -357,5 +357,11 @@ Because the weight limit at the competition was 1.5 kg, the number of things on 
 The identification and analysis of such risks is indispensable, and the accuracy of the robot is improved by everyone grasping the risks. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve with the program with everyone.  
 
 # How to build a robot
+**① Build the robot itself**
 * Click "Robot Assembly Instructions.pdf" and build the robot.
+* If you are unsure
+  (Click in the order of "models" → "How to use the Robot 3Dmodel.ldr file.md" to view the 3D model of the robot.)
+
+**② Import the program**
+
 
