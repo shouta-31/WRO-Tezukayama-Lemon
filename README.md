@@ -367,5 +367,9 @@ The identification and analysis of such risks is indispensable, and the accuracy
 
 **1 About OpenMV**
 * Download and install OpenMV IDE from here
-*  
+* Launch OpenMV IDE and connect the OpenMV board to your computer using a USB cable (USB Type-A to Micro USB Type-B).
+* If a camera is connected to the SPIKE hub via a cable (i.e., the camera is plugged into a SPIKE port), be sure to disconnect the cable.
+* Press the Windows key, search for "Explorer" (the file management app), and click to open it. Select `pupremote.py` and `lpf2.py` (using Ctrl+Shift+↓), then copy them (Ctrl+C). In the left-hand menu, select "This PC," open the OpenMV drive, and paste the files there (Ctrl+V).
+* Press the Connect button (bottom left of the screen)
+   
 
