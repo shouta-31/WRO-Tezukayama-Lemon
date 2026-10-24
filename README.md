@@ -381,15 +381,17 @@ The identification and analysis of such risks is indispensable, and the accuracy
 * If no bounding box appears around the object, stop execution. Go to Tools > Machine Vision > Threshold Editor at the top, then click "Frame Buffer." Adjust the L-min and L-max values ​​to isolate the object so that only the object itself appears white. (If the object is red, adjusting A-min first—or A-max first if it is green—will make the process easier.) Copy the LAB threshold values. Clear all existing content within "thresholds" (for red) or "thresholds2" (for green), and paste the copied values.
 (Run the program; if a bounding box appears around the object, the setup is correct. If no box appears, readjust the threshold values.)
 * Stop execution.
-* Go to Tools > Save open script to OpenMV Cam (as `main.py`). If a prompt appears asking, "Remove comments and replace spaces/tabs?", select "No" (if it does not appear, you can simply skip this step).
+* Go to Tools > Save open script to OpenMV Cam (as main.py). If a prompt appears asking, "Remove comments and replace spaces/tabs?", select "No" (if it does not appear, you can simply skip this step).
 * The OpenMV camera will light up red; wait until the light turns off.
 
 **2 About Pybricks**
 * First, plug the camera cable into port F on the Spike.
 * Access Pybricks Code and follow the on-screen instructions to flash the firmware.
-$
+<img width="965" alt="image" src="https://github.com/user-attachments/assets/d0995590-e614-4436-878b-b9cc83826c8e" />
+
 * Import all of the following files using the "Import a file" option in the top-left corner: `pupremote_hub.py`, `uartremote.py`, `Obstacle_rounds.py`, and `Open_rounds.py`.
-$
+<img width="303" alt="image" src="https://github.com/user-attachments/assets/97b2acd3-f654-47cb-ac49-c847b8fe23d4" />
+
 * Open `Obstacle_rounds.py` and `Open_rounds.py`
 * Click the Bluetooth button → click the name you assigned when installing the Pybricks firmware → click "Pair"
 
