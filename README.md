@@ -132,6 +132,8 @@ The table below summarizes the actual measured power consumption for each device
 Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
 ※Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100  
 
+<div align="center">
+ 
  |  | device | At rest (mA) | During action (mA) |
  |:---:|---|---|---|
  | **Hub body** | SPIKE Hub Gyroscope sensor etc. | 50 | 100|
@@ -142,7 +144,9 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
  | **Port E** | Distance sensor | 15 | 30 |
  | **Port F** | OpenMV H7 Cam Plus | 100 | 200 |
  | **Total** | Entire system | 345 | 1140 |  
-  
+
+</div>
+
 ## 2.4:Motor
 
 |  | SPIKE Prime M Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/00032b75-2055-453e-a9f2-e9383d24ad08" /> | SPIKE Prime L Motor <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/b349e044-b045-4d70-bab0-5f2c46cf8896" /> |
