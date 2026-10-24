@@ -384,8 +384,17 @@ The identification and analysis of such risks is indispensable, and the accuracy
 * Go to Tools > Save open script to OpenMV Cam (as `main.py`). If a prompt appears asking, "Remove comments and replace spaces/tabs?", select "No" (if it does not appear, you can simply skip this step).
 * The OpenMV camera will light up red; wait until the light turns off.
 
+**2 About Pybricks**
+* First, plug the camera cable into port F on the Spike.
+* Access Pybricks Code and follow the on-screen instructions to flash the firmware.
+$
+* Import all of the following files using the "Import a file" option in the top-left corner: `pupremote_hub.py`, `uartremote.py`, `Obstacle_rounds.py`, and `Open_rounds.py`.
+$
+* Open `Obstacle_rounds.py` and `Open_rounds.py`
+* Click the Bluetooth button → click the name you assigned when installing the Pybricks firmware → click "Pair"
 
-
-
+**③ Driving**
+* Open `Open_rounds.py’ if you are running Open rounds, or ‘Obstacle_rounds.py’ if you are running obstacle rounds.
+* Place the robot on the course and press the Run button (or F5).
 
 
