@@ -93,6 +93,8 @@ Additionally, shown below is a 3D model of our robot created in Studio 2.0; this
 
 <div align="center"><img height="446" alt="image" src="https://github.com/user-attachments/assets/0d12f19a-05b1-4f6d-aa1e-61b9674fa910" /></div>
 
+<p align="center"><b>[Center of gravity of the robot]</b></p>
+
 The robot was designed to be compact overall to minimize contact with traffic signs during the Obstacle Challenge rounds. Stability was also enhanced by lowering the chassis height and eliminating internal hollow spaces.  
 
 Furthermore, the center of gravity (indicated by the red circle) was positioned slightly toward the front wheels rather than directly over the rear wheels to prevent slipping.  
@@ -204,6 +206,8 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
  | **LED emission** | Color: White (color temperature: 4000K)<br>The illuminated area can be individually controlled in four segments<br>Output power: Adjustable from 0 to 100% in 1% increments |
  | **Wire** | 250 mm / Integrated with sensor (not removable) |
  | **Other** | By removing the screws on the back, the front part of the sensor can be detached, allowing a third-party<br>sensor to be attached (support timing for third-party sensors has not been determined). |
+
+<p align="center"><b>[Graph 1]</b></p>
 
 ### 2.7.1:Forward
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/d310ef52-c1d7-471b-88f6-9f8c3b2d1c0e" />
