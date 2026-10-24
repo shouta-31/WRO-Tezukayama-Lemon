@@ -371,5 +371,9 @@ The identification and analysis of such risks is indispensable, and the accuracy
 * If a camera is connected to the SPIKE hub via a cable (i.e., the camera is plugged into a SPIKE port), be sure to disconnect the cable.
 * Press the Windows key, search for "Explorer" (the file management app), and click to open it. Select `pupremote.py` and `lpf2.py` (using Ctrl+Shift+↓), then copy them (Ctrl+C). In the left-hand menu, select "This PC," open the OpenMV drive, and paste the files there (Ctrl+V).
 * Press the Connect button (bottom left of the screen)
-   
+
+| When connected | When not connected |
+|---|---|
+| <img width="356" alt="image" src="https://github.com/user-attachments/assets/b694c78a-8bfc-4f37-882d-d0b042cf8365" /> | <img width="320" alt="image" src="https://github.com/user-attachments/assets/c938ffab-042f-4242-b412-324d07418876" /> |
+
 
