@@ -4,7 +4,8 @@
 This is the official repository of Teizukayama Lemon, a representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. This repository contains comprehensive engineering texts on robot design, strategy, programming, and system thinking. The robot, the program, and this book were created by a team of three students with the support of a coach.
 
 # Content
-* `README.md` includes strategy, robot structure, programming, and systems thinking.
+* `README.md` detailing our entire engineering process.
+* `Engineering Journal` includes strategy, robot structure, programming, and systems thinking.
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
 * `video` contains the video.md file with the link to a video where driving demonstration exists
