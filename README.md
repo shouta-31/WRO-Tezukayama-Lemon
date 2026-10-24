@@ -70,7 +70,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - Age : 15 years old
 
 - Mr.Hiroshi Yahiro : A team coach
-  - Subject in charge : Physics
+  - Occupation : A teacher
 
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
