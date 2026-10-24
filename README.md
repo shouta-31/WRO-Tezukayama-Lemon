@@ -368,5 +368,8 @@ The identification and analysis of such risks is indispensable, and the accuracy
   (Click in the order of `models` → `How to use the Robot 3Dmodel.ldr file.md` to view the 3D model of the robot.)
 
 **② Import the program**
-
+* Click `program code` and download all the files contained within it.
+**1 About OpenMV**
+* Download and install OpenMV IDE from here
+*  
 
