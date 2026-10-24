@@ -358,9 +358,9 @@ The identification and analysis of such risks is indispensable, and the accuracy
 
 # How to build a robot
 **① Build the robot itself**
-* Click "Robot Assembly Instructions.pdf" and build the robot.
+* Click `Robot Assembly Instructions.pdf` and build the robot.
 * If you are unsure
-  (Click in the order of "models" → "How to use the Robot 3Dmodel.ldr file.md" to view the 3D model of the robot.)
+  (Click in the order of `models` → `How to use the Robot 3Dmodel.ldr file.md` to view the 3D model of the robot.)
 
 **② Import the program**
 
