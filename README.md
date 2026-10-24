@@ -127,6 +127,7 @@ Since the robot built this time did not require many sensors or motors, a large 
 
 <img width="2037" height="645" alt="IMG_0401" src="https://github.com/user-attachments/assets/ae9079a7-c838-4897-bd8e-98a3eea6d24b" />
 
+<p align="center"><b>[Wiring diagram inside the hub]&[OpenMV wiring diagram]</b></p>
 
 For more details, please visit the link below.
 ### ["Robot circuit diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes/Schematic.md)
@@ -178,6 +179,7 @@ Since the weight of the robot bears down on the steering mechanism, a motor torq
 
 ## 2.5:Front-wheel steering
 <div align="center"><img width="828" alt="image" src="https://github.com/user-attachments/assets/eea00792-96e5-41ae-acad-dc8d2ea9165d" /></div>
+
 <p align="center"><b>[Steering Section]</b></p>
 
 For this competition, we employed the Ackermann-Jeantaud steering mechanism. We had previously used the rack-and-pinion system—which is easier to implement—but poor meshing between the pinion and rack caused lateral slipping and resistance during turns, resulting in a success rate of only about 50%.
@@ -250,6 +252,7 @@ x >= 1.5
 
 Therefore, we determined that Part A should be at least 1.5cm long. We adjusted the length to approximately 4.5cm, ensuring it did not exceed the robot's size limit, providing a margin of safety. Furthermore, by using Part A, we succeeded in reducing both the time it takes to start and the time it takes to park by 8 seconds each. Moreover, while previously we could only complete the course 4 out of 10 times, with Part A installed, we can now complete the course within the time limit every time.
 <img width="805" alt="IMG_0456" src="https://github.com/user-attachments/assets/f533c13c-9176-46fd-9062-c8f73f0bfa55" />
+
 <p align="center"><b>[A diagram showing how the robot departs from the parking space.]</b></p>
 
 # 3:Program
