@@ -356,4 +356,5 @@ Because the weight limit at the competition was 1.5 kg, the number of things on 
 The identification and analysis of such risks is indispensable, and the accuracy of the robot is improved by everyone grasping the risks. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve with the program with everyone.  
 
 # How to build a robot
-* 
+* Click "Robot Assembly Instructions.pdf" and build the robot.
+
