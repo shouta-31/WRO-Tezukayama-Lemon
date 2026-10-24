@@ -2,7 +2,7 @@
 <div align="center"><img width="600" alt="全体写真" src="https://github.com/user-attachments/assets/de38bd71-2025-435b-97e2-613d6c119916" /></div>
 
 This is the official repository of Teizukayama Lemon, a representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. This repository contains comprehensive engineering texts on robot design, strategy, programming, and system thinking. The robot, the program, and this book were created by a team of three students with the support of a coach.
-　
+
 # Content
 * `README.md` includes strategy, robot structure, programming, and systems thinking.
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
@@ -11,11 +11,28 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 * `schemes` contains two schematic diagrams in form of PNG of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
 * `program code` contains code of control software for all components which were programmed.
 * `models` is a model file used to manufacture vehicle parts.
+  
+# 0:A team
+## 0.1 Team introduction
+Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have been testing many times, tuning each time, and preparing for the world championship by trial and error so that we can get higher scores quickly in time. We will aim to win the championship, which is our goal, by making use of this effort and preparation!
+
+## 0.2 Team members
+- Kyosuke Esumi : A programmer
+  - Date of birth : January 19th
+  - Age : 15 years old
+
+- Shuta Morita : Document preparation
+  - Date of birth : March 6th
+  - Age : 15 years old
+
+- Shota Ueno : A builder
+  - Date of birth : March 1st
+  - Age : 15 years old
+
+- Mr.Hiroshi Yahiro : A team coach
+  - Occupation : A teacher
 
 # Engineering Journal
-- [0:A team](#0A-team)
-  - [0.1:Team introduction](#01Team-introduction)
-  - [0.2:Team members](##02Team-members)
 - [1:Strategy](#1strategy)
   - [1.1:Open challenge rounds](#11open-challenge-rounds)
   -  [1.2:Obstacle challenge rounds](#12obstacle-challenge-rounds)
@@ -51,26 +68,6 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
   - [4.1:Interactions Between Subsystems](#41interactions-between-subsystems)
   - [4.2:Vehicle Restrictions](#42vehicle-restrictions)
   - [4.3:Risk Identification and Mitigation Measures](#43risk-identification-and-mitigation-measures)
-
-# 0:A team
-## 0.1 Team introduction
-Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have been testing many times, tuning each time, and preparing for the world championship by trial and error so that we can get higher scores quickly in time. We will aim to win the championship, which is our goal, by making use of this effort and preparation!
-
-## 0.2 Team members
-- Kyosuke Esumi : A programmer
-  - Date of birth : January 19th
-  - Age : 15 years old
-
-- Shuta Morita : Document preparation
-  - Date of birth : March 6th
-  - Age : 15 years old
-
-- Shota Ueno : A builder
-  - Date of birth : March 1st
-  - Age : 15 years old
-
-- Mr.Hiroshi Yahiro : A team coach
-  - Occupation : A teacher
 
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
