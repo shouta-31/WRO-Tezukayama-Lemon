@@ -13,6 +13,7 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 * `models` is a model file used to manufacture vehicle parts.
 
 # Engineering Journal
+- [0:A team](#0A-team)
 - [1:Strategy](#1strategy)
   - [1.1:Open challenge rounds](#11open-challenge-rounds)
   -  [1.2:Obstacle challenge rounds](#12obstacle-challenge-rounds)
@@ -49,7 +50,7 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
   - [4.2:Vehicle Restrictions](#42vehicle-restrictions)
   - [4.3:Risk Identification and Mitigation Measures](#43risk-identification-and-mitigation-measures)
 
-# 0:
+# 0:A team
 
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
