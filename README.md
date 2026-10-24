@@ -69,6 +69,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - [4.1:Interactions Between Subsystems](#41interactions-between-subsystems)
   - [4.2:Vehicle Restrictions](#42vehicle-restrictions)
   - [4.3:Risk Identification and Mitigation Measures](#43risk-identification-and-mitigation-measures)
+- [5:Reference materials](#5Reference-materials)
 
 # 1:Strategy
 To tackle the Open Challenge and Obstacle Challenge rounds, we devised specific strategies for each and built our robots and programs accordingly. We will now explain these strategies.
@@ -353,6 +354,16 @@ Because the weight limit at the competition was 1.5 kg, the number of things on 
 　　　　　　　　　[A place where everyone can check the corrections in Japanese]
 
 The identification and analysis of such risks is indispensable, and the accuracy of the robot is improved by everyone grasping the risks. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve with the program with everyone.  
+
+# 5:Reference materials
+https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h
+https://pybricks.com/
+https://openmv.io/pages/download
+https://www.switch-science.com/products/6560
+https://grabcad.com/library/h7-plus-1
+https://afrel.co.jp/product/spike/prime/
+https://github.com/GianCann/SpikePrimeHub
+https://store.bricklink.com/v2/studio/download.page
 
 # How to build a robot
 **① Build the robot itself**
