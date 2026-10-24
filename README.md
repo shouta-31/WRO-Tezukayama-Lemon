@@ -374,6 +374,8 @@ The identification and analysis of such risks is indispensable, and the accuracy
 
 | When connected | When not connected |
 |---|---|
-| <img width="200" alt="image" src="https://github.com/user-attachments/assets/b694c78a-8bfc-4f37-882d-d0b042cf8365" /> | <img width="200" alt="image" src="https://github.com/user-attachments/assets/c938ffab-042f-4242-b412-324d07418876" /> |
+| <img width="150" alt="image" src="https://github.com/user-attachments/assets/b694c78a-8bfc-4f37-882d-d0b042cf8365" /> | <img width="150" alt="image" src="https://github.com/user-attachments/assets/c938ffab-042f-4242-b412-324d07418876" /> |
+
+* If not connected, press the Connect button or use Ctrl+E.
 
 
