@@ -319,41 +319,47 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
 <img width="1126" height="884" alt="IMG_0424" src="https://github.com/user-attachments/assets/af71fd45-adcf-491f-b119-8c4593d38cc6" />
 
 ### 3.3.1:P control using a gyro sensor
-To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.
+To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.  
 
 <img width="1233" height="184" alt="IMG_0425" src="https://github.com/user-attachments/assets/4c2e0a42-385c-4021-b1c7-db41bc9a1ceb" />
 
-At first, I used PID control with the addition of differentials and integration, but as a result of actually running on the course, it was found that in this competition, control that incorporates differentials and integration instead destabilizes the robot's behavior. In addition, when I measured the lateral brak width at 5m straight, the blur was 7cm in PID control and 5cm in PD control, but the blur was reduced to within 3cm with P control alone, so from the above, the system is simplified and the behavior is stabilized. Finally, "P control" was adopted.
+At first, I used PID control with the addition of differentials and integration, but as a result of actually running on the course, it was found that in this competition, control that incorporates differentials and integration instead destabilizes the robot's behavior. In addition, when I measured the lateral brak width at 5m straight, the blur was 7cm in PID control and 5cm in PD control, but the blur was reduced to within 3cm with P control alone, so from the above, the system is simplified and the behavior is stabilized. Finally, "P control" was adopted.  
 
 ### 3.3.2:Turning method
-The variable in line 14 of image 3 completely eliminates overshoot due to inertia by incorporating a program that rotates at the fastest speed at the start of turning and slows down as it approaches the target value, and achieves accurate turning with an accuracy of within (target value) ±0.5°.
+The variable in line 14 of image 3 completely eliminates overshoot due to inertia by incorporating a program that rotates at the fastest speed at the start of turning and slows down as it approaches the target value, and achieves accurate turning with an accuracy of within (target value) ±0.5°.  
 
 <img width="1242" height="184" alt="IMG_0426" src="https://github.com/user-attachments/assets/24d969de-4038-4685-8ea2-5a6854c2be26" />
 
 ## 3.4:Design considerations for Obstacle Challenge rounds
-In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.
+In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.  
 
 ### 3.4.1:Measuring the distance to traffic signs based on the number of pixel
-To accurately determine the actual physical distance between the robot and the sign, we conducted repeated experiments using the robot, input the following distance data, and obtained the results shown in Table 1 below.
-$
-This test demonstrated that by using the pixel count at a distance of 20–30 cm as a metric, the system can execute precise steering maneuvers to transition into an avoidance state, thereby enabling it to bypass objects without collision.
+To accurately determine the actual physical distance between the robot and the sign, we conducted repeated experiments using the robot, input the following distance data, and obtained the results shown in Table 1 below.  
+$. 
+This test demonstrated that by using the pixel count at a distance of 20–30 cm as a metric, the system can execute precise steering maneuvers to transition into an avoidance state, thereby enabling it to bypass objects without collision.  
 
 ### 3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained
-There are instances where two objects of the same color appear simultaneously within the OpenMV camera's field of view. To address this, the program identifies the most relevant traffic sign from the list of detected color blobs by selecting the one with the largest pixel area—capturing its X-coordinate, Y-coordinate, and pixel count—as shown in the code in Image 5. Furthermore, since the data sent to Pybricks includes the X-coordinate, Y-coordinate, and pixel count for both red and green objects, the program is designed to compare these pixel counts on the Pybricks side (as seen in lines 3 and 13 of the code in Image 6, highlighted in red) and prioritize the object with the larger pixel count. This approach effectively eliminates edge cases where a distant sign might be incorrectly prioritized, which could otherwise lead to a failure to avoid an obstacle located closer to the camera.
-$
-$
+There are instances where two objects of the same color appear simultaneously within the OpenMV camera's field of view. To address this, the program identifies the most relevant traffic sign from the list of detected color blobs by selecting the one with the largest pixel area—capturing its X-coordinate, Y-coordinate, and pixel count—as shown in the code in Image 5. Furthermore, since the data sent to Pybricks includes the X-coordinate, Y-coordinate, and pixel count for both red and green objects, the program is designed to compare these pixel counts on the Pybricks side (as seen in lines 3 and 13 of the code in Image 6, highlighted in red) and prioritize the object with the larger pixel count. This approach effectively eliminates edge cases where a distant sign might be incorrectly prioritized, which could otherwise lead to a failure to avoid an obstacle located closer to the camera.  
+$. 
+$. 
 
 ### 3.4.3:Turning Method
 We reasoned that categorizing our cornering methods would reduce execution time and improve accuracy; consequently, we implemented the following classification system for use when entering corner sections.
-$
-The details of this program are as follows.
-(i) "Green detected"
-In this case, since green has been detected, you should turn as shown in the diagram.
-$
-(ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."
-In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.
-$
+$. 
 
+The details of this program are as follows.  
+
+(i) "Green detected"  
+    In this case, since green has been detected, you should turn as shown in the diagram.  
+$. 
+
+(ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
+     In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
+$. 
+
+The flowchart in this image is as follows.  
+$. 
+The following diagram shows the path taken when this program is executed.  
 
 
 # 4:Systems Thinking
