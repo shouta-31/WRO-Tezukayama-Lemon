@@ -340,23 +340,21 @@ This test demonstrated that by using the pixel count at a distance of 20–30 cm
 
 ### 3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained
 There are instances where two objects of the same color appear simultaneously within the OpenMV camera's field of view. To address this, the program identifies the most relevant traffic sign from the list of detected color blobs by selecting the one with the largest pixel area—capturing its X-coordinate, Y-coordinate, and pixel count—as shown in the code in Image 5. Furthermore, since the data sent to Pybricks includes the X-coordinate, Y-coordinate, and pixel count for both red and green objects, the program is designed to compare these pixel counts on the Pybricks side (as seen in lines 3 and 13 of the code in Image 6, highlighted in red) and prioritize the object with the larger pixel count. This approach effectively eliminates edge cases where a distant sign might be incorrectly prioritized, which could otherwise lead to a failure to avoid an obstacle located closer to the camera.  
-$. 
-$. 
+$
+$
 
 ### 3.4.3:Turning Method
 We reasoned that categorizing our cornering methods would reduce execution time and improve accuracy; consequently, we implemented the following classification system for use when entering corner sections.
 $. 
 
 The details of this program are as follows.  
-
 (i) "Green detected"  
-    In this case, since green has been detected, you should turn as shown in the diagram.  
+&ensp;&ensp;In this case, since green has been detected, you should turn as shown in the diagram.  
 $. 
 
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
-     In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
+&ensp;&ensp;In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method <br>&ensp;&ensp;was adopted to make that determination.  
 $. 
-
 The flowchart in this image is as follows.  
 $. 
 The following diagram shows the path taken when this program is executed.  
