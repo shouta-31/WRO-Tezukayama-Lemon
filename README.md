@@ -333,6 +333,7 @@ The variable in line 14 of image 3 completely eliminates overshoot due to inerti
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.
 
+### 3.4.1. Measuring the distance to traffic signs based on the number of pixel
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
 <img width="1693" height="1181" alt="IMG_0437" src="https://github.com/user-attachments/assets/0feb5de7-3d26-4800-841b-3499fa1e8290" />
