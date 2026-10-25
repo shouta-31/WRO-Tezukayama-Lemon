@@ -333,7 +333,29 @@ The variable in line 14 of image 3 completely eliminates overshoot due to inerti
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.
 
-### 3.4.1. Measuring the distance to traffic signs based on the number of pixel
+### 3.4.1:Measuring the distance to traffic signs based on the number of pixel
+To accurately determine the actual physical distance between the robot and the sign, we conducted repeated experiments using the robot, input the following distance data, and obtained the results shown in Table 1 below.
+$
+This test demonstrated that by using the pixel count at a distance of 20–30 cm as a metric, the system can execute precise steering maneuvers to transition into an avoidance state, thereby enabling it to bypass objects without collision.
+
+### 3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained
+There are instances where two objects of the same color appear simultaneously within the OpenMV camera's field of view. To address this, the program identifies the most relevant traffic sign from the list of detected color blobs by selecting the one with the largest pixel area—capturing its X-coordinate, Y-coordinate, and pixel count—as shown in the code in Image 5. Furthermore, since the data sent to Pybricks includes the X-coordinate, Y-coordinate, and pixel count for both red and green objects, the program is designed to compare these pixel counts on the Pybricks side (as seen in lines 3 and 13 of the code in Image 6, highlighted in red) and prioritize the object with the larger pixel count. This approach effectively eliminates edge cases where a distant sign might be incorrectly prioritized, which could otherwise lead to a failure to avoid an obstacle located closer to the camera.
+$
+$
+
+### 3.4.3:Turning Method
+We reasoned that categorizing our cornering methods would reduce execution time and improve accuracy; consequently, we implemented the following classification system for use when entering corner sections.
+$
+The details of this program are as follows.
+(i) "Green detected"
+In this case, since green has been detected, you should turn as shown in the diagram.
+$
+(ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."
+In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.
+$
+
+
+
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
 <img width="1693" height="1181" alt="IMG_0437" src="https://github.com/user-attachments/assets/0feb5de7-3d26-4800-841b-3499fa1e8290" />
