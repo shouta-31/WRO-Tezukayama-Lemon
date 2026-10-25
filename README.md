@@ -349,11 +349,11 @@ $.
 
 The details of this program are as follows.  
 (i) "Green detected"  
-&ensp;&ensp;In this case, since green has been detected, you should turn as shown in the diagram.  
+>In this case, since green has been detected, you should turn as shown in the diagram.  
 $. 
 
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
-&ensp;&ensp;In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method <br>&ensp;&ensp;was adopted to make that determination.  
+>In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
 $. 
 The flowchart in this image is as follows.  
 $. 
