@@ -402,13 +402,16 @@ Image 12 [The position where the car body should be moved]
 ### 3.5.1:Visualization of mistakes in print statements
 $.
 Image 13 [Confirmation of operation by print text]
+
 As shown in image 13, by including a print statement for each action, you can quickly check which actions are not working, and you can reduce the time it takes to correct. This makes it possible to increase accuracy and speed up by increasing the number of attempts and experimenting and comparing better functions.
 
 ### 3.5.2:How to determine the turning direction
 $.
 Image 14 [Program that determines the direction of turning]
+
 The direction of rotation is determined by the program content in image 14. The following figure shows this as a flowchart.
 $.
+
 In this way, you can correctly determine the direction of turning without making a mistake in the direction of turning.
 
 # 4:Systems Thinking
