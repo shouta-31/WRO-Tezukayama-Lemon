@@ -202,8 +202,12 @@ $$
 **2:Speed ​​calculation formula**
 
 $$
-\text{Speed} = \frac{\pi \times \text{Diameter of rotating body} \times \text{Number of revolutions per minute}}{60}
+v = \frac{\pi \times d \times n}{60}
 $$
+
+* $v = \text{Speed}$
+* $d = \text{Diameter of rotating body}$
+* $n = \text{Number of revolutions per minute}$
 
 **3:Formula for calculating the torque required for the front wheel (frictional moment of resistance)**
 
