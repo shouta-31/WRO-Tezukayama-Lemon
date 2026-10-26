@@ -378,6 +378,7 @@ Since I finished reading the object in front of me when I was spinning, I divide
 When reading traffic signs, there is a possibility that the boxes outside the course are the same color as the traffic signs. At that time, if the pixel number of the traffic sign is smaller than the pixel number of the object outside the field, the object outside the course will also be detected and the obstacle will not be read correctly. Therefore, we have considered the following countermeasures.
 
 $.
+
 Image 10
 
 •Risk: Objects outside the course will be detected.
