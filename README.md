@@ -343,7 +343,8 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
           if Yaw>90:
             back_motor.stop()
             front_motor.run_target (1000, 0)
-            turn_count=turn_count+1print（turn_count/4，"周成功"）
+            turn_count=turn_count+1
+            print（turn_count/4，"周成功"）
             break
 ```
 
