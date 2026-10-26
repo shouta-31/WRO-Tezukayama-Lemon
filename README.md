@@ -365,6 +365,51 @@ The flowchart in this image is as follows.
 $. 
 The following diagram shows the path taken when this program is executed.  
 
+### 3.4.4:How to drive a straight line section
+Since I finished reading the object in front of me when I was spinning, I divided it into the following cases.
+
+(I) "There is a red object in the center or back"
+
+(Ii) "There is a green object in the center or back"
+
+(Iii) "There are no objects in this section (only objects read during rotation)"
+
+(I) (ii) allows the object to be accurately avoided, and (iii) prevents mistakes when turning even in the absence of objects. These make it possible to operate accurately without mistakes even when turning.
+
+### 3.4.5:How to prevent misidentification
+When reading traffic signs, there is a possibility that the boxes outside the course are the same color as the traffic signs. At that time, if the pixel number of the traffic sign is smaller than the pixel number of the object outside the field, the object outside the course will also be detected and the obstacle will not be read correctly. Therefore, we have considered the following countermeasures.
+$.
+Image 10
+•Risk: Objects outside the course will be detected.
+•Countermeasures: As shown in lines 3 and 13 (red frame) of image 10, the value of the y coordinate of the object is not "payload [4] (y coordinate ) < 150" (the range of y coordinate is "0 to 240" and most of the y coordinates of objects outside the course are "y coordinate < 15 If it is based on this because it is not "0", the object is not subject to detection.
+This program reduces the reading of objects outside the course and allows only traffic signs to be detected.
+
+### 3.4.6:Destination setting
+One of the reasons for the high number of mistakes in this robot running was that the position was different depending on the pattern and it was difficult to adjust. Therefore, by setting the destination, it became better to run the same program in all patterns after arriving at the destination, which led to the simplification of the program and the prevention of mistakes.
+For example, in the case of the following corner section program, align it on the same line after turning, and then move the same control to prevent mistakes.
+$.(Program)
+In the place surrounded by this red frame, the following calculation is made using the distance to the left (in the case of a right turn) that was calculated in advance, and aligned on the same line (the position of the figure below).
+
+### 3.4.7:Parking
+$.
+Image 11 [Program from the end of the right turn to the start of parking]
+$.
+Figure 2 [Program details of image 11 (flow chart)]
+$.
+Image 12 [The position where the car body should be moved]
+
+## 3.5:Other ingenuity points
+### 3.5.1:Visualization of mistakes in print statements
+$.
+Image 13 [Confirmation of operation by print text]
+As shown in image 13, by including a print statement for each action, you can quickly check which actions are not working, and you can reduce the time it takes to correct. This makes it possible to increase accuracy and speed up by increasing the number of attempts and experimenting and comparing better functions.
+
+### 3.5.2:How to determine the turning direction
+$.
+Image 14 [Program that determines the direction of turning]
+The direction of rotation is determined by the program content in image 14. The following figure shows this as a flowchart.
+$.
+In this way, you can correctly determine the direction of turning without making a mistake in the direction of turning.
 
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
