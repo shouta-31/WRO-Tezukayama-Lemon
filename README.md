@@ -189,9 +189,27 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
 
 As described in section 2.2, we used the SPIKE Prime Hub; consequently, we limited our motor selection to SPIKE Prime motors and chose specific motors for the drive and steering systems based on the aforementioned considerations. Calculations regarding the robot's weight (650.8 g) and torque—factoring in a safety margin—indicated that the required torque was 7.7 Ncm for the front wheels and 5.4 Ncm for the rear wheels.  
 
- * The formula for calculating torque is "Torque = Applied force x Distance from rotation axis to point of force."  
- The speed calculation formula was "Speed = π x Diameter of rotating body x Number of revolutions per minute / 60"  
- Calculation of the required torque at the front wheels is "Frictional resistance moment = coefficient of friction x weight on      one front wheel x scrub radius."  
+**1:Torque calculation formula**
+
+$$
+T = F_{\text{app}} \times r
+$$
+
+* $T = \text{Torque}$
+* $F_{\text{app}} = \text{Applied force}$
+* $r = \text{Distance from rotation axis to point of force}$
+
+**2:Speed ​​calculation formula**
+
+$$
+\text{Speed} = \frac{\pi \times \text{Diameter of rotating body} \times \text{Number of revolutions per minute}}{60}
+$$
+
+**3:Formula for calculating the torque required for the front wheel (frictional moment of resistance)**
+
+$$
+\text{Frictional resistance moment} = \text{coefficient of friction} \times \text{weight on one front wheel} \times \text{scrub radius}
+$$
 
 ### 2.4.1:Drive Motor
 Since the drive motor only needs to perform simple forward and backward movements, I used the "SPIKE Prime M Motor," which is compact, lightweight, and easy to mount on the robot.  
