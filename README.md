@@ -322,7 +322,30 @@ With these measures, I was able to succeed 9 out of 10 times, and I was able to 
 
 ## 3.3:Design considerations for the Open Challenge rounds
 In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".
-<img width="1126" height="884" alt="IMG_0424" src="https://github.com/user-attachments/assets/af71fd45-adcf-491f-b119-8c4593d38cc6" />
+
+```py
+  print ("Clock_turn")
+  while True:
+    print(right_sensor.distance())
+    print(left_sensor. distance ())
+    Yaw=hub.imu.heading()
+    front_motor.run_target (1000, 0-Yaw)
+    speed=100+eyes.distance()
+    back_motor.run(speed)
+    print (Yaw)
+    if eyes. distance()<450:
+        while True:
+          Yaw=hub.imu.heading()
+          front_motor. run_target (1000,45)
+          speed=(90-Yaw) *11+200
+          back_motor. run(speed)
+          print (Yaw)
+          if Yaw>90:
+            back_motor.stop()
+            front_motor.run_target (1000, 0)
+            turn_count=turn_count+1print（turn_count/4，"周成功"）
+            break
+```
 
 ### 3.3.1:P control using a gyro sensor
 To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.  
