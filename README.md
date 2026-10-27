@@ -212,8 +212,13 @@ $$
 **3:Formula for calculating the torque required for the front wheel (frictional moment of resistance)**
 
 $$
-\text{Frictional resistance moment} = \text{coefficient of friction} \times \text{weight on one front wheel} \times \text{scrub radius}
+M = μ \times P \times \frac{d}{2}
 $$
+
+* $M = \text{Frictional resistance moment}$
+* $μ = \text{coefficient of friction of bearings}$
+* $P = \text{Load on the bearing}$
+* $d = \text{Inner diameter of the bearing}$
 
 ### 2.4.1:Drive Motor
 Since the drive motor only needs to perform simple forward and backward movements, I used the "SPIKE Prime M Motor," which is compact, lightweight, and easy to mount on the robot.  
