@@ -402,17 +402,24 @@ $
 
 ### 3.4.3:Turning Method
 We reasoned that categorizing our cornering methods would reduce execution time and improve accuracy; consequently, we implemented the following classification system for use when entering corner sections.
-$. 
+$  
 The details of this program are as follows.  
 (i) "Green detected"  
 >In this case, since green has been detected, you should turn as shown in the diagram.  
-$. 
+$  
+
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
 >In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
-$. 
+$  
 The flowchart in this image is as follows.  
-$. 
+$  
 The following diagram shows the path taken when this program is executed.  
+
+(iii) Other
+>In this case as well, it is not possible to determine whether the object on the right is "green, red, or absent," so the department determines whether there is a green object during the turn, similar to (ii). Also, when the distance on the left is short, the turning space is on the right and not on the left, so the turning method is different from (ii), as shown in the diagram below.  
+$  
+
+By differentiating the turning method in this way, we were able to reduce the number of obstacles to read in the next section to just one, thus shortening the time required.
 
 ### 3.4.4:How to drive a straight line section
 Since I finished reading the object in front of me when I was spinning, I divided it into the following cases.
