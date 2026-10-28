@@ -417,7 +417,7 @@ $
 The details of this program are as follows.  
 (i) "Green detected"  
 >In this case, since green has been detected, you should turn as shown in the diagram.  
-<img width="137" alt="IMG_0461" src="https://github.com/user-attachments/assets/682058ec-74b8-481f-9c3a-181c14c78f45" />
+<img width="337" alt="IMG_0461" src="https://github.com/user-attachments/assets/682058ec-74b8-481f-9c3a-181c14c78f45" />
 
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
 >In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
