@@ -414,15 +414,15 @@ In the Obstacle Challenge rounds, we believed the key was how to simplify the pr
 ### 3.4.1:Measuring the distance to traffic signs based on the number of pixel
 In order to accurately grasp the actual physical distance between the robot and the sign, we actually repeated the experiment using the robot, entered the following distance data, and obtained the results in Table 1 below.  
 $. 
+
 This test made it possible to avoid it without hitting an object, saying, "by using the number of pixels 20 to 30 cm as an indicator, the steering wheel is accurately cut and transitioned to the avoidance state".  
 
 ### 3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained
 Two of the same colors may be mixed into the field of view of the OpenMV camera. At that time, the program detects the nearest traffic sign from the detected color bloblist, and the blob with the largest pixel area is processed by the program in image 4, and the traffic sign's "X coordinate, Y coordinate, pi I tried to detect the "xel number". In addition, the information sent to pybricks is "red X coordinates, Y coordinates, number of pixels, green X coordinates, Y coordinates, pixels number", so even if different colors are loaded at the same time, the ratio of the number of pixels on the pybricks side, as shown in the red frame in image 5 I made a program to compare and process the value with a large number of pixels. These completely prevented the edge case from mistakenly detecting distant signs and not avoiding obstacles in front of them.  
 <img width="1317" height="218" alt="IMG_0462" src="https://github.com/user-attachments/assets/e553c7fd-1dc7-49f6-895d-678325cc13ea" />
-
 Image 4 [Countermeasures in openMV]
-<img width="1195" height="107" alt="IMG_0463" src="https://github.com/user-attachments/assets/903ac714-2f6a-4cd9-a3c2-7987eb75ec1f" />
 
+<img width="1195" height="107" alt="IMG_0463" src="https://github.com/user-attachments/assets/903ac714-2f6a-4cd9-a3c2-7987eb75ec1f" />
 Image 5 [Countermeasures with pybricks]
 
 ### 3.4.3:Turning Method
