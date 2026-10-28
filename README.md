@@ -510,7 +510,7 @@ As shown in image 13, by including a print statement for each action, you can qu
 
 ### ["Subsystem Diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes/Subsystem%20Diagram.pdf)
 
-We created a subsystem diagram that shows the interconnection of the above drive, sensor, power supply, and processing to make it easier to see where the impact will be when remaking our robot subsystem. And from this figure, it can be seen that various subsystems of the sensor system are used, and the number of lines of the program in the camera is reduced by using Open MV to reduce the running time of the program even a little. In addition, the Spike hub's load has been reduced and the control cycle has been improved.(See Section [3.1.2](#312about-openmv)) for details.)  
+To better understand the potential impact of modifying our robot's subsystems, we created a diagram illustrating the interrelationships between the drive, sensor, power, and processing subsystems. This diagram revealed that we were utilizing a variety of sensor-related subsystems; consequently, we opted to use OpenMV to handle some of the processing—thereby reducing the amount of code running on the camera itself. This change also lessened the load on the Spike hub, resulting in an improved control cycle frequency.(See Section [3.1.2](#312about-openmv)) for details.)  
 Furthermore, this diagram allows others to easily understand the interrelationships and interactions among our robot’s subsystems at a glance.  
 
 ## 4.2:Vehicle Restrictions
