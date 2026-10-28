@@ -197,7 +197,7 @@ Furthermore, based on the SPIKE Prime battery used in this instance [Output volt
 
 <p align="center"><b>[SPIKE Prime motor data]</b></p>
 
-As described in section [2.2](#22robot-structure-and-actuation), we used the SPIKE Prime Hub; consequently, we limited our motor selection to SPIKE Prime motors and chose specific motors for the drive and steering systems based on the aforementioned considerations. Calculations regarding the robot's weight (650.8 g) and torque—factoring in a safety margin—indicated that the required torque was 7.7 Ncm for the front wheels and 5.4 Ncm for the rear wheels.  
+As described in section [2.2](#22robot-structure-and-actuation), we used the SPIKE Prime Hub; consequently, we limited our motor selection to SPIKE Prime motors and chose specific motors for the drive and steering systems based on the aforementioned considerations. Calculations regarding the robot's weight (650.8 g) and torque—factoring in a safety margin—indicated that the required torque was 6.72 Ncm for the front wheels and 2.1 Ncm for the rear wheels.  
 
 **1:Torque calculation formula**
 
@@ -234,7 +234,7 @@ $$
 Since the drive motor only needs to perform simple forward and backward movements, I used the "SPIKE Prime M Motor," which is compact, lightweight, and easy to mount on the robot.  
 
 ### 2.4.2:Steering Motor
-Since the weight of the robot rests on the steering mechanism, a motor with a torque greater than 7.7 Ncm was required to operate it. For this reason, we used the "SPIKE Prime L-motor," which offers high torque and minimal speed reduction under load.  
+Since the weight of the robot rests on the steering mechanism, a motor with a torque greater than 6.72 Ncm was required to operate it. For this reason, we used the "SPIKE Prime L-motor," which offers high torque and minimal speed reduction under load.  
 
 ## 2.5:Front-wheel steering
 <div align="center"><img width="828" alt="image" src="https://github.com/user-attachments/assets/eea00792-96e5-41ae-acad-dc8d2ea9165d" /></div>
