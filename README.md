@@ -375,17 +375,28 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
             break
 ```
 
+<p align="center"><b>Image 3[Program for P control (proportionality constant=1) and 90° turn(clockwise) in Open
+Challenge rounds]</b></p>
+
 ### 3.3.1:P control using a gyro sensor
 To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.  
 
-<img width="1233" height="184" alt="IMG_0425" src="https://github.com/user-attachments/assets/4c2e0a42-385c-4021-b1c7-db41bc9a1ceb" />
+```py
+    front_motor.run_target(1000,0-Yaw)
+```
+
+<p align="center"><b>[The program on line 6 of Image 3]</b></p>
 
 At first, I used PID control with the addition of differentials and integration, but as a result of actually running on the course, it was found that in this competition, control that incorporates differentials and integration instead destabilizes the robot's behavior. In addition, when I measured the lateral brak width at 5m straight, the blur was 7cm in PID control and 5cm in PD control, but the blur was reduced to within 3cm with P control alone, so from the above, the system is simplified and the behavior is stabilized. Finally, "P control" was adopted.  
 
 ### 3.3.2:Turning method
 The variable in line 14 of image 3 completely eliminates overshoot due to inertia by incorporating a program that rotates at the fastest speed at the start of turning and slows down as it approaches the target value, and achieves accurate turning with an accuracy of within (target value) ±0.5°.  
 
-<img width="1242" height="184" alt="IMG_0426" src="https://github.com/user-attachments/assets/24d969de-4038-4685-8ea2-5a6854c2be26" />
+```py
+        speed=(90-Yaw)*11+200
+```
+
+<p align="center"><b>[The program on line 4 of Image 3]</b></p>
 
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.  
