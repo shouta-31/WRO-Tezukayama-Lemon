@@ -72,7 +72,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
     - [3.3.2:Turning method](#332turning-method)
   - [3.4:Design considerations for Obstacle Challenge rounds](#34design-considerations-for-obstacle-challenge-rounds)
     - [3.4.1:Measuring the distance to traffic signs based on the number of pixel](#341measuring-the-distance-to-traffic-signs-based-on-the-number-of-pixel)
-    - [3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained](#342a-program-that-reads-nearby-traffic-signs-an-transmits-the-values-obtained)
+    - [3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained](#342a-program-that-reads-nearby-traffic-signs-and-transmits-the-values-obtained)
     - [3.4.3:Turning Method](#343turning-method)
     - [3.4.4:How to drive a straight line section](#344how-to-drive-a-straight-line-section)
     - [3.4.5:How to prevent misidentification](#345how-to-prevent-misidentification)
