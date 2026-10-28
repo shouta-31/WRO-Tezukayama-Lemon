@@ -413,7 +413,19 @@ In the Obstacle Challenge rounds, we believed the key was how to simplify the pr
 
 ### 3.4.1:Measuring the distance to traffic signs based on the number of pixel
 In order to accurately grasp the actual physical distance between the robot and the sign, we actually repeated the experiment using the robot, entered the following distance data, and obtained the results in Table 1 below.  
-$. 
+
+<div align="center">
+  
+ | distance(cm) | Area (number of pixels) |
+ |---|---|
+ | 10 | 3.0*10<sup>4</sup> |
+ | 20 | 1.1*10<sup>4</sup> |
+ | 30 | 5.1*10<sup>3</sup> |
+ | 40 | 2.9*10<sup>3</sup> |
+ | 50 | 2.0*10<sup>3</sup> |
+
+</div>
+<p align="center"><b>Table 1 [Area at each distance (rounded to two significant figures due to numerical uncertainty)]</b></p>
 
 This test made it possible to avoid it without hitting an object, saying, "by using the number of pixels 20 to 30 cm as an indicator, the steering wheel is accurately cut and transitioned to the avoidance state".  
 
