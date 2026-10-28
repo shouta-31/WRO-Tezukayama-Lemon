@@ -364,22 +364,22 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
   print ("Clock_turn")
   while True:
     print(right_sensor.distance())
-    print(left_sensor. distance ())
+    print(left_sensor.distance ())
     Yaw=hub.imu.heading()
-    front_motor.run_target (1000, 0-Yaw)
+    front_motor.run_target (1000,0-Yaw)
     speed=100+eyes.distance()
     back_motor.run(speed)
-    print (Yaw)
+    print(Yaw)
     if eyes. distance()<450:
         while True:
           Yaw=hub.imu.heading()
-          front_motor. run_target (1000,45)
-          speed=(90-Yaw) *11+200
-          back_motor. run(speed)
-          print (Yaw)
+          front_motor.run_target(1000,45)
+          speed=(90-Yaw)*11+200
+          back_motor.run(speed)
+          print(Yaw)
           if Yaw>90:
             back_motor.stop()
-            front_motor.run_target (1000, 0)
+            front_motor.run_target(1000, 0)
             turn_count=turn_count+1
             print（turn_count/4，"周成功"）
             break
