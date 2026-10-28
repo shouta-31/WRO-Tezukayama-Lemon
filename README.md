@@ -108,7 +108,6 @@ Also, as a strategy, in the parking lotChoosing a parking spotI did that. I will
 
 ## 1.3:Testing, Tuning, and Trade-offs
 To complete the mission more accurately, we consistently aimed to score at least 80% on each challenge and repeatedly ran test workflows such as experiments to measure the distance between the robot and objects to fine-tune our system. We also made trade-offs regarding parts and programming based on these tests.
- 
 The table below shows the scores achieved within the time limit during the Open Challenge rounds (open) and Obstacle Challenge rounds (obstacle) across 10 test runs.
 <img width="1184" height="792" alt="IMG_0440" src="https://github.com/user-attachments/assets/af8019d3-96aa-457c-8e61-a6926b966361" />
 
@@ -461,13 +460,23 @@ By differentiating the turning method in this way, we were able to reduce the nu
 ### 3.4.4:How to drive a straight line section
 Since I finished reading the object in front of me when I was spinning, I divided it into the following cases.
 
-(I) "There is a red object in the center or back"
+(I) "There are no objects in this section at the moment (only objects read when turning)"
+＄
 
-(Ii) "There is a green object in the center or back"
+At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in image 7 is as follows.
+(Flow chart)
+Also, if you run this program, it will work as shown in the figure below.
 
-(Iii) "There are no objects in this section (only objects read during rotation)"
+(Ii) "There is a red object in the center or back"
+＄
 
-(I) (ii) allows the object to be accurately avoided, and (iii) prevents mistakes when turning even in the absence of objects. These make it possible to operate accurately without mistakes even when turning.
+>At this time, considering the delay of the reaction time until the program starts in order for the red distance to approach 30 cm, we try to track based on the value of the pixel number 3000, which is 40 cm in front of the distance (see 3.4.1). In addition, if the previous distance is closer than 40 cm, there is a possibility of hitting the object, so the previous distance was reduced to 40 cm, and then the object was tracked. In addition, after avoiding the red object, I created a program to move the car body to the position with a yaw angle of 0 in order to go straight, and tested it, but it saved time and accurately avoided objects in the corner section. After turning right to avoid red, read the red or green object or turn left until the yaw angle is 0 (in fact, 10 is used to shift from the center due to the delay in the processing speed of the robot).
+
+(Iii) "There is a green object in the center or back"
+＄
+
+In the case of green, like red, if it is too close, distance the robot from the object, then track the green object, turn left if the distance in front of you is 40 cm, read the red or green object or the yaw angle is greater than 0 I made it a program that turns right until (as in the case of (iii)).
+(Ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
 ### 3.4.5:How to prevent misidentification
 When reading traffic signs, there is a possibility that the boxes outside the course are the same color as the traffic signs. At that time, if the pixel number of the traffic sign is smaller than the pixel number of the object outside the field, the object outside the course will also be detected and the obstacle will not be read correctly. Therefore, we have considered the following countermeasures.
