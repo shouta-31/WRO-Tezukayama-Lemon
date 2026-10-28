@@ -406,7 +406,7 @@ The variable in line 14 of image 3 completely eliminates overshoot due to inerti
         speed=(90-Yaw)*11+200
 ```
 
-<p align="center"><b>[The program on line 4 of Image 3]</b></p>
+<p align="center"><b>[The program on line 14 of Image 3]</b></p>
 
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.  
