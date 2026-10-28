@@ -463,7 +463,7 @@ Since I finished reading the object in front of me when I was spinning, I divide
 (I) "There are no objects in this section at the moment (only objects read when turning)"
 ＄
 
-At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in image 7 is as follows.
+>At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in image 7 is as follows.
 (Flow chart)
 Also, if you run this program, it will work as shown in the figure below.
 
@@ -475,7 +475,7 @@ Also, if you run this program, it will work as shown in the figure below.
 (Iii) "There is a green object in the center or back"
 ＄
 
-In the case of green, like red, if it is too close, distance the robot from the object, then track the green object, turn left if the distance in front of you is 40 cm, read the red or green object or the yaw angle is greater than 0 I made it a program that turns right until (as in the case of (iii)).
+>In the case of green, like red, if it is too close, distance the robot from the object, then track the green object, turn left if the distance in front of you is 40 cm, read the red or green object or the yaw angle is greater than 0 I made it a program that turns right until (as in the case of (iii)).
 (Ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
 ### 3.4.5:How to prevent misidentification
