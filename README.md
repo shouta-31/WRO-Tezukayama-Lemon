@@ -360,12 +360,12 @@ With these measures, I was able to succeed 9 out of 10 times, and I was able to 
 In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".
 
 ```py
-  print ("Clock_turn")
+  print("Clock_turn")
   while True:
     print(right_sensor.distance())
-    print(left_sensor.distance ())
+    print(left_sensor.distance())
     Yaw=hub.imu.heading()
-    front_motor.run_target (1000,0-Yaw)
+    front_motor.run_target(1000,0-Yaw)
     speed=100+eyes.distance()
     back_motor.run(speed)
     print(Yaw)
@@ -378,7 +378,7 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
           print(Yaw)
           if Yaw>90:
             back_motor.stop()
-            front_motor.run_target(1000, 0)
+            front_motor.run_target(1000,0)
             turn_count=turn_count+1
             print（turn_count/4，"周成功"）
             break
@@ -462,7 +462,8 @@ Since I finished reading the object in front of me when I was spinning, I divide
 
 (i) "There are no objects in this section at the moment (only objects read when turning)"
 
-＄
+```py
+```
 
 >At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in image 7 is as follows.
 (Flow chart)
