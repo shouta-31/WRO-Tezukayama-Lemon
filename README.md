@@ -483,15 +483,16 @@ Also, if you run this program, it will work as shown in the figure below.
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
 ### 3.4.5:How to prevent misidentification
-When reading traffic signs, there is a possibility that the boxes outside the course are the same color as the traffic signs. At that time, if the pixel number of the traffic sign is smaller than the pixel number of the object outside the field, the object outside the course will also be detected and the obstacle will not be read correctly. Therefore, we have considered the following countermeasures.
+When reading traffic signs, objects outside the course may be the same color as traffic signs. At that time, if it is subject to detection, the obstacle cannot be read correctly. Therefore, we have considered the following countermeasures.
 
 $.
 
 Image 10
 
 •Risk: Objects outside the course will be detected.
-•Countermeasures: As shown in lines 3 and 13 (red frame) of image 10, the value of the y coordinate of the object is not "payload [4] (y coordinate ) < 150" (the range of y coordinate is "0 to 240" and most of the y coordinates of objects outside the course are "y coordinate < 15 If it is based on this because it is not "0", the object is not subject to detection.
-This program reduces the reading of objects outside the course and allows only traffic signs to be detected.
+
+•Countermeasures: As an example, the pixel number of the object is less than 500, as shown in image 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
+This program reduces the reading of objects outside the course and allows only traffic signs to be detected
 
 ### 3.4.6:Destination setting
 One of the reasons for the high number of mistakes in this robot running was that the position was different depending on the pattern and it was difficult to adjust. Therefore, by setting the destination, it became better to run the same program in all patterns after arriving at the destination, which led to the simplification of the program and the prevention of mistakes.
@@ -499,7 +500,7 @@ For example, in the case of the following corner section program, align it on th
 
 $.(Program)
 
-In the place surrounded by this red frame, the following calculation is made using the distance to the left (in the case of a right turn) that was calculated in advance, and aligned on the same line (the position of the figure below).
+In the place surrounded by this red frame, the left distance (in the case of right turn) that was calculated in advance is used, and it is aligned on the same line (position in the figure below).
 
 ### 3.4.7:Parking
 
