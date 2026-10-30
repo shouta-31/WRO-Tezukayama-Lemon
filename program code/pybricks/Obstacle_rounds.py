@@ -1148,6 +1148,7 @@ def last_right():
         front_motor.run_target(1000,0)
         timer.reset()
         while True:
+            Yaw=hub.imu.heading()
             front_motor.run_target(1000,(0-Yaw))
             back_motor.run(1000)
             if timer.time()>1000:
@@ -1165,6 +1166,7 @@ def last_right():
         front_motor.run_target(1000,0)
         timer.reset()
         while True:
+            Yaw=hub.imu.heading()
             front_motor.run_target(1000,(0-Yaw))
             back_motor.run(1000)
             if timer.time()>800:
