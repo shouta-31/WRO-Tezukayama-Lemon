@@ -462,6 +462,133 @@ Since I finished reading the object in front of me when I was spinning, I divide
 (i) "There are no objects in this section at the moment (only objects read when turning)"
 
 ```py
+if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:
+    while True:#前の距離が85cmまで直進
+        payload=p.call('blob')
+        hub.light.on(Color.BLUE)
+        Yaw=hub.imu.heading()
+        direction=(0-Yaw)*0.8
+        if direction>-30:
+            direction=30
+        if direction<=-30:
+            direction=-30
+        front_motor.run_target(1000,direction)
+        back_motor.run(1000)
+        print("not_found")
+        print(payload)
+        if obstacle==1 and eyes.distance()<850:
+            payload=p.call('blob')
+            print(payload)
+            print(eyes.distance())
+            break
+        elif obstaclel=1 and (eyes.distance()<850 or payload[2]<500 or payload[5]<500):
+            payload-p.call('blob')
+            print(payload)
+            print(eyes.distance())
+            break
+        elif left_sensor.distance()<100:#左の距離が近いときに中央移動
+            timer.reset()
+            front_motor.run_target (1000,35)
+            while True:
+                hub.light.off()
+                front_motor.run_target(1000,35)
+                back_motor.run(1000)
+                if timer.time()>700:
+                    break
+            while True:
+                payload-p.call('blob')
+                print(payload)
+                Yaw=hub.imu.heading()
+                if Yaw>20:
+                    Yaw=65
+                back_motor.run((Yaw-5)*15+150)
+                front_motor.run_target (1000,-35)
+                if Yaw<0:
+                    front_motor.run_target(1000,-35)
+                    break
+        elif right_sensor.distance()<100:#右の距離が近いときに中央移動
+            timer.reset()
+            front_motor.run_target(1000,-35)
+            while True:
+                hub.light.off()
+                front_motor.run_target(1000,-35)
+                back_motor.run(1000)
+                if timer.time()>700:
+                    break
+            while True:
+                payload=p.call('blob')
+                print(payload)
+                Yaw=hub.imu.heading()
+                if Yaw<-20:
+                    Yaw=-65
+                back_motor.run((Yaw+5)*-15+150)
+                front_motor.run_target(1000,35)
+                if Yaw>0:
+                    front_motor.run_target (1000,0)
+                    break
+    while True:#前の距離がg5cmまで直進
+        payload=p.call('blob')
+        hub.light.on(Color.BLUE)
+        Yaw=hub.imu.heading()
+        direction=(0-Yaw)*0.8
+        if direction>-30:
+            direction=30
+        if direction<=-30:
+            direction=-30
+        front_motor.run_target(1000,direction)
+        back_motor.run(1000)
+        print("not_found")
+        print(payload)
+        if obstacle==1 and eyes.distance()<850:
+            payload=p.call('blob')
+            print(payload)
+            print(eyes.distance())
+            break
+        elif obstaclel=1 and (eyes.distance()<850 or payload[2]<500 or payload[5]<500):
+            payload-p.call('blob')
+            print(payload)
+            print(eyes.distance())
+            break
+        elif left_sensor.distance()<100:#左の距離が近いときに中央移動
+            timer.reset()
+            front_motor.run_target (1000,35)
+            while True:
+                hub.light.off()
+                front_motor.run_target(1000,35)
+                back_motor.run(1000)
+                if timer.time()>700:
+                    break
+            while True:
+                payload-p.call('blob')
+                print(payload)
+                Yaw=hub.imu.heading()
+                if Yaw>20:
+                    Yaw=65
+                back_motor.run((Yaw-5)*15+150)
+                front_motor.run_target (1000,-35)
+                if Yaw<0:
+                    front_motor.run_target(1000,-35)
+                    break
+        elif right_sensor.distance()<100:#右の距離が近いときに中央移動
+            timer.reset()
+            front_motor.run_target(1000,-35)
+            while True:
+                hub.light.off()
+                front_motor.run_target(1000,-35)
+                back_motor.run(1000)
+                if timer.time()>700:
+                    break
+            while True:
+                payload=p.call('blob')
+                print(payload)
+                Yaw=hub.imu.heading()
+                if Yaw<-20:
+                    Yaw=-65
+                back_motor.run((Yaw+5)*-15+150)
+                front_motor.run_target(1000,35)
+                if Yaw>0:
+                    front_motor.run_target (1000,0)
+                    break
 ```
 
 >At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in image 7 is as follows.
@@ -470,7 +597,63 @@ Also, if you run this program, it will work as shown in the figure below.
 
 (ii) "There is a red object in the center or back"
 
-＄
+```py
+if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
+    print(eyes.distance())
+    print(p.call('blob'))
+    payload=p.call('blob')
+    if payload[2]>3000:
+        print("近い")
+        while True:
+            payload=p.call('blob')
+            hub.light.on(Color.RED)
+            front_motor.run_target(1000,0)
+            back_motor.run(-1000)
+            if payload[2]<3000:
+                break
+    while True:#赤回避
+        payload=p.call('blob')
+        hub.light.on(Color.RED)
+        direction=(payload[0]-160)*0.15#P制御
+        if direction>=30:
+            direction=30
+        if direction<=-30:
+            direction=-30
+        front_motor.run_target(1000, direction)
+        back_motor.run(1000)
+        if payload[2]>20000 or payload[2]<0:
+            front_motor.run_target(1000,0)
+            back_motor.run(-200)
+        if payload[2]>=3000:#赤に近づいた
+            timer.reset()
+            front_motor.run_target(1000,35)
+            while True:#
+                hub.light.off()
+                front_motor.run_target(1000,35)
+                back_motor.run(1000)
+                if timer.time()>600:
+                    front_motor.run_target(1000,-35)
+                    break
+        while True:#yaw<10まで左に曲がる途中でコーナーセクション
+            payload=p.call('blob')
+            print(payload)
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,-35)
+            if Yaw>30:
+                Yaw=70
+            back_motor.run((Yaw-10)*15+100)
+            if payload[2]>200:
+                global red_or_green
+                hub.light.on(Color.RED)
+                red_or_green=1
+            elif payload[5]>200:
+                global red_or_green
+                hub.light.on(Color.GREEN)
+                red_or_green=2
+            if Yaw<10:
+                break
+        break
+```
 
 >At this time, considering the delay of the reaction time until the program starts in order for the red distance to approach 30 cm, we try to track based on the value of the pixel number 3000, which is 40 cm in front of the distance (see 3.4.1). In addition, if the previous distance is closer than 40 cm, there is a possibility of hitting the object, so the previous distance was reduced to 40 cm, and then the object was tracked. In addition, after avoiding the red object, I created a program to move the car body to the position with a yaw angle of 0 in order to go straight, and tested it, but it saved time and accurately avoided objects in the corner section. After turning right to avoid red, read the red or green object or turn left until the yaw angle is 0 (in fact, 10 is used to shift from the center due to the delay in the processing speed of the robot).
 
