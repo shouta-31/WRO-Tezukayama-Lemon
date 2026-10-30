@@ -349,14 +349,14 @@ As a communication method, the main program in the Open MV receives data from th
 ## 3.2:Gyro
 We tried to accurately control the course of the aircraft using the "yo angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" that occurs in the gyro sensor, only 4 out of 10 times succeeded. Therefore, we took measures based on the following iteration cycle.
 
-• Risk "Drift Error" : The angle changes slightly when turning, and in the latter half of the competition straight line accuracy decreases.
+* Risk "Drift Error" : The angle changes slightly when turning, and in the latter half of the competition straight line accuracy decreases.
 
-• Countermeasure : Incorporate code to automatically reset the gyroscope's current angle to 0° in software when the robot is completely stationary (such as immediately after starting or after detecting a wall).
+* Countermeasure : Incorporate code to automatically reset the gyroscope's current angle to 0° in software when the robot is completely stationary (such as immediately after starting or after detecting a wall).
 
-With these measures, I was able to succeed 9 out of 10 times, and I was able to increase the success rate by reducing the trajectory of the aircraft in the gyro.
+With these measures, I was able to succeed 9 out of 10 times, and I was able to increase the success rate by reducing the trajectory of the aircraft in the gyro.  
 
 ## 3.3:Design considerations for the Open Challenge rounds
-In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".
+In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".  
 
 ```py
   print("Clock_turn")
@@ -383,28 +383,27 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
             break
 ```
 
-<p align="center"><b>Image 3[Program for P control (proportionality constant=1) and 90° turn(clockwise) in Open
+<p align="center"><b>Code 1[Program for P control (proportionality constant=1) and 90° turn(clockwise) in Open
 Challenge rounds]</b></p>
 
 ### 3.3.1:P control using a gyro sensor
-To automatically correct uneven friction on the tires during straight-line driving, proportional control was introduced, which determines the steering amount based on the error between the target yaw angle and the current gyro sensor value, using the program shown in line 6 of Image 3.  
+To automatically compensate for uneven friction acting on the tires during straight-line travel, we implemented proportional control—defined in line 6 of the code in "Code 1"—which determines the steering angle based on the error between the target yaw angle and the current value from the gyro sensor.  
 
 ```py
     front_motor.run_target(1000,0-Yaw)
 ```
 
-<p align="center"><b>[The program on line 6 of Image 3]</b></p>
+<p align="center"><b>[Line 6 of Code1]</b></p>
 
-At first, I used PID control with the addition of differentials and integration, but as a result of actually running on the course, it was found that in this competition, control that incorporates differentials and integration instead destabilizes the robot's behavior. In addition, when I measured the lateral brak width at 5m straight, the blur was 7cm in PID control and 5cm in PD control, but the blur was reduced to within 3cm with P control alone, so from the above, the system is simplified and the behavior is stabilized. Finally, "P control" was adopted.  
+Initially, we employed PID control—incorporating both derivative and integral terms—but testing on the course revealed that these components actually made the robot’s behavior less stable. Furthermore, when measuring lateral deviation over a 5-meter straight run, we found a deviation of 7 cm with PID control and 5 cm with PD control; in contrast, using P control alone kept the deviation within 3 cm. Consequently, we opted for P control to simplify the system and ensure more stable performance.  
 
 ### 3.3.2:Turning method
-The variable in line 14 of image 3 completely eliminates overshoot due to inertia by incorporating a program that rotates at the fastest speed at the start of turning and slows down as it approaches the target value, and achieves accurate turning with an accuracy of within (target value) ±0.5°.  
-
+By utilizing the variable on line 14 of Code 1, we implemented a program that initiates rotation at maximum speed and decelerates as the target value is approached; this completely eliminates overshoot caused by inertia, enabling precise rotation with an accuracy of within ±0.5° of the target value.
 ```py
         speed=(90-Yaw)*11+200
 ```
 
-<p align="center"><b>[The program on line 14 of Image 3]</b></p>
+<p align="center"><b>[Line 14 of Code 1]</b></p>
 
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.  
