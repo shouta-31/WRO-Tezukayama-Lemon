@@ -479,7 +479,7 @@ Also, if you run this program, it will work as shown in the figure below.
 
 ＄
 
->In the case of green, like red, if it is too close, distance the robot from the object, then track the green object, turn left if the distance in front of you is 40 cm, read the red or green object or the yaw angle is greater than 0 I made it a program that turns right until (as in the case of (iii)).
+>In the case of green, like red, if it is too close, the robot is distanced from the object, then track the green object, turn left if the distance is 40 cm in front, read the red or green object, or turn right until the yaw angle is greater than 0 (as in the case of (iii)).
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
 ### 3.4.5:How to prevent misidentification
