@@ -359,6 +359,7 @@ With these measures, I was able to succeed 9 out of 10 times, and I was able to 
 In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".  
 
 <details>
+<summary><b>Code 1[Program for P control (proportionality constant=1) and 90° turn(clockwise) in Open Challenge rounds]</b></summary>
 
 ```py
   print("Clock_turn")
