@@ -660,7 +660,67 @@ if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
 
 (iii) "There is a green object in the center or back"
 
-＄
+```py
+elif payload[2]<payload[5] and payload[5]>400 and obstacle!=1:#緑
+    print(eyes.distance())
+    print(p.call('blob'))
+    if payload[2]>3000:
+        print("近い")
+        while True:
+            payload=p.call('blob')
+            hub.light.on(Color.GREEN)
+            front_motor.run_target(1000,0)
+            back_motor.run(-1000)
+            if payload[5]<2000:
+                break
+    while True:#綠回避
+        payload=p.call('blob')
+        print(payload)
+        hub.light.on(Color.GREEN)
+        direction=(payload[3]-160)*0.15#P制御
+        if direction>=30:
+            direction=30
+        if direction<=-30:
+            direction=-30
+        front_motor.run_target(1000, direction)
+        back_motor.run(1000)
+        if payload[5]>20000 or payload[5]<0:
+            front_motor.run_target(1000,0)
+            back_motor.run(-200)
+        if payload[5]>=3000:#緑に近づいた
+            timer.reset()
+            front_motor.run_target(1000,-35)
+            while True:#
+                hub.light.off()
+                front_motor.run_target(1000,-35)
+                back_motor.run(1000)
+                if timer.time()>500:
+                    front_motor.run_target(1000,35)
+                    break
+            while True:#yaw>-10まで右に曲がる。途中読み取り
+                Yaw=hub.imu.heading()
+                payload=p.call('blob')
+                print(payload)
+                front_motor.run_target(1000,35)
+                if Yaw<-30:
+                    Yaw=-70
+                back_motor.run((Yaw+10)*-15+100)
+                if payload[2]>200:
+                    global red_or_green
+                    hub.light.on(Color.RED)
+                    red_or_green=1
+                elif payload[5]>200:
+                    global red_or_green
+                    hub.light.on(Color.GREEN)
+                    red_or_green=2
+                if Yaw>-10:
+                    break
+            break
+payload=p.call('blob')
+print(eyes.distance())
+print(payload)
+print("red_or_green:",red_or_green)
+```
 
 >In the case of green, like red, if it is too close, the robot is distanced from the object, then track the green object, turn left if the distance is 40 cm in front, read the red or green object, or turn right until the yaw angle is greater than 0 (as in the case of (iii)).
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
