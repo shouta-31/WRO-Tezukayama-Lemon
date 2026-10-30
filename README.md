@@ -247,7 +247,7 @@ Additionally, by installing a physical stopper on the steering assembly, we elim
 ###  2.6.1:Front wheel
 <img width="380" alt="image" src="https://github.com/user-attachments/assets/7b3f6dec-f834-4c38-91df-4e157a5d072f" />
 
-For the front wheels, I used tires with design ID 55976, a diameter of 56 mm, and a width of 26 mm. Although the width is 26 mm—making them nearly the same size as the rear tires—I chose them because they have a smaller contact area with the ground; this reduces friction, making it easier to steer the vehicle left and right.  
+For the front wheels, I used tires with design ID 55976, measuring 56 mm in diameter and 26 mm in width. Although their 26 mm width is nearly identical to that of the rear tires, I chose them because they have a smaller contact patch with the ground; this reduces friction, making it easier to steer the vehicle.
 
 ### 2.6.2:Rear Wheel
 <img width="380" alt="IMG_0429" src="https://github.com/user-attachments/assets/35e5861f-a23f-4bdc-8023-6a5007324925" />
@@ -767,17 +767,17 @@ As shown in image 13, by including a print statement for each action, you can qu
 
 ### ["Subsystem Diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes/Subsystem%20Diagram.pdf)
 
-To better understand the potential impact of modifying our robot's subsystems, we created a diagram illustrating the interrelationships between the drive, sensor, power, and processing subsystems. This diagram revealed that we were utilizing a variety of sensor-related subsystems; consequently, we opted to use OpenMV to handle some of the processing—thereby reducing the amount of code running on the camera itself. This change also lessened the load on the Spike hub, resulting in an improved control cycle frequency.(See Section [3.1.2](#312about-openmv)) for details.)  
-Furthermore, this diagram allows others to easily understand the interrelationships and interactions among our robot’s subsystems at a glance.  
+To make it easier to identify the potential impact of modifying any of our robot’s subsystems, we created a diagram illustrating the interrelationships between the drive, sensor, power, and processing subsystems. This diagram revealed that we were utilizing a variety of sensor-related subsystems; consequently, we opted to incorporate OpenMV to handle some of the processing—thereby reducing the amount of code that needed to run on the main controller. This change also lessened the load on the Spike hub, resulting in a faster control cycle. (For further details, please refer to [3.1.2](#312about-openmv).)
+Furthermore, this diagram allows others to quickly grasp the interrelationships and interactions among our robot’s subsystems at a single glance.
 
 ## 4.2:Vehicle Restrictions
-Because the weight limit at the competition was 1.5 kg, the number of things on the robot was limited. Although the robot originally made did not exceed the restrictions, it weighed 689.2g. Therefore, the time to capture was limited, but it was a little longer. Therefore, by reducing the number of parts used for fixing by lowering the height of the robot, the weight of the robot can be 650.8g, and the capture time can be reduced by an average of 15 seconds, making it possible to capture quickly and accurately. I did.
+The competition imposed a 1.5 kg weight limit, which restricted the components that could be mounted on the robot. Although our initial design met this requirement, it weighed 689.2 g; consequently, while our completion times were within the allowed limits, they were somewhat longer than desired. By lowering the robot’s profile, we were able to reduce the number of parts used for securing components, bringing the total weight down to 650.8 g. This adjustment improved our average completion time by 15 seconds, enabling faster and more precise performance.
 
 ## 4.3:Risk Identification and Mitigation Measures
 <img width="1064" height="601" alt="IMG_0441" src="https://github.com/user-attachments/assets/d8ee7cc0-894b-4410-b92d-e2a279366637" />
 　　　　　　　　　[A place where everyone can check the corrections in Japanese]
 
-The identification and analysis of such risks is indispensable, and the accuracy of the robot is improved by everyone grasping the risks. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve with the program with everyone.  
+By consistently identifying and analyzing such risks—and ensuring that everyone is aware of them—we are able to improve the precision of our robots. Furthermore, by sharing the workload for challenges that are difficult to resolve through programming alone, we reduce the burden on our programmers.
 
 # 5:Reference materials
 https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h
