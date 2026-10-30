@@ -388,9 +388,6 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
 
 </details>
 
-<p align="center"><b>Code 1[Program for P control (proportionality constant=1) and 90° turn(clockwise) in Open
-Challenge rounds]</b></p>
-
 ### 3.3.1:P control using a gyro sensor
 To automatically compensate for uneven friction acting on the tires during straight-line travel, we implemented proportional control—defined in line 6 of the code in "Code 1"—which determines the steering angle based on the error between the target yaw angle and the current value from the gyro sensor.  
 
