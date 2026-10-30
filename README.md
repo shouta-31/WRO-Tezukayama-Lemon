@@ -358,6 +358,8 @@ With these measures, I was able to succeed 9 out of 10 times, and I was able to 
 ## 3.3:Design considerations for the Open Challenge rounds
 In the obstacle-free Open Challenge rounds, an accurate straight forward and a 90° turn are required. Here, we have introduced an algorithm that optimizes the trade-off of "running speed" and "return accuracy".  
 
+<details>
+
 ```py
   print("Clock_turn")
   while True:
