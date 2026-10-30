@@ -383,6 +383,8 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
             break
 ```
 
+</details>
+
 <p align="center"><b>Code 1[Program for P control (proportionality constant=1) and 90° turn(clockwise) in Open
 Challenge rounds]</b></p>
 
