@@ -243,7 +243,17 @@ Since the weight of the robot rests on the steering mechanism, a motor with a to
 For this competition, we used "parallel steering." Previously, we used the easily implementable "rack and pinion" system, but the poor meshing of the pinion and rack resulted in significant sideways slippage and resistance during turns, limiting smooth turns to approximately 50%.
 Therefore, we decided to implement a new steering mechanism. We considered either the Ackermann steering system or the parallel steering system as suitable for this robot.
 To determine which to use, we compared the two by setting the maximum steering angle.
-Here, using R = L/tanθ (θ: steering angle, L: distance between the front and rear wheels, R: turning radius), our robot has L = 12.7 cm, so the data is as shown in the table below.
+Here, using 
+
+$$
+R = \frac{L}{tanθ}
+$$
+
+* $θ = \text{steering angle}$
+* $L = \text{distance between the front and rear wheels}$
+* $R = \text{turning radius}$
+
+—and noting that for this robot, $L = 12.7 cm$—the data is as presented in the table below.
 
  | steering angle | turning radius |
  |:---:|---|
@@ -255,21 +265,17 @@ Here, using R = L/tanθ (θ: steering angle, L: distance between the front and r
 
 The following is a line graph of this data.
 
-<img width="1172" height="627" alt="IMG_0482" src="https://github.com/user-attachments/assets/e0a4e5f2-59e6-4dac-be5a-f4f842eb8afd" />
+<div align="center"><img height="427" alt="IMG_0482" src="https://github.com/user-attachments/assets/e0a4e5f2-59e6-4dac-be5a-f4f842eb8afd" /></div>
 
 From this graph, we can see the following:
-
-25°: Difficult to make tight turns.
-
-30°: Good balance between turning performance and driving stability.
-
-35°: Even easier to make tight turns, advantageous for turning in narrow spaces.
-
-40° or more: May increase the likelihood of tire-to-body interference and tire skidding.
+* 25°: Difficult to make tight turns.
+* 30°: Good balance between turning performance and driving stability.
+* 35°: Even easier to make tight turns, advantageous for turning in narrow spaces.
+* 40° or more: May increase the likelihood of tire-to-body interference and tire skidding.
 
 Therefore, based on this data, we set the maximum steering angle to 30 degrees.
 
-<img width="1022" height="864" alt="IMG_0483" src="https://github.com/user-attachments/assets/24a054bc-1715-4ca6-92be-6945e5c78ee7" />
+<div align="center"><img height="564" alt="IMG_0483" src="https://github.com/user-attachments/assets/24a054bc-1715-4ca6-92be-6945e5c78ee7" /></div>
 
 Our robot has a relatively short distance of 12.7 cm between the front and rear wheels, and the maximum steering angle is assumed to be 30°. Furthermore, the tires we use on the front wheels have a small contact area (see section 2.6.1 for details on tires), so even with a parallel steering mechanism, the robot would skid sideways, preventing significant deviations in the numerical values.
 Also, using an Ackermann steering mechanism would increase the number of parts and weight compared to the parallel steering mechanism, making numerical errors more likely due to the robot's momentum. Even if the parts are made thin, there is a possibility of breakage, so our robot uses a parallel steering mechanism.
@@ -332,13 +338,13 @@ The OpenMV Cam H7 Plus has the advantages of lower power consumption, a larger m
 In the Obstacle Challenge rounds, we often struggled to complete the course within the time limit due to the time it took to launch from the parking area and park. Therefore, to increase the distance between parking areas and reduce the time, we added a protrusion (hereinafter referred to as Part A) to the robot, extending from the bottom of the front ultrasonic sensor (as shown by the blue circle in the image above), making it as thin as possible to avoid contact with the parking area.
 To determine the length of Part A, we used the following formula:
 
-(Robot's total length + Length of Part A) * 1.5 >= Distance the robot is closest to the parking area
+$(\text{Robot's total length} + \text{Length of Part A}) \times 1.5 \geqq \text{Distance the robot is closest to the parking area}$
 
 The robot's total length is 22.5cm, and the closest distance the robot is to the parking area is approximately 36cm. Letting the length of Part A be xcm, we substitute these values ​​into the above formula:
 
-(22.5 + x) * 1.5 >= 36
+$(22.5 + x) \times 1.5 \geqq 36$
 
-x >= 1.5
+$x \geqq 1.5$
 
 Therefore, we determined that Part A should be at least 1.5cm long. We adjusted the length to approximately 4.5cm, ensuring it did not exceed the robot's size limit, providing a margin of safety. Furthermore, by using Part A, we succeeded in reducing both the time it takes to start and the time it takes to park by 8 seconds each. Moreover, while previously we could only complete the course 4 out of 10 times, with Part A installed, we can now complete the course within the time limit every time.
 <img width="805" alt="IMG_0456" src="https://github.com/user-attachments/assets/f533c13c-9176-46fd-9062-c8f73f0bfa55" />
