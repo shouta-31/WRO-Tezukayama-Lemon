@@ -136,7 +136,8 @@ Furthermore, the center of gravity (indicated by the red circle) was positioned 
  | **accelerate** | Easy to spin freely | Because the weight is shifted to the rear, it is easier to accelerate. |
  | **Accuracy of straight-line movement** | It provides stability due to its high grip. | The low grip can make it unstable.  |
  
-We selected a rear-wheel drive configuration. This choice reduces the load on the front tires, thereby minimizing measurement errors at the front wheels. In contrast, a front-wheel drive setup tends to drift outward during turns, creating a risk of colliding with obstacles. To improve straight-line accuracy, we positioned the wheel hubs slightly toward the front, effectively eliminating wheel spin.  
+And I chose rear-wheel drive as the drive system. This is because rear-wheel drive makes it difficult to load the front tire and reduces the numerical error of the front wheel. In addition, if you use front-wheel drive, you may hit an obstacle because it is easy to swell out in the curve. There are other four-wheel drives, but in four-wheel drive, if you use gears from the rear wheel to bring power to the front wheel, the tires of the rear wheel will move a little faster, resulting in errors such as parking.
+In order to increase the accuracy of straight ahead, the hub was slightly brought to the front wheel side to eliminate empty spinning. 
  
 ## 2.3:Power Supply and Wiring
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
@@ -239,9 +240,33 @@ Since the weight of the robot rests on the steering mechanism, a motor with a to
 
 <p align="center"><b>[Steering Section]</b></p>
 
-For this competition, we employed the Ackermann-Jeantaud steering mechanism. We had previously used the rack-and-pinion system—which is easier to implement—but poor meshing between the pinion and rack caused lateral slipping and resistance during turns, resulting in a success rate of only about 50%.
-Switching to the Ackermann-Jeantaud mechanism reduced the number of failures, raising our success rate to approximately 90%. Since turning accuracy is crucial for this competition, we decided to adopt this mechanism.  
-Additionally, by installing a physical stopper on the steering assembly, we eliminated the need to limit the steering range via programming.  
+For this competition, we used "parallel steering." Previously, we used the easily implementable "rack and pinion" system, but the poor meshing of the pinion and rack resulted in significant sideways slippage and resistance during turns, limiting smooth turns to approximately 50%.
+Therefore, we decided to implement a new steering mechanism. We considered either the Ackermann steering system or the parallel steering system as suitable for this robot.
+To determine which to use, we compared the two by setting the maximum steering angle.
+Here, using R = L/tanθ (θ: steering angle, L: distance between the front and rear wheels, R: turning radius), our robot has L = 12.7 cm, so the data is as shown in the table below.
+
+The following is a line graph of this data.
+
+<img width="1172" height="627" alt="IMG_0482" src="https://github.com/user-attachments/assets/e0a4e5f2-59e6-4dac-be5a-f4f842eb8afd" />
+
+From this graph, we can see the following:
+
+25°: Difficult to make tight turns.
+
+30°: Good balance between turning performance and driving stability.
+
+35°: Even easier to make tight turns, advantageous for turning in narrow spaces.
+
+40° or more: May increase the likelihood of tire-to-body interference and tire skidding.
+
+Therefore, based on this data, we set the maximum steering angle to 30 degrees.
+
+<img width="1022" height="864" alt="IMG_0483" src="https://github.com/user-attachments/assets/24a054bc-1715-4ca6-92be-6945e5c78ee7" />
+
+Our robot has a relatively short distance of 12.7 cm between the front and rear wheels, and the maximum steering angle is assumed to be 30°. Furthermore, the tires we use on the front wheels have a small contact area (see section 2.6.1 for details on tires), so even with a parallel steering mechanism, the robot would skid sideways, preventing significant deviations in the numerical values.
+Also, using an Ackermann steering mechanism would increase the number of parts and weight compared to the parallel steering mechanism, making numerical errors more likely due to the robot's momentum. Even if the parts are made thin, there is a possibility of breakage, so our robot uses a parallel steering mechanism.
+When we actually mounted the "parallel steering" on the robot, the number of failures decreased, and we were able to achieve a success rate of approximately 90%. Since the key to this project is how accurately the robot can turn, we decided to use this mechanism.
+Furthermore, by adding a stopper to the steering, we eliminated the need to programmatically limit the steering range.
 
 ## 2.6:Tires
 ###  2.6.1:Front wheel
