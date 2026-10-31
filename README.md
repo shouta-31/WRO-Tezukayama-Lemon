@@ -593,7 +593,9 @@ if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:
                     break
 ```
 
->At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in image 7 is as follows.
+<p align="center"><b>[Code 7]</b></p>
+
+>At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in Code 7 is as follows.
 (Flow chart)
 Also, if you run this program, it will work as shown in the figure below.
 
@@ -656,6 +658,8 @@ if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
                 break
         break
 ```
+
+<p align="center"><b>[Code 8]</b></p>
 
 >At this time, considering the delay of the reaction time until the program starts in order for the red distance to approach 30 cm, we try to track based on the value of the pixel number 3000, which is 40 cm in front of the distance (see 3.4.1). In addition, if the previous distance is closer than 40 cm, there is a possibility of hitting the object, so the previous distance was reduced to 40 cm, and then the object was tracked. In addition, after avoiding the red object, I created a program to move the car body to the position with a yaw angle of 0 in order to go straight, and tested it, but it saved time and accurately avoided objects in the corner section. After turning right to avoid red, read the red or green object or turn left until the yaw angle is 0 (in fact, 10 is used to shift from the center due to the delay in the processing speed of the robot).
 
@@ -723,6 +727,8 @@ print(payload)
 print("red_or_green:",red_or_green)
 ```
 
+<p align="center"><b>[Code 9]</b></p>
+
 >In the case of green, like red, if it is too close, the robot is distanced from the object, then track the green object, turn left if the distance is 40 cm in front, read the red or green object, or turn right until the yaw angle is greater than 0 (as in the case of (iii)).
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
@@ -731,16 +737,20 @@ When reading traffic signs, objects outside the course may be the same color as 
 
 <img height="120" alt="image" src="https://github.com/user-attachments/assets/b406d735-02de-46f6-95e1-560e369b32e2" />
 
+<p align="center"><b>[Code 10]</b></p>
+
 * Risk: Objects outside the course will be detected.
 
-* Countermeasures: As an example, the pixel number of the object is less than 500, as shown in image 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
+* Countermeasures: As an example, the pixel number of the object is less than 500, as shown in COde 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
 This program reduces the reading of objects outside the course and allows only traffic signs to be detected
 
 ### 3.4.6:Destination setting
 One of the reasons for the high number of mistakes in this robot running was that the position was different depending on the pattern and it was difficult to adjust. Therefore, by setting the destination, it became better to run the same program in all patterns after arriving at the destination, which led to the simplification of the program and the prevention of mistakes.
 For example, in the case of the following corner section program, align it on the same line after turning, and then move the same control to prevent mistakes.
 
-$.(Program)
+<img width="988" height="1030" alt="image" src="https://github.com/user-attachments/assets/228bb970-df63-4895-9010-c3d9bf0d91ed" />
+
+Calculations are performed using the distance measured beforehand—specifically the distance on the left side (assuming a clockwise direction)—within the area enclosed by the red box, in order to align the elements along the same line (as shown in the position in the diagram below). Code 11
 
 In the place surrounded by this red frame, the left distance (in the case of right turn) that was calculated in advance is used, and it is aligned on the same line (position in the figure below).
 
