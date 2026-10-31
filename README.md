@@ -786,6 +786,9 @@ For example, in the case of the following corner section program, align it on th
 
 In the place surrounded by this red frame, the left distance (in the case of right turn) that was calculated in advance is used, and it is aligned on the same line (position in the figure below).
 
+<img width="846" height="742" alt="image" src="https://github.com/user-attachments/assets/68ae61c8-0e8a-4ab4-9e6f-1c3736fb1e68" />
+<p align="center"><b>[Image 7]</b></p>
+
 ### 3.4.7:Parking
 
 ## 3.5:Other ingenuity points
