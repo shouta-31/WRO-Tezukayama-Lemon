@@ -803,11 +803,11 @@ For example, in the case of the following corner section program, align it on th
 
 <img width="988" height="1030" alt="image" src="https://github.com/user-attachments/assets/228bb970-df63-4895-9010-c3d9bf0d91ed" />
 
-<b>Calculations are performed using the distance measured beforehand—specifically the distance on the left side (assuming a clockwise direction)—within the area enclosed by the red box, in order to align the elements along the same line (as shown in the position in the diagram below). Code 11</b>
+<p align="center"><b>Calculations are performed using the distance measured beforehand—<br>specifically the distance on the left side (assuming a clockwise direction)—<br>within the area enclosed by the red box, in order to align the elements along the same line<br> (as shown in the position in the diagram below). Code 11</b></p>
 
 In the place surrounded by this red frame, the left distance (in the case of right turn) that was calculated in advance is used, and it is aligned on the same line (position in the figure below).
 
-<img width="846" height="742" alt="image" src="https://github.com/user-attachments/assets/68ae61c8-0e8a-4ab4-9e6f-1c3736fb1e68" />
+<div align="center"><img height="542" alt="image" src="https://github.com/user-attachments/assets/68ae61c8-0e8a-4ab4-9e6f-1c3736fb1e68" /></div>
 <p align="center"><b>[Image 7]</b></p>
 
 ### 3.4.7:Parking
