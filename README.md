@@ -168,7 +168,10 @@ With the SPIKE Prime Hub, power is distributed evenly across all six ports. Addi
 ### 2.3.2:Power Balance
 The table below summarizes the actual measured power consumption for each device.  
 Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
-* Margin (%) = (1 - (Total maximum current consumption ÷ Maximum current supply capability of the power source)) × 100  
+
+$$
+\text{Margin [\\%]} = \left(1 - \frac{\text{Total maximum current consumption}}{\text{Maximum current supply capability of the power source}} \right) \times 100
+$$
 
 <div align="center">
  
