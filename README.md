@@ -245,6 +245,14 @@ Therefore, we decided to implement a new steering mechanism. We considered eithe
 To determine which to use, we compared the two by setting the maximum steering angle.
 Here, using R = L/tanθ (θ: steering angle, L: distance between the front and rear wheels, R: turning radius), our robot has L = 12.7 cm, so the data is as shown in the table below.
 
+ | steering angle | turning radius |
+ |:---:|---|
+ | **20°** | 34.89cm |
+ | **25°** | 27.21cm |
+ | **30°** | 22.00cm |
+ | **35°** | 18.14cm |
+ | **40°** | 15.14cm |
+
 The following is a line graph of this data.
 
 <img width="1172" height="627" alt="IMG_0482" src="https://github.com/user-attachments/assets/e0a4e5f2-59e6-4dac-be5a-f4f842eb8afd" />
@@ -765,7 +773,7 @@ When reading traffic signs, objects outside the course may be the same color as 
 
 * Risk: Objects outside the course will be detected.
 
-* Countermeasures: As an example, the pixel number of the object is less than 500, as shown in COde 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
+* Countermeasures: As an example, the pixel number of the object is less than 500, as shown in Code 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
 This program reduces the reading of objects outside the course and allows only traffic signs to be detected
 
 ### 3.4.6:Destination setting
@@ -788,7 +796,7 @@ In the place surrounded by this red frame, the left distance (in the case of rig
 <img width="1268" height="871" alt="image" src="https://github.com/user-attachments/assets/b6eedb82-6a89-4a78-a701-0004487e15b6" />
 <p align="center"><b>[Code 15 [Visualizing errors in a mobile robot using a 'home' button]]</b></p>
 
-As shown in Code 14, by inserting `print` statements for each action, we can quickly identify which part of the sequence is failing, thereby reducing the time required for debugging. Furthermore, as demonstrated in the third line of Code 15, we configured the hub’s home button to light up in specific colors—which can even change based on certain conditions. This enhancement allows us to conduct more test runs and experiment with—as well as compare—different functional approaches, ultimately leading to greater accuracy and faster development. Additionally, because these features make it clear to the entire team how far the program executed correctly, any team member—not just the programmer—can spot errors or instances of unstable behavior. This ensures that every issue occurring during a single run can be identified and addressed.
+As shown in Code 14, by inserting print statements for each action, we can quickly identify which part of the sequence is failing, thereby reducing the time required for debugging. Furthermore, as demonstrated in the third line of Code 15, we configured the hub’s home button to light up in specific colors—which can even change based on certain conditions. This enhancement allows us to conduct more test runs and experiment with—as well as compare—different functional approaches, ultimately leading to greater accuracy and faster development. Additionally, because these features make it clear to the entire team how far the program executed correctly, any team member—not just the programmer—can spot errors or instances of unstable behavior. This ensures that every issue occurring during a single run can be identified and addressed.
 
 ### 3.5.2:How to determine the turning direction
 
