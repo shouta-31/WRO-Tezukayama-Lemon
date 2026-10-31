@@ -729,13 +729,11 @@ print("red_or_green:",red_or_green)
 ### 3.4.5:How to prevent misidentification
 When reading traffic signs, objects outside the course may be the same color as traffic signs. At that time, if it is subject to detection, the obstacle cannot be read correctly. Therefore, we have considered the following countermeasures.
 
-$.
+<img height="120" alt="image" src="https://github.com/user-attachments/assets/b406d735-02de-46f6-95e1-560e369b32e2" />
 
-Image 10
+* Risk: Objects outside the course will be detected.
 
-•Risk: Objects outside the course will be detected.
-
-•Countermeasures: As an example, the pixel number of the object is less than 500, as shown in image 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
+* Countermeasures: As an example, the pixel number of the object is less than 500, as shown in image 10 (red frame), "payload [2] (number of red pixels) < 500 and payload [5] (number of green pixels) <500" (in the course If the object is greater than 500 and there is basically no object outside the course that is larger than that, assuming that the number of pixels is <500), the object is not subject to tracking. ( Originally, the object was excluded using the value of the y coordinate, but there may be objects other than the green object at almost the same position as the height of the green object that detects, so I thought that the judgment at the y coordinate was meaningless)
 This program reduces the reading of objects outside the course and allows only traffic signs to be detected
 
 ### 3.4.6:Destination setting
