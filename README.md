@@ -347,8 +347,8 @@ $(22.5 + x) \times 1.5 \geqq 36$
 $x \geqq 1.5$
 
 Therefore, we determined that Part A should be at least 1.5cm long. We adjusted the length to approximately 4.5cm, ensuring it did not exceed the robot's size limit, providing a margin of safety. Furthermore, by using Part A, we succeeded in reducing both the time it takes to start and the time it takes to park by 8 seconds each. Moreover, while previously we could only complete the course 4 out of 10 times, with Part A installed, we can now complete the course within the time limit every time.
-<img width="805" alt="IMG_0456" src="https://github.com/user-attachments/assets/f533c13c-9176-46fd-9062-c8f73f0bfa55" />
 
+<div align="center"><img width="805" alt="IMG_0456" src="https://github.com/user-attachments/assets/f533c13c-9176-46fd-9062-c8f73f0bfa55" /></div>
 <p align="center"><b>[A diagram showing how the robot departs from the parking space.]</b></p>
 
 # 3:Program
