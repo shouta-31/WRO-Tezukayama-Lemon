@@ -736,7 +736,6 @@ print("red_or_green:",red_or_green)
 When reading traffic signs, objects outside the course may be the same color as traffic signs. At that time, if it is subject to detection, the obstacle cannot be read correctly. Therefore, we have considered the following countermeasures.
 
 <img height="120" alt="image" src="https://github.com/user-attachments/assets/b406d735-02de-46f6-95e1-560e369b32e2" />
-
 <p align="center"><b>[Code 10]</b></p>
 
 * Risk: Objects outside the course will be detected.
@@ -750,7 +749,7 @@ For example, in the case of the following corner section program, align it on th
 
 <img width="988" height="1030" alt="image" src="https://github.com/user-attachments/assets/228bb970-df63-4895-9010-c3d9bf0d91ed" />
 
-Calculations are performed using the distance measured beforehand—specifically the distance on the left side (assuming a clockwise direction)—within the area enclosed by the red box, in order to align the elements along the same line (as shown in the position in the diagram below). Code 11
+<b>Calculations are performed using the distance measured beforehand—specifically the distance on the left side (assuming a clockwise direction)—within the area enclosed by the red box, in order to align the elements along the same line (as shown in the position in the diagram below). Code 11</b>
 
 In the place surrounded by this red frame, the left distance (in the case of right turn) that was calculated in advance is used, and it is aligned on the same line (position in the figure below).
 
@@ -758,11 +757,13 @@ In the place surrounded by this red frame, the left distance (in the case of rig
 
 ## 3.5:Other ingenuity points
 ### 3.5.1:Visualization of mistakes in print statements
-$.
+<img width="693" height="332" alt="image" src="https://github.com/user-attachments/assets/4cc74bc7-07a6-4c50-b188-de7ee851ab70" />
+<p align="center"><b>[Code 14 [Verifying operation using print statements]]</b></p>
 
-Image 13 [Confirmation of operation by print text]
+<img width="1268" height="871" alt="image" src="https://github.com/user-attachments/assets/b6eedb82-6a89-4a78-a701-0004487e15b6" />
+<p align="center"><b>[Code 15 [Visualizing errors in a mobile robot using a 'home' button]]</b></p>
 
-As shown in image 13, by including a print statement for each action, you can quickly check which actions are not working, and you can reduce the time it takes to correct. This makes it possible to increase accuracy and speed up by increasing the number of attempts and experimenting and comparing better functions.
+As shown in Code 14, by inserting `print` statements for each action, we can quickly identify which part of the sequence is failing, thereby reducing the time required for debugging. Furthermore, as demonstrated in the third line of Code 15, we configured the hub’s home button to light up in specific colors—which can even change based on certain conditions. This enhancement allows us to conduct more test runs and experiment with—as well as compare—different functional approaches, ultimately leading to greater accuracy and faster development. Additionally, because these features make it clear to the entire team how far the program executed correctly, any team member—not just the programmer—can spot errors or instances of unstable behavior. This ensures that every issue occurring during a single run can be identified and addressed.
 
 ### 3.5.2:How to determine the turning direction
 
