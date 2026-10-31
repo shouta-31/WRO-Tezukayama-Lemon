@@ -471,23 +471,44 @@ There are instances where two objects of the same color appear simultaneously wi
 
 ### 3.4.3:Turning Method
 We reasoned that categorizing our cornering methods would reduce execution time and improve accuracy; consequently, we implemented the following classification system for use when entering corner sections.
-$  
+
+```py
+  payload=p.call('blob')
+  if payload[5]>500: ...
+  elif left_sensor.distance()>400: ...
+  else: ...
+```
+
+<p align="center"><b>[Code 4]</b></p>
+
 The details of this program are as follows.  
 (i) "Green detected"  
 >In this case, since green has been detected, you should turn as shown in the diagram.
 >
 ><img width="357" alt="IMG_0461" src="https://github.com/user-attachments/assets/682058ec-74b8-481f-9c3a-181c14c78f45" />
+><p align="center"><b>[Image 3]</b></p>
+>
+>```py
+>```
+>
+><p align="center"><b>[Code 5]</b></p>
 
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
 >In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
-$  
-The flowchart in this image is as follows.  
-$  
-The following diagram shows the path taken when this program is executed.  
+>
+>```py
+>```
+><p align="center"><b>[Code 6]</b/>
+>
+>The flowchart in this code is as follows.  
+>$  
+>The following diagram shows the path taken when this program is executed.  
+>$
+>$
 
 (iii) Other
 >In this case as well, it is not possible to determine whether the object on the right is "green, red, or absent," so the department determines whether there is a green object during the turn, similar to (ii). Also, when the distance on the left is short, the turning space is on the right and not on the left, so the turning method is different from (ii), as shown in the diagram below.  
-$  
+>$  
 
 By differentiating the turning method in this way, we were able to reduce the number of obstacles to read in the next section to just one, thus shortening the time required.
 
@@ -629,8 +650,8 @@ if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:
 <p align="center"><b>[Code 7]</b></p>
 
 >At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in Code 7 is as follows.
-(Flow chart)
-Also, if you run this program, it will work as shown in the figure below.
+>(Flow chart)
+>Also, if you run this program, it will work as shown in the figure below.
 
 (ii) "There is a red object in the center or back"
 
@@ -790,18 +811,51 @@ In the place surrounded by this red frame, the left distance (in the case of rig
 <p align="center"><b>[Image 7]</b></p>
 
 ### 3.4.7:Parking
+$
+$
+$
+$
+$
+$
 
 ## 3.5:Other ingenuity points
 ### 3.5.1:Visualization of mistakes in print statements
-<img width="693" height="332" alt="image" src="https://github.com/user-attachments/assets/4cc74bc7-07a6-4c50-b188-de7ee851ab70" />
+
+```py
+    if Yaw>90:
+        back_motor.stop()
+        print("緑p :",payload[5])
+        break
+Yaw=hub. imu. heading()
+hub.imu.reset_heading(Yaw-90)
+print("Yaw:",hub.imu.heading())
+payload=p.call('blob')
+```
+
 <p align="center"><b>[Code 14 [Verifying operation using print statements]]</b></p>
 
-<img width="1268" height="871" alt="image" src="https://github.com/user-attachments/assets/b6eedb82-6a89-4a78-a701-0004487e15b6" />
+```py
+print("no")
+while True:#前80cmまで前進
+    hub.light.on(Color.BLUE)
+    Yaw=hub.imu. heading()
+    direction=(0-Yaw)*0.5
+    front_motor.run_target (1000, direction)
+    payload=p.call('blob')
+    back motor.run(1000)
+    if eyes.distance()<700:
+        hub.light.off()
+        left distance=left_sensor. distance()
+        print(eyes.distance())
+        break
+```
+
 <p align="center"><b>[Code 15 [Visualizing errors in a mobile robot using a 'home' button]]</b></p>
 
 As shown in Code 14, by inserting print statements for each action, we can quickly identify which part of the sequence is failing, thereby reducing the time required for debugging. Furthermore, as demonstrated in the third line of Code 15, we configured the hub’s home button to light up in specific colors—which can even change based on certain conditions. This enhancement allows us to conduct more test runs and experiment with—as well as compare—different functional approaches, ultimately leading to greater accuracy and faster development. Additionally, because these features make it clear to the entire team how far the program executed correctly, any team member—not just the programmer—can spot errors or instances of unstable behavior. This ensures that every issue occurring during a single run can be identified and addressed.
 
 ### 3.5.2:How to determine the turning direction
+$
 
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
