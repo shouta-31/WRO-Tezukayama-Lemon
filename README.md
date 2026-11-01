@@ -500,7 +500,63 @@ The details of this program are as follows.
 >Therefore, the program will look like the code below.
 
 ```py
-
+    if payload[5]>10 or red_or_green==2:#緑
+        print("green")
+        eyes_distance=0
+        while True:#直進
+            hub.light.on(Color.GREEN)
+            Yaw=hub.imu.heading()
+            direction=(0-Yaw)*0.5
+            front_motor.run_target(1000,direction)
+            payload=p.call('blob')
+            back_motor.run(1000)
+            eyes_distance=400
+            if turn_count==3 or turn_count==7 or turn_count==11:
+                eyes_distance=650
+            if eyes.distance()<eyes_distance and payload[5]<10:
+                hub.light.off()
+                print(eyes.distance())
+                break
+        while True:#旋回
+            Yaw=hub.imu.heading()
+            payload=p.call('blob')
+            front_motor.run_target(1000,35)
+            if Yaw<100 and turn_count!=11:
+                Yaw=70
+            if turn_count==11 and Yaw>70:
+                Yaw=140
+            if payload[2]>100:
+                speed=(160-payload[0])*15+100
+            elif payload[5]>100:
+                speed=(160-payload[3])*15+100
+            else:
+                speed=(130-Yaw)*15+100
+            back_motor.run(speed)
+            if (Yaw>130 and payload[2]<100 and payload[5]<100) or payload[0]>150 or payload[3]>150:
+                print(p.call('blob'))
+                back_motor.stop()
+                Yaw=hub.imu.heading()
+                print(Yaw)
+                if turn_count!=11:
+                    hub.imu.reset_heading(Yaw-90)
+                break
+        if payload[0]<150 and payload[3]<150 and turn_count!=11:#オブジェクトが先にない
+            while True:
+                Yaw=hub.imu.heading()
+                front_motor.run_target(1000,-35)
+                back_motor.run(Yaw*25+100)
+                if Yaw<0:
+                    break
+        if turn_count==11:
+            while True:
+                Yaw=hub.imu.heading()
+                front_motor.run_target(1000,35)
+                back_motor.run((90-Yaw)*5+100)
+                if Yaw>90:
+                    break
+            hub.imu.reset_heading(0)
+            color=2
+        front_motor.run_target(1000,0)
 ```
 
 <p align="center"><b>[Code 5]</b></p>
