@@ -492,34 +492,39 @@ We reasoned that categorizing our cornering methods would reduce execution time 
 
 The details of this program are as follows.  
 (i) "Green detected"  
->In this case, since green has been detected, you should turn as shown in the diagram.
+>In this case, the color green has been detected; please turn and proceed as shown in the diagram.
 >
 ><img width="357" alt="IMG_0461" src="https://github.com/user-attachments/assets/682058ec-74b8-481f-9c3a-181c14c78f45" />
 ><p align="center"><b>[Image 3]</b></p>
 >
+>Therefore, the program will look like the code below.
+
 >```py
 >```
 >
 ><p align="center"><b>[Code 5]</b></p>
 
-(ii) "Green was not detected" AND "the distance on the left is greater than 40 cm."  
->In this case, since it is impossible to determine whether the object on the right is green, red, or non-existent, the following method was adopted to make that determination.  
+(ii) "Green was not detected" AND "the distance on the left is greater than 40 cm"
+>At this point, since it is impossible to determine whether the object on the right is green, red, or non-existent, I have implemented the following method to make that determination.
 >
 >```py
 >```
+>
 ><p align="center"><b>[Code 6]</b/>
 >
 >The flowchart in this code is as follows.  
 >$  
->The following diagram shows the path taken when this program is executed.  
->$
->$
+>The path taken when this program is executed is shown in the figure below.
+>
+><p align="center"><b>[Image 4 [When the object beyond the corner is red or colorless]]</b></p>
+>
+><p align="center"><b>[Image 5 [When the object around the corner is green]]</b></p>
 
 (iii) Other
->In this case as well, it is not possible to determine whether the object on the right is "green, red, or absent," so the department determines whether there is a green object during the turn, similar to (ii). Also, when the distance on the left is short, the turning space is on the right and not on the left, so the turning method is different from (ii), as shown in the diagram below.  
->$  
+>In this case as well, since it is impossible to determine whether the object on the right is green, red, or non-existent, the system—much like in scenario (ii)—decides based on whether a green object appears while the robot is turning. Furthermore, when the distance to the left is short, there is no space to turn toward the left; therefore, the robot performs a turn as shown in the figure below, which differs from the method used in scenario (ii).
+><p align="center"><b>[Image 6 [Does not detect green AND distance on the left is less than 40 cm]]</b></p>
 
-By differentiating the turning method in this way, we were able to reduce the number of obstacles to read in the next section to just one, thus shortening the time required.
+By categorizing the turning methods in this way, it became possible to limit the number of obstacles to be detected in the subsequent segment to just one, thereby reducing the time required.
 
 ### 3.4.4:How to drive a straight line section
 Since I finished reading the object in front of me when I was spinning, I divided it into the following cases.
