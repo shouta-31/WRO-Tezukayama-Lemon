@@ -498,18 +498,18 @@ The details of this program are as follows.
 ><p align="center"><b>[Image 3]</b></p>
 >
 >Therefore, the program will look like the code below.
->
->```py
->
->```
->
-><p align="center"><b>[Code 5]</b></p>
+
+```py
+
+```
+
+<p align="center"><b>[Code 5]</b></p>
 
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm"
 >At this point, since it is impossible to determine whether the object on the right is green, red, or non-existent, I have implemented the following method to make that determination.
->
->```py
->    elif left_sensor.distance()>500 and left_sensor.distance!=2000:#左40㎝より大きい
+
+```py
+     elif left_sensor.distance()>500 and left_sensor.distance!=2000:#左40㎝より大きい
         print("no")
         red=0
         while True:#前25㎝まで前進
@@ -838,10 +838,10 @@ The details of this program are as follows.
                         back_motor.run((40-Yaw)*25+100)
                         if Yaw>40:
                             break
->```
->
-><p align="center"><b>[Code 6]</b/>
->
+```
+
+<p align="center"><b>[Code 6]</b/>
+
 >The flowchart in this code is as follows.  
 >$  
 >The path taken when this program is executed is shown in the figure below.
