@@ -494,7 +494,7 @@ The details of this program are as follows.
 (i) "Green detected"  
 >In this case, the color green has been detected; please turn and proceed as shown in the diagram.
 >
-><img width="357" alt="IMG_0461" src="https://github.com/user-attachments/assets/682058ec-74b8-481f-9c3a-181c14c78f45" />
+><div align="center"><img width="357" alt="IMG_0461" src="https://github.com/user-attachments/assets/682058ec-74b8-481f-9c3a-181c14c78f45" /></div>
 ><p align="center"><b>[Image 3]</b></p>
 >
 >Therefore, the program will look like the code below.
@@ -1077,7 +1077,7 @@ if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
             direction=30
         if direction<=-30:
             direction=-30
-        front_motor.run_target(1000, direction)
+        front_motor.run_target(1000,direction)
         back_motor.run(1000)
         if payload[2]>20000 or payload[2]<0:
             front_motor.run_target(1000,0)
@@ -1141,7 +1141,7 @@ elif payload[2]<payload[5] and payload[5]>400 and obstacle!=1:#緑
             direction=30
         if direction<=-30:
             direction=-30
-        front_motor.run_target(1000, direction)
+        front_motor.run_target(1000,direction)
         back_motor.run(1000)
         if payload[5]>20000 or payload[5]<0:
             front_motor.run_target(1000,0)
@@ -1226,7 +1226,7 @@ $
         back_motor.stop()
         print("緑p :",payload[5])
         break
-Yaw=hub. imu. heading()
+Yaw=hub.imu.heading()
 hub.imu.reset_heading(Yaw-90)
 print("Yaw:",hub.imu.heading())
 payload=p.call('blob')
@@ -1238,14 +1238,14 @@ payload=p.call('blob')
 print("no")
 while True:#前80cmまで前進
     hub.light.on(Color.BLUE)
-    Yaw=hub.imu. heading()
+    Yaw=hub.imu.heading()
     direction=(0-Yaw)*0.5
-    front_motor.run_target (1000, direction)
+    front_motor.run_target (1000,direction)
     payload=p.call('blob')
-    back motor.run(1000)
+    back_motor.run(1000)
     if eyes.distance()<700:
         hub.light.off()
-        left distance=left_sensor. distance()
+        left_distance=left_sensor.distance()
         print(eyes.distance())
         break
 ```
