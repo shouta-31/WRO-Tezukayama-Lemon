@@ -918,133 +918,70 @@ Since I finished reading the object in front of me when I was spinning, I divide
 (i) "There are no objects in this section at the moment (only objects read when turning)"
 
 ```py
-if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:
-    while True:#前の距離が85cmまで直進
-        payload=p.call('blob')
-        hub.light.on(Color.BLUE)
-        Yaw=hub.imu.heading()
-        direction=(0-Yaw)*0.8
-        if direction>-30:
-            direction=30
-        if direction<=-30:
-            direction=-30
-        front_motor.run_target(1000,direction)
-        back_motor.run(1000)
-        print("not_found")
-        print(payload)
-        if obstacle==1 and eyes.distance()<850:
+    if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:#赤もしくは緑のpixel数があるもしくは前の距離が850㎝より小さい
+        while True:#前の距離が85㎝まで直進
             payload=p.call('blob')
+            hub.light.on(Color.BLUE)
+            Yaw=hub.imu.heading()
+            direction=(0-Yaw)*0.8
+            if direction>=30:
+                direction=30
+            if direction<=-30:
+                direction=-30
+            front_motor.run_target(1000,direction)      
+            back_motor.run(1000)
+            print("not_found")
             print(payload)
-            print(eyes.distance())
-            break
-        elif obstaclel=1 and (eyes.distance()<850 or payload[2]<500 or payload[5]<500):
-            payload-p.call('blob')
-            print(payload)
-            print(eyes.distance())
-            break
-        elif left_sensor.distance()<100:#左の距離が近いときに中央移動
-            timer.reset()
-            front_motor.run_target (1000,35)
-            while True:
-                hub.light.off()
+            if obstacle==1 and eyes.distance()<850:
+                payload=p.call('blob')  
+                print(payload)  
+                print(eyes.distance())
+                break
+            elif obstacle!=1 and (eyes.distance()<850 or payload[2]<500 or payload[5]<500):
+                payload=p.call('blob')  
+                print(payload)  
+                print(eyes.distance())
+                break
+            elif left_sensor.distance()<100:#左の距離が近いときに中央移動
+                timer.reset()
                 front_motor.run_target(1000,35)
-                back_motor.run(1000)
-                if timer.time()>700:
-                    break
-            while True:
-                payload-p.call('blob')
-                print(payload)
-                Yaw=hub.imu.heading()
-                if Yaw>20:
-                    Yaw=65
-                back_motor.run((Yaw-5)*15+150)
-                front_motor.run_target (1000,-35)
-                if Yaw<0:
+                while True:
+                    hub.light.off()
+                    front_motor.run_target(1000,35)
+                    back_motor.run(1000) 
+                    if timer.time()>700:
+                        break
+                while True:
+                    payload=p.call('blob')
+                    print(payload)
+                    Yaw=hub.imu.heading()
+                    if Yaw>20:
+                        Yaw=65
+                    back_motor.run((Yaw-5)*15+150)
                     front_motor.run_target(1000,-35)
-                    break
-        elif right_sensor.distance()<100:#右の距離が近いときに中央移動
-            timer.reset()
-            front_motor.run_target(1000,-35)
-            while True:
-                hub.light.off()
+                    if Yaw<0:
+                        front_motor.run_target(1000,0)
+                        break
+            elif right_sensor.distance()<100:#右の距離が近いときに中央移動
+                timer.reset()
                 front_motor.run_target(1000,-35)
-                back_motor.run(1000)
-                if timer.time()>700:
-                    break
-            while True:
-                payload=p.call('blob')
-                print(payload)
-                Yaw=hub.imu.heading()
-                if Yaw<-20:
-                    Yaw=-65
-                back_motor.run((Yaw+5)*-15+150)
-                front_motor.run_target(1000,35)
-                if Yaw>0:
-                    front_motor.run_target (1000,0)
-                    break
-    while True:#前の距離がg5cmまで直進
-        payload=p.call('blob')
-        hub.light.on(Color.BLUE)
-        Yaw=hub.imu.heading()
-        direction=(0-Yaw)*0.8
-        if direction>-30:
-            direction=30
-        if direction<=-30:
-            direction=-30
-        front_motor.run_target(1000,direction)
-        back_motor.run(1000)
-        print("not_found")
-        print(payload)
-        if obstacle==1 and eyes.distance()<850:
-            payload=p.call('blob')
-            print(payload)
-            print(eyes.distance())
-            break
-        elif obstaclel=1 and (eyes.distance()<850 or payload[2]<500 or payload[5]<500):
-            payload-p.call('blob')
-            print(payload)
-            print(eyes.distance())
-            break
-        elif left_sensor.distance()<100:#左の距離が近いときに中央移動
-            timer.reset()
-            front_motor.run_target (1000,35)
-            while True:
-                hub.light.off()
-                front_motor.run_target(1000,35)
-                back_motor.run(1000)
-                if timer.time()>700:
-                    break
-            while True:
-                payload-p.call('blob')
-                print(payload)
-                Yaw=hub.imu.heading()
-                if Yaw>20:
-                    Yaw=65
-                back_motor.run((Yaw-5)*15+150)
-                front_motor.run_target (1000,-35)
-                if Yaw<0:
+                while True:
+                    hub.light.off()
                     front_motor.run_target(1000,-35)
-                    break
-        elif right_sensor.distance()<100:#右の距離が近いときに中央移動
-            timer.reset()
-            front_motor.run_target(1000,-35)
-            while True:
-                hub.light.off()
-                front_motor.run_target(1000,-35)
-                back_motor.run(1000)
-                if timer.time()>700:
-                    break
-            while True:
-                payload=p.call('blob')
-                print(payload)
-                Yaw=hub.imu.heading()
-                if Yaw<-20:
-                    Yaw=-65
-                back_motor.run((Yaw+5)*-15+150)
-                front_motor.run_target(1000,35)
-                if Yaw>0:
-                    front_motor.run_target (1000,0)
-                    break
+                    back_motor.run(1000) 
+                    if timer.time()>700:
+                        break
+                while True:
+                    payload=p.call('blob')
+                    print(payload)
+                    Yaw=hub.imu.heading()
+                    if Yaw<-20:
+                        Yaw=-65
+                    back_motor.run((Yaw+5)*-15+150)
+                    front_motor.run_target(1000,35)
+                    if Yaw>0:
+                        front_motor.run_target(1000,0)
+                        break
 ```
 
 <p align="center"><b>[Code 7]</b></p>
@@ -1056,61 +993,61 @@ if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:
 (ii) "There is a red object in the center or back"
 
 ```py
-if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
-    print(eyes.distance())
-    print(p.call('blob'))
-    payload=p.call('blob')
-    if payload[2]>3000:
-        print("近い")
-        while True:
+    if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
+        print(eyes.distance())
+        print(p.call('blob'))
+        payload=p.call('blob')
+        if payload[2]>3000:
+            print("近い")
+            while True:
+                payload=p.call('blob')
+                hub.light.on(Color.RED)
+                front_motor.run_target(1000,0)
+                back_motor.run(-1000)
+                if payload[2]<3000:
+                    break
+        while True:#赤回避
             payload=p.call('blob')
             hub.light.on(Color.RED)
-            front_motor.run_target(1000,0)
-            back_motor.run(-1000)
-            if payload[2]<3000:
-                break
-    while True:#赤回避
-        payload=p.call('blob')
-        hub.light.on(Color.RED)
-        direction=(payload[0]-160)*0.15#P制御
-        if direction>=30:
-            direction=30
-        if direction<=-30:
-            direction=-30
-        front_motor.run_target(1000,direction)
-        back_motor.run(1000)
-        if payload[2]>20000 or payload[2]<0:
-            front_motor.run_target(1000,0)
-            back_motor.run(-200)
-        if payload[2]>=3000:#赤に近づいた
-            timer.reset()
-            front_motor.run_target(1000,35)
-            while True:#
-                hub.light.off()
+            direction=(payload[0]-160)*0.15#P制御
+            if direction>=30:
+                direction=30
+            if direction<=-30:
+                direction=-30
+            front_motor.run_target(1000,direction)
+            back_motor.run(1000) 
+            if payload[2]>20000 or payload[2]<0:
+                front_motor.run_target(1000,0)
+                back_motor.run(-200)
+            if payload[2]>=3000:#赤に近づいた
+                timer.reset()
                 front_motor.run_target(1000,35)
-                back_motor.run(1000)
-                if timer.time()>600:
+                while True:#右
+                    hub.light.off()
+                    front_motor.run_target(1000,35)
+                    back_motor.run(1000) 
+                    if timer.time()>600:
+                        front_motor.run_target(1000,-35)
+                        break
+                while True:#yaw<10まで左に曲がる途中でコーナーセクション読み取り
+                    payload=p.call('blob')
+                    print(payload)
+                    Yaw=hub.imu.heading()
                     front_motor.run_target(1000,-35)
-                    break
-        while True:#yaw<10まで左に曲がる途中でコーナーセクション
-            payload=p.call('blob')
-            print(payload)
-            Yaw=hub.imu.heading()
-            front_motor.run_target(1000,-35)
-            if Yaw>30:
-                Yaw=70
-            back_motor.run((Yaw-10)*15+100)
-            if payload[2]>200:
-                global red_or_green
-                hub.light.on(Color.RED)
-                red_or_green=1
-            elif payload[5]>200:
-                global red_or_green
-                hub.light.on(Color.GREEN)
-                red_or_green=2
-            if Yaw<10:
+                    if Yaw>30:
+                        Yaw=70
+                    back_motor.run((Yaw-10)*15+100)
+                    if payload[2]>200:
+                        global red_or_green
+                        hub.light.on(Color.RED)
+                        red_or_green=1
+                    elif payload[5]>200:
+                        global red_or_green
+                        hub.light.on(Color.GREEN)
+                        red_or_green=2
+                    if Yaw<10:
+                        break
                 break
-        break
 ```
 
 <p align="center"><b>[Code 8]</b></p>
@@ -1120,65 +1057,65 @@ if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
 (iii) "There is a green object in the center or back"
 
 ```py
-elif payload[2]<payload[5] and payload[5]>400 and obstacle!=1:#緑
-    print(eyes.distance())
-    print(p.call('blob'))
-    if payload[2]>3000:
-        print("近い")
-        while True:
-            payload=p.call('blob')
-            hub.light.on(Color.GREEN)
-            front_motor.run_target(1000,0)
-            back_motor.run(-1000)
-            if payload[5]<2000:
-                break
-    while True:#綠回避
-        payload=p.call('blob')
-        print(payload)
-        hub.light.on(Color.GREEN)
-        direction=(payload[3]-160)*0.15#P制御
-        if direction>=30:
-            direction=30
-        if direction<=-30:
-            direction=-30
-        front_motor.run_target(1000,direction)
-        back_motor.run(1000)
-        if payload[5]>20000 or payload[5]<0:
-            front_motor.run_target(1000,0)
-            back_motor.run(-200)
-        if payload[5]>=3000:#緑に近づいた
-            timer.reset()
-            front_motor.run_target(1000,-35)
-            while True:#
-                hub.light.off()
-                front_motor.run_target(1000,-35)
-                back_motor.run(1000)
-                if timer.time()>500:
-                    front_motor.run_target(1000,35)
-                    break
-            while True:#yaw>-10まで右に曲がる。途中読み取り
-                Yaw=hub.imu.heading()
+    elif payload[2]<payload[5] and payload[5]>400 and obstacle!=1:#緑
+        print(eyes.distance())
+        print(p.call('blob'))
+        if payload[2]>3000:
+            print("近い")
+            while True:
                 payload=p.call('blob')
-                print(payload)
-                front_motor.run_target(1000,35)
-                if Yaw<-30:
-                    Yaw=-70
-                back_motor.run((Yaw+10)*-15+100)
-                if payload[2]>200:
-                    global red_or_green
-                    hub.light.on(Color.RED)
-                    red_or_green=1
-                elif payload[5]>200:
-                    global red_or_green
-                    hub.light.on(Color.GREEN)
-                    red_or_green=2
-                if Yaw>-10:
+                hub.light.on(Color.GREEN)
+                front_motor.run_target(1000,0)
+                back_motor.run(-1000)
+                if payload[5]<2000:
                     break
-            break
-payload=p.call('blob')
-print(eyes.distance())
-print(payload)
-print("red_or_green:",red_or_green)
+        while True:#緑回避
+            payload=p.call('blob')
+            print(payload)
+            hub.light.on(Color.GREEN)
+            direction=(payload[3]-160)*0.15#P制御
+            if direction>=30:
+                direction=30
+            if direction<=-30:
+                direction=-30
+            front_motor.run_target(1000,direction)
+            back_motor.run(1000) 
+            if payload[5]>20000 or payload[5]<0:
+                    front_motor.run_target(1000,0)
+                    back_motor.run(-200)
+            if payload[5]>=3000:#緑に近づいた
+                timer.reset()
+                front_motor.run_target(1000,-35)
+                while True:#左
+                    hub.light.off()
+                    front_motor.run_target(1000,-35)
+                    back_motor.run(1000) 
+                    if timer.time()>500:
+                        front_motor.run_target(1000,35)
+                        break
+                while True:#yaw>-10まで右に曲がる。途中読み取り
+                    Yaw=hub.imu.heading()
+                    payload=p.call('blob')
+                    print(payload)
+                    front_motor.run_target(1000,35)
+                    if Yaw<-30:
+                        Yaw=-70
+                    back_motor.run((Yaw+10)*-15+100)
+                    if payload[2]>200:
+                        global red_or_green
+                        hub.light.on(Color.RED)
+                        red_or_green=1
+                    elif payload[5]>200:
+                        global red_or_green
+                        hub.light.on(Color.GREEN)
+                        red_or_green=2
+                    if Yaw>-10:
+                        break
+                break
+    payload=p.call('blob')
+    print(eyes.distance())
+    print(payload)
+    print("red_or_green:",red_or_green)
 ```
 
 <p align="center"><b>[Code 9]</b></p>
@@ -1211,8 +1148,114 @@ In the place surrounded by this red frame, the left distance (in the case of rig
 <p align="center"><b>[Image 7]</b></p>
 
 ### 3.4.7:Parking
-$
-$
+
+```py
+if right_turn_or_left_turn==1:
+    last_right()
+else:
+    last_left()
+parking()
+```
+
+Code 12
+
+```py
+def last_right():
+    if color==1:#赤
+        front_motor.run_target(1000,0)
+        timer.reset()
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,(0-Yaw))
+            back_motor.run(1000)
+            if timer.time()>1000:
+                back_motor.stop()
+                break
+        front_motor.run_target(1000,-35)
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,-35)
+            back_motor.run((90-Yaw)*-25-100)
+            if Yaw>90:
+                Yaw=hub.imu.heading()
+                hub.imu.reset_heading(Yaw-90)
+                break
+        front_motor.run_target(1000,0)
+        timer.reset()
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,(0-Yaw))
+            back_motor.run(1000)
+            if timer.time()>800:
+                back_motor.stop()
+                break
+    else:#緑
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,35)
+            back_motor.run(1000)
+            if Yaw>40:
+                back_motor.stop()
+                break
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,-35)
+            back_motor.run((90-Yaw)*-25-100)
+            if Yaw>90:
+                Yaw=hub.imu.heading()
+                hub.imu.reset_heading(Yaw-90)
+                break
+```
+
+```py
+def last_left():
+    if color==2:#緑
+        front_motor.run_target(1000,0)
+        timer.reset()
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,(0-Yaw))
+            back_motor.run(1000)
+            if timer.time()>1000:
+                back_motor.stop()
+                break
+        front_motor.run_target(1000,35)
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,35)
+            back_motor.run((90+Yaw)*-25-100)
+            if Yaw<-90:
+                Yaw=hub.imu.heading()
+                hub.imu.reset_heading(Yaw+90)
+                break
+        front_motor.run_target(1000,0)
+        timer.reset()
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,(0-Yaw))
+            back_motor.run(1000)
+            if timer.time()>800:
+                back_motor.stop()
+                break
+    else:#赤
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,-35)
+            back_motor.run(1000)
+            if Yaw<-40:
+                back_motor.stop()
+                break
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,35)
+            back_motor.run((90+Yaw)*-25-100)
+            if Yaw<-90:
+                Yaw=hub.imu.heading()
+                hub.imu.reset_heading(Yaw+90)
+                break
+```
+
+Code13
 $
 $
 $
@@ -1242,10 +1285,10 @@ while True:#前80cmまで前進
     direction=(0-Yaw)*0.5
     front_motor.run_target (1000,direction)
     payload=p.call('blob')
-    back_motor.run(1000)
+    back motor.run(1000)
     if eyes.distance()<700:
         hub.light.off()
-        left_distance=left_sensor.distance()
+        left distance=left_sensor.distance()
         print(eyes.distance())
         break
 ```
@@ -1255,7 +1298,19 @@ while True:#前80cmまで前進
 As shown in Code 14, by inserting print statements for each action, we can quickly identify which part of the sequence is failing, thereby reducing the time required for debugging. Furthermore, as demonstrated in the third line of Code 15, we configured the hub’s home button to light up in specific colors—which can even change based on certain conditions. This enhancement allows us to conduct more test runs and experiment with—as well as compare—different functional approaches, ultimately leading to greater accuracy and faster development. Additionally, because these features make it clear to the entire team how far the program executed correctly, any team member—not just the programmer—can spot errors or instances of unstable behavior. This ensures that every issue occurring during a single run can be identified and addressed.
 
 ### 3.5.2:How to determine the turning direction
-$
+
+```py
+print(right_sensor.distance())
+print(left_sensor.distance())
+if right_sensor.distance()>left_sensor.distance():
+    start_right()
+    right_turn()
+    right_turn_or_left_turn=1#右回り
+else:
+    start_left()
+    left_turn()
+    right_turn_or_left_turn=2#左回り
+```
 
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
