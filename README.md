@@ -1152,7 +1152,7 @@ Since the objects in the foreground have already been loaded by the time a turn 
 ### 3.4.5:How to prevent misidentification
 When reading traffic signs, objects outside the course may be the same color as traffic signs. At that time, if it is subject to detection, the obstacle cannot be read correctly. Therefore, we have considered the following countermeasures.
 
-<img height="120" alt="image" src="https://github.com/user-attachments/assets/b406d735-02de-46f6-95e1-560e369b32e2" />
+<div align="center"><img height="120" alt="image" src="https://github.com/user-attachments/assets/b406d735-02de-46f6-95e1-560e369b32e2" /></div>
 <p align="center"><b>[Code 10]</b></p>
 
 * Risk: Objects outside the course will be detected.
@@ -1290,10 +1290,21 @@ def last_left():
 </details>
 
 The diagram below illustrates the behavior when the program in Code 13 is executed.
+
+<div align="center"><img width="1562" height="1034" alt="image" src="https://github.com/user-attachments/assets/511f0440-893a-4a88-bcca-d8187ab806ba" /></div>
+<p align="center"><b>[Image 8[Operational diagram for Code 13 (in the case of red or colorless)]]</b></p>
+
+<div align="center"><img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/940fccf5-b2bf-4872-a7ce-1073c53b2987" /></div>
+<p align="center"><b>[Image 9[Operational diagram for Code 13 (in the green case)]]</b></p>
+
 $
-$
-$
-$
+<div align="center"><img width="633" height="678" alt="image" src="https://github.com/user-attachments/assets/f8ffda23-8d0a-4661-8d1d-bb0e10afd8c8" /></div>
+<p align="center"><b>[Image 10[Parking 1]]</b></p>
+
+<div align="center"><img width="629" height="605" alt="image" src="https://github.com/user-attachments/assets/e26025c2-2d3f-4548-a5bc-86f92c0b9c1b" /></div>
+<p align="center"><b>[Image 11[Parking 2]]</b></p>
+
+By incorporating a parallel parking maneuver—using the same program employed for the subsequent perpendicular parking—during both counter-clockwise and clockwise runs, we aimed to reduce the time required for corrections in the event of a parking error during the competition.
 
 ## 3.5:Other ingenuity points
 ### 3.5.1:Visualization of mistakes in print statements
