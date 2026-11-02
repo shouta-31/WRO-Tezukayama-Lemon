@@ -573,6 +573,10 @@ The details of this program are as follows.
 
 </details>
 
+>The flowchart for this code is as follows.
+><img width="1199" height="1312" alt="image" src="https://github.com/user-attachments/assets/249e8937-55a4-434d-9515-31bd0b8e9902" />
+><p align="center"><b>[Flowchart 1]</b></p>
+
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm"
 >At this point, since it is impossible to determine whether the object on the right is green, red, or non-existent, I have implemented the following method to make that determination.
 
@@ -913,8 +917,11 @@ The details of this program are as follows.
 
 </details>
 
->The flowchart in this code is as follows.  
->$  
+>The flowchart in this code is as follows.
+>
+><img width="1794" height="4550" alt="image" src="https://github.com/user-attachments/assets/571f391e-e0f4-493a-a3c3-2d9f07fa13fc" />
+><p align="center"><b>[Flowchart 2]</b></p>
+>
 >The path taken when this program is executed is shown in the figure below.
 >
 ><div align="center"><img width="350" alt="image" src="https://github.com/user-attachments/assets/f475b963-59a9-4079-b998-641b68665048" /></div>
@@ -928,6 +935,10 @@ The details of this program are as follows.
 >
 ><img width="1216" height="423" alt="IMG_0490" src="https://github.com/user-attachments/assets/0d937d59-6b6f-4287-8065-752c8db33ad6" />
 ><p align="center"><b>[Image 6 [Does not detect green AND distance on the left is less than 40 cm]]</b></p>
+>
+>The flowchart for case (iii) is as follows.
+><img width="2090" height="3960" alt="image" src="https://github.com/user-attachments/assets/b3dace65-af62-494a-8827-8ead14a0b330" />
+><p align="center"><b>[Flowchart 3]</b></p>
 
 By categorizing the turning methods in this way, it became possible to limit the number of obstacles to be detected in the subsequent segment to just one, thereby reducing the time required.
 
@@ -1009,7 +1020,10 @@ Since the objects in the foreground have already been loaded by the time a turn 
 </details>
 
 >At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in Code 7 is as follows.
->(Flow chart)
+>
+><img width="1213" height="1297" alt="image" src="https://github.com/user-attachments/assets/084bfafe-88a6-4398-ba52-bbb67fa75137" />
+><p align="center"><b>[Flowchart 4]</b></p>
+>
 >Also, if you run this program, it will work as shown in the figure below.
 
 (ii) "There is a red object in the center or back"
@@ -1078,6 +1092,11 @@ Since the objects in the foreground have already been loaded by the time a turn 
 </details>
 
 >At this time, considering the delay of the reaction time until the program starts in order for the red distance to approach 30 cm, we try to track based on the value of the pixel number 3000, which is 40 cm in front of the distance (see [3.4.1](#341measuring-the-distance-to-traffic-signs-based-on-the-number-of-pixel)). In addition, if the previous distance is closer than 40 cm, there is a possibility of hitting the object, so the previous distance was reduced to 40 cm, and then the object was tracked. In addition, after avoiding the red object, I created a program to move the car body to the position with a yaw angle of 0 in order to go straight, and tested it, but it saved time and accurately avoided objects in the corner section. After turning right to avoid red, read the red or green object or turn left until the yaw angle is 0 (in fact, 10 is used to shift from the center due to the delay in the processing speed of the robot).
+>
+>The flowchart for this program is as follows.
+>
+><img width="1206" height="1305" alt="image" src="https://github.com/user-attachments/assets/cffbbba1-e679-4757-9bf2-69014d13cd02" />
+><p align="center"><b>[Flowchart 5]</b></p>
 
 (iii) "There is a green object in the center or back"
 
@@ -1150,6 +1169,11 @@ Since the objects in the foreground have already been loaded by the time a turn 
 
 >In the case of green, like red, if it is too close, the robot is distanced from the object, then track the green object, turn left if the distance is 40 cm in front, read the red or green object, or turn right until the yaw angle is greater than 0 (as in the case of (iii)).
 >
+>The flowchart for this program is as follows.
+>
+><img width="1199" height="1312" alt="image" src="https://github.com/user-attachments/assets/6a5a7b05-f1bf-447f-88b8-d25caf20de83" />
+><p align="center"><b>[Flowchart 6]</b></p>
+
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
 ### 3.4.5:How to prevent misidentification
@@ -1300,7 +1324,13 @@ The diagram below illustrates the behavior when the program in Code 13 is execut
 <div align="center"><img width="562" alt="image" src="https://github.com/user-attachments/assets/940fccf5-b2bf-4872-a7ce-1073c53b2987" /></div>
 <p align="center"><b>[Image 9[Operational diagram for Code 13 (in the green case)]]</b></p>
 
-$
+The program content for Codes 12 and 13 is as shown in the flowchart below.
+
+<img width="1312" height="1199" alt="image" src="https://github.com/user-attachments/assets/8326f029-c759-4ba3-850a-7cf68ab81aa3" />
+<p align="center"><b>[Flowchart 7[Program details for Codes 12 and 13 (flowchart)]]</b></p>
+
+The operation diagram for the `parking()` function in the Code 12 program is shown below.
+
 <div align="center"><img width="433" alt="image" src="https://github.com/user-attachments/assets/f8ffda23-8d0a-4661-8d1d-bb0e10afd8c8" /></div>
 <p align="center"><b>[Image 10[Parking 1]]</b></p>
 
@@ -1370,6 +1400,13 @@ else:
 ```
 
 </details>
+
+The turning direction is determined by the program logic in Code 16. The flowchart below illustrates this process. (The contents of `start_right()` and `start_left()` are also included.)
+
+<img width="1224" height="1285" alt="image" src="https://github.com/user-attachments/assets/9719157c-9709-4f49-8788-dcbd1e1469a7" />
+<p align="center"><b>[Flowchart 8]</b></p>
+
+This allows for the correct determination of the turning direction, ensuring that no mistakes are made regarding which way to turn.
 
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
