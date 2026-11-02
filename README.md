@@ -917,6 +917,7 @@ The details of this program are as follows.
 >$  
 >The path taken when this program is executed is shown in the figure below.
 >
+><div align="center"><img width="350" alt="image" src="https://github.com/user-attachments/assets/f475b963-59a9-4079-b998-641b68665048" /></div>
 ><p align="center"><b>[Image 4 [When the object beyond the corner is red or colorless]]</b></p>
 >
 ><p align="center"><b>[Image 5 [When the object around the corner is green]]</b></p>
@@ -928,7 +929,7 @@ The details of this program are as follows.
 By categorizing the turning methods in this way, it became possible to limit the number of obstacles to be detected in the subsequent segment to just one, thereby reducing the time required.
 
 ### 3.4.4:How to drive a straight line section
-Since I finished reading the object in front of me when I was spinning, I divided it into the following cases.
+Since the objects in the foreground have already been loaded by the time a turn is made, I have categorized the scenarios as follows:
 
 (i) "There are no objects in this section at the moment (only objects read when turning)"
 
@@ -1145,6 +1146,7 @@ Since I finished reading the object in front of me when I was spinning, I divide
 </details>
 
 >In the case of green, like red, if it is too close, the robot is distanced from the object, then track the green object, turn left if the distance is 40 cm in front, read the red or green object, or turn right until the yaw angle is greater than 0 (as in the case of (iii)).
+>
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
 ### 3.4.5:How to prevent misidentification
