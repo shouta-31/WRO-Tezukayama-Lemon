@@ -509,7 +509,7 @@ The details of this program are as follows.
 >Therefore, the program will look like the code below.
 
 <details>
-<summary>b>Code 5</b></summary>
+<summary><b>Code 5</b></summary>
 
 ```py
     if payload[5]>10 or red_or_green==2:#緑
