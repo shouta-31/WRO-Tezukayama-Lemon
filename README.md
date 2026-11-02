@@ -433,21 +433,27 @@ In the obstacle-free Open Challenge rounds, an accurate straight forward and a 9
 ### 3.3.1:P control using a gyro sensor
 To automatically compensate for uneven friction acting on the tires during straight-line travel, we implemented proportional control—defined in line 6 of the code in "Code 1"—which determines the steering angle based on the error between the target yaw angle and the current value from the gyro sensor.  
 
+<details>
+<summary><b>Line 6 of Code1</b></summary>
+
 ```py
     front_motor.run_target(1000,0-Yaw)
 ```
 
-<p align="center"><b>[Line 6 of Code1]</b></p>
+</details>
 
 Initially, we employed PID control—incorporating both derivative and integral terms—but testing on the course revealed that these components actually made the robot’s behavior less stable. Furthermore, when measuring lateral deviation over a 5-meter straight run, we found a deviation of 7 cm with PID control and 5 cm with PD control; in contrast, using P control alone kept the deviation within 3 cm. Consequently, we opted for P control to simplify the system and ensure more stable performance.  
 
 ### 3.3.2:Turning method
 By utilizing the variable on line 14 of Code 1, we implemented a program that initiates rotation at maximum speed and decelerates as the target value is approached; this completely eliminates overshoot caused by inertia, enabling precise rotation with an accuracy of within ±0.5° of the target value.
+
+<details>
+<summary><b>Line 14 of Code 1</b></summary>
+
 ```py
         speed=(90-Yaw)*11+200
 ```
-
-<p align="center"><b>[Line 14 of Code 1]</b></p>
+</details>
 
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.  
@@ -481,6 +487,9 @@ There are instances where two objects of the same color appear simultaneously wi
 ### 3.4.3:Turning Method
 We reasoned that categorizing our cornering methods would reduce execution time and improve accuracy; consequently, we implemented the following classification system for use when entering corner sections.
 
+<details>
+<summary><b>Code 4</b></summary>
+
 ```py
   payload=p.call('blob')
   if payload[5]>500: ...
@@ -488,7 +497,7 @@ We reasoned that categorizing our cornering methods would reduce execution time 
   else: ...
 ```
 
-<p align="center"><b>[Code 4]</b></p>
+</details>
 
 The details of this program are as follows.  
 (i) "Green detected"  
@@ -498,6 +507,9 @@ The details of this program are as follows.
 ><p align="center"><b>[Image 3]</b></p>
 >
 >Therefore, the program will look like the code below.
+
+<details>
+<summary>b>Code 5</b></summary>
 
 ```py
     if payload[5]>10 or red_or_green==2:#緑
@@ -559,10 +571,13 @@ The details of this program are as follows.
         front_motor.run_target(1000,0)
 ```
 
-<p align="center"><b>[Code 5]</b></p>
+</details>
 
 (ii) "Green was not detected" AND "the distance on the left is greater than 40 cm"
 >At this point, since it is impossible to determine whether the object on the right is green, red, or non-existent, I have implemented the following method to make that determination.
+
+<details>
+<summary><b>Code 6</b></summary>
 
 ```py
      elif left_sensor.distance()>500 and left_sensor.distance!=2000:#左40㎝より大きい
@@ -896,7 +911,7 @@ The details of this program are as follows.
                             break
 ```
 
-<p align="center"><b>[Code 6]</b/>
+</details>
 
 >The flowchart in this code is as follows.  
 >$  
@@ -916,6 +931,9 @@ By categorizing the turning methods in this way, it became possible to limit the
 Since I finished reading the object in front of me when I was spinning, I divided it into the following cases.
 
 (i) "There are no objects in this section at the moment (only objects read when turning)"
+
+<details>
+<summary><b>Code 7</b></summary>
 
 ```py
     if (payload[2]<500 and payload[5]<500 and eyes.distance()>850) or obstacle==1:#赤もしくは緑のpixel数があるもしくは前の距離が850㎝より小さい
@@ -984,13 +1002,16 @@ Since I finished reading the object in front of me when I was spinning, I divide
                         break
 ```
 
-<p align="center"><b>[Code 7]</b></p>
+</details>
 
 >At this time, I decided that there was no object in this section when turning, or I passed the straight section and went straight using the yaw angle until I was in a position to enter the corner section (the distance in front is 850 cm). In addition, this program used the left and right distance to prevent the aircraft from crashing into the wall when it passed by the wall. The flowchart in Code 7 is as follows.
 >(Flow chart)
 >Also, if you run this program, it will work as shown in the figure below.
 
 (ii) "There is a red object in the center or back"
+
+<details>
+<summary><b>Code 8</b></summary>
 
 ```py
     if payload[2]>payload[5] and payload[2]>400 and obstacle!=1:#赤
@@ -1050,11 +1071,14 @@ Since I finished reading the object in front of me when I was spinning, I divide
                 break
 ```
 
-<p align="center"><b>[Code 8]</b></p>
+</details>
 
 >At this time, considering the delay of the reaction time until the program starts in order for the red distance to approach 30 cm, we try to track based on the value of the pixel number 3000, which is 40 cm in front of the distance (see [3.4.1](#341measuring-the-distance-to-traffic-signs-based-on-the-number-of-pixel)). In addition, if the previous distance is closer than 40 cm, there is a possibility of hitting the object, so the previous distance was reduced to 40 cm, and then the object was tracked. In addition, after avoiding the red object, I created a program to move the car body to the position with a yaw angle of 0 in order to go straight, and tested it, but it saved time and accurately avoided objects in the corner section. After turning right to avoid red, read the red or green object or turn left until the yaw angle is 0 (in fact, 10 is used to shift from the center due to the delay in the processing speed of the robot).
 
 (iii) "There is a green object in the center or back"
+
+<details>
+<summary><b>Code 9</b></summary>
 
 ```py
     elif payload[2]<payload[5] and payload[5]>400 and obstacle!=1:#緑
@@ -1118,7 +1142,7 @@ Since I finished reading the object in front of me when I was spinning, I divide
     print("red_or_green:",red_or_green)
 ```
 
-<p align="center"><b>[Code 9]</b></p>
+</details>
 
 >In the case of green, like red, if it is too close, the robot is distanced from the object, then track the green object, turn left if the distance is 40 cm in front, read the red or green object, or turn right until the yaw angle is greater than 0 (as in the case of (iii)).
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
@@ -1149,6 +1173,9 @@ In the place surrounded by this red frame, the left distance (in the case of rig
 
 ### 3.4.7:Parking
 
+<details>
+<summary><b>Code 12[Program for the interval between the end of the right turn and the start of parking]</b></summary>
+
 ```py
 if right_turn_or_left_turn==1:
     last_right()
@@ -1157,8 +1184,11 @@ else:
 parking()
 ```
 
-Code 12
+</details>
 
+<details>
+<summary><b>Code 13[Program for parking when turning clockwise, and for parallel parking when turning counter-clockwise]</b></summary>
+  
 ```py
 def last_right():
     if color==1:#赤
@@ -1255,7 +1285,9 @@ def last_left():
                 break
 ```
 
-Code13
+</details>
+
+The diagram below illustrates the behavior when the program in Code 13 is executed.
 $
 $
 $
@@ -1263,6 +1295,9 @@ $
 
 ## 3.5:Other ingenuity points
 ### 3.5.1:Visualization of mistakes in print statements
+
+<details>
+<summary><b>Code 14 [Verifying operation using print statements]</b></summary>
 
 ```py
     if Yaw>90:
@@ -1275,7 +1310,10 @@ print("Yaw:",hub.imu.heading())
 payload=p.call('blob')
 ```
 
-<p align="center"><b>[Code 14 [Verifying operation using print statements]]</b></p>
+</details>
+
+<details>
+<summary><b>Code 15 [Visualizing errors in a mobile robot using a 'home' button]</b></summary>
 
 ```py
 print("no")
@@ -1293,11 +1331,14 @@ while True:#前80cmまで前進
         break
 ```
 
-<p align="center"><b>[Code 15 [Visualizing errors in a mobile robot using a 'home' button]]</b></p>
+</details>
 
 As shown in Code 14, by inserting print statements for each action, we can quickly identify which part of the sequence is failing, thereby reducing the time required for debugging. Furthermore, as demonstrated in the third line of Code 15, we configured the hub’s home button to light up in specific colors—which can even change based on certain conditions. This enhancement allows us to conduct more test runs and experiment with—as well as compare—different functional approaches, ultimately leading to greater accuracy and faster development. Additionally, because these features make it clear to the entire team how far the program executed correctly, any team member—not just the programmer—can spot errors or instances of unstable behavior. This ensures that every issue occurring during a single run can be identified and addressed.
 
 ### 3.5.2:How to determine the turning direction
+
+<details>
+<summary><b>Code 16[Program that determines the turning direction during obstacle rounds (start_right() and start_left() are the routines for exiting the parking area and entering the turning section)]</b></summary>
 
 ```py
 print(right_sensor.distance())
@@ -1311,6 +1352,8 @@ else:
     left_turn()
     right_turn_or_left_turn=2#左回り
 ```
+
+</details>
 
 # 4:Systems Thinking
 ## 4.1:Interactions Between Subsystems
