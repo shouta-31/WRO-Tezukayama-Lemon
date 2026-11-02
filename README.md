@@ -11,6 +11,7 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 * `schemes` contains two schematic diagrams in form of PNG of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
 * `program code (src)` contains code of control software for all components which were programmed.
 * `models` is a model file used to manufacture vehicle parts.
+* `flow_chart` contains the flowchart used in the README.
   
 # A team
 ## Team introduction
