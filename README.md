@@ -1170,7 +1170,7 @@ For example, in the case of the following corner section program, align it on th
 
 In the place surrounded by this red frame, the left distance (in the case of right turn) that was calculated in advance is used, and it is aligned on the same line (position in the figure below).
 
-<div align="center"><img height="542" alt="image" src="https://github.com/user-attachments/assets/68ae61c8-0e8a-4ab4-9e6f-1c3736fb1e68" /></div>
+<div align="center"><img height="442" alt="image" src="https://github.com/user-attachments/assets/68ae61c8-0e8a-4ab4-9e6f-1c3736fb1e68" /></div>
 <p align="center"><b>[Image 7]</b></p>
 
 ### 3.4.7:Parking
@@ -1291,17 +1291,17 @@ def last_left():
 
 The diagram below illustrates the behavior when the program in Code 13 is executed.
 
-<div align="center"><img width="1562" height="1034" alt="image" src="https://github.com/user-attachments/assets/511f0440-893a-4a88-bcca-d8187ab806ba" /></div>
+<div align="center"><img width="562" alt="image" src="https://github.com/user-attachments/assets/511f0440-893a-4a88-bcca-d8187ab806ba" /></div>
 <p align="center"><b>[Image 8[Operational diagram for Code 13 (in the case of red or colorless)]]</b></p>
 
-<div align="center"><img width="1500" height="1000" alt="image" src="https://github.com/user-attachments/assets/940fccf5-b2bf-4872-a7ce-1073c53b2987" /></div>
+<div align="center"><img width="562" alt="image" src="https://github.com/user-attachments/assets/940fccf5-b2bf-4872-a7ce-1073c53b2987" /></div>
 <p align="center"><b>[Image 9[Operational diagram for Code 13 (in the green case)]]</b></p>
 
 $
-<div align="center"><img width="633" height="678" alt="image" src="https://github.com/user-attachments/assets/f8ffda23-8d0a-4661-8d1d-bb0e10afd8c8" /></div>
+<div align="center"><img width="433" alt="image" src="https://github.com/user-attachments/assets/f8ffda23-8d0a-4661-8d1d-bb0e10afd8c8" /></div>
 <p align="center"><b>[Image 10[Parking 1]]</b></p>
 
-<div align="center"><img width="629" height="605" alt="image" src="https://github.com/user-attachments/assets/e26025c2-2d3f-4548-a5bc-86f92c0b9c1b" /></div>
+<div align="center"><img width="429" alt="image" src="https://github.com/user-attachments/assets/e26025c2-2d3f-4548-a5bc-86f92c0b9c1b" /></div>
 <p align="center"><b>[Image 11[Parking 2]]</b></p>
 
 By incorporating a parallel parking maneuver—using the same program employed for the subsequent perpendicular parking—during both counter-clockwise and clockwise runs, we aimed to reduce the time required for corrections in the event of a parking error during the competition.
@@ -1386,7 +1386,7 @@ The competition imposed a 1.5 kg weight limit, which restricted the components t
 
 ## 4.3:Risk Identification and Mitigation Measures
 <img width="1064" height="601" alt="IMG_0441" src="https://github.com/user-attachments/assets/d8ee7cc0-894b-4410-b92d-e2a279366637" />
-　　　　　　　　　[A place where everyone can check the corrections in Japanese]
+<p align="center"><b>[A place where everyone can check the corrections in Japanese]</b></p>
 
 By consistently identifying and analyzing such risks—and ensuring that everyone is aware of them—we are able to improve the precision of our robots. Furthermore, by sharing the workload for challenges that are difficult to resolve through programming alone, we reduce the burden on our programmers.
 
