@@ -925,6 +925,8 @@ The details of this program are as follows.
 
 (iii) Other
 >In this case as well, since it is impossible to determine whether the object on the right is green, red, or non-existent, the system—much like in scenario (ii)—decides based on whether a green object appears while the robot is turning. Furthermore, when the distance to the left is short, there is no space to turn toward the left; therefore, the robot performs a turn as shown in the figure below, which differs from the method used in scenario (ii).
+>
+><img width="1216" height="423" alt="IMG_0490" src="https://github.com/user-attachments/assets/0d937d59-6b6f-4287-8065-752c8db33ad6" />
 ><p align="center"><b>[Image 6 [Does not detect green AND distance on the left is less than 40 cm]]</b></p>
 
 By categorizing the turning methods in this way, it became possible to limit the number of obstacles to be detected in the subsequent segment to just one, thereby reducing the time required.
