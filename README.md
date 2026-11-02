@@ -920,6 +920,7 @@ The details of this program are as follows.
 ><div align="center"><img width="350" alt="image" src="https://github.com/user-attachments/assets/f475b963-59a9-4079-b998-641b68665048" /></div>
 ><p align="center"><b>[Image 4 [When the object beyond the corner is red or colorless]]</b></p>
 >
+><img width="1520" height="1017" alt="IMG_0489" src="https://github.com/user-attachments/assets/93a139d0-0cf4-4fcf-83d6-3914896e2625" />
 ><p align="center"><b>[Image 5 [When the object around the corner is green]]</b></p>
 
 (iii) Other
