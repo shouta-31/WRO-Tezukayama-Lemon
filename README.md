@@ -316,7 +316,24 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
 
 Through repeated testing with this robot, it was discovered that during the Open Challenge rounds, the angle of incidence error would be at least ±5° when completing the corner section.  
 Therefore, to ensure that the wall could be read even with this error, a distance sensor with a wide measurement range was used, as can be seen in Graph 1.  
- 
+
+<img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
+
+<p align="center"><b>[Calibration Data]</b></p>
+Furthermore, when implementing this distance sensor on our robot, we collected data regarding the discrepancy between the reference distance (actual distance) and the measured value. The data is summarized below:
+
+ | Exact value | Measured value |
+ |:---:|---|
+ | **20 cm** | 20.1 cm |
+ | **30 cm** | 30.3 cm |
+ | **40 cm** | 40.4 cm |
+ | **50 cm** | 50.3 cm |
+ | **60 cm** | 60.7 cm |
+ | **70 cm** | 70.7 cm |
+
+We developed our program by accounting for these measured discrepancies. As a result, our robot is now able to navigate without being affected by these errors.
+
+
 ### 2.7.2:Left and right
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/38cd2c0b-a8cf-43cb-9d08-de35d7f445a2" />
 
