@@ -57,7 +57,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - [2.6:Tires](#26tires)
     - [2.6.1:Front wheel](#261front-wheel)
     - [2.6.2:Rear Wheel](#262rear-wheel)
-  - [2.7:Sensors and Sensor Architecture](#27sensors-and-sensor-architecture)
+  - [2.7:Sensors, sensor architecture, and sensor calibration methods](#27Sensors, sensor architecture, and sensor calibration methods)
     - [2.7.1:Forward](#271forward)
     - [2.7.2:Left and right](#272left-and-right)
   - [2.8:Camera](#28camera)
@@ -297,7 +297,7 @@ For the front wheels, I used tires with design ID 55976, measuring 56 mm in diam
 
 For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28mm in width. We chose this tire because its large contact surface with the ground increases friction, resulting in greater propulsion and making it easier to increase speed.  
 
-## 2.7:Sensors and Sensor Architecture
+## 2.7:Sensors, sensor architecture, and sensor calibration methods
 <img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/78838e3b-042f-49ae-bca4-7167ef6f03e3" />
 
  |  |  |
@@ -317,12 +317,9 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
 Through repeated testing with this robot, it was discovered that during the Open Challenge rounds, the angle of incidence error would be at least ±5° when completing the corner section.  
 Therefore, to ensure that the wall could be read even with this error, a distance sensor with a wide measurement range was used, as can be seen in Graph 1.  
 
-<img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
+In addition, we took data on the error between the reference distance (actual distance) and the actual measured value when using this distance sensor on the robot. The following is a summary of data on the actual distance and measurements for the course wall.
 
-<p align="center"><b>[Calibration Data]</b></p>
-Furthermore, when implementing this distance sensor on our robot, we collected data regarding the discrepancy between the reference distance (actual distance) and the measured value. The data is summarized below:
-
- | Exact value | Measured value |
+ | Actual distance | Measured value |
  |:---:|---|
  | **20 cm** | 20.1 cm |
  | **30 cm** | 30.3 cm |
@@ -331,7 +328,11 @@ Furthermore, when implementing this distance sensor on our robot, we collected d
  | **60 cm** | 60.7 cm |
  | **70 cm** | 70.7 cm |
 
-We developed our program by accounting for these measured discrepancies. As a result, our robot is now able to navigate without being affected by these errors.
+ <img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
+
+<p align="center"><b>[Calibration Data]</b></p>
+
+We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
 
 ### 2.7.2:Left and right
