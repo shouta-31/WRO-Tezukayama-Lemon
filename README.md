@@ -57,7 +57,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - [2.6:Tires](#26tires)
     - [2.6.1:Front wheel](#261front-wheel)
     - [2.6.2:Rear Wheel](#262rear-wheel)
-  - [2.7:Sensors, sensor architecture, and sensor calibration methods](#27Sensors, sensor architecture, and sensor calibration methods)
+  - [2.7:Sensors, sensor architecture, and sensor calibration methods](#27Sensors,-sensor-architecture,-and-sensor-calibration-methods)
     - [2.7.1:Forward](#271forward)
     - [2.7.2:Left and right](#272left-and-right)
   - [2.8:Camera](#28camera)
