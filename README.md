@@ -60,6 +60,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - [2.7:Sensors, sensor architecture, and sensor calibration methods](#27Sensors,-sensor-architecture,-and-sensor-calibration-methods)
     - [2.7.1:Forward](#271forward)
     - [2.7.2:Left and right](#272left-and-right)
+    - [2.7.3:Sensor calibration methods](#273Sensor-calibration-methods)
   - [2.8:Camera](#28camera)
 - [3:Program](#3program)
   - [3.1:Programming Software (Pybricks, OpenMV)](#31programming-software-pybricks-openmv)
@@ -317,6 +318,12 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
 Through repeated testing with this robot, it was discovered that during the Open Challenge rounds, the angle of incidence error would be at least ±5° when completing the corner section.  
 Therefore, to ensure that the wall could be read even with this error, a distance sensor with a wide measurement range was used, as can be seen in Graph 1.  
 
+### 2.7.2:Left and right
+<img  height="348" alt="image" src="https://github.com/user-attachments/assets/38cd2c0b-a8cf-43cb-9d08-de35d7f445a2" />
+
+The left and right distance sensors are used to determine the proximity to the left and right walls, confirm the direction of rotation, and act as a safety device to prevent contact with the walls. (See [3.4.4](#344how-to-drive-a-straight-line-section) for details.) Therefore, by mounting the distance sensors vertically as shown in the image above, the error is reduced. The reason for using distance sensors is that they can read within 30 cm when performing high-speed detection, so we judged them to be suitable sensors for use as a safety device.
+
+### 2.7.3:Sensor calibration methods
 In addition, we took data on the error between the reference distance (actual distance) and the actual measured value when using this distance sensor on the robot. The following is a summary of data on the actual distance and measurements for the course wall.
 
  | Actual distance | Measured value |
@@ -334,12 +341,6 @@ In addition, we took data on the error between the reference distance (actual di
 
 We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
-
-### 2.7.2:Left and right
-<img  height="348" alt="image" src="https://github.com/user-attachments/assets/38cd2c0b-a8cf-43cb-9d08-de35d7f445a2" />
-
-The left and right distance sensors are used to determine the proximity to the left and right walls, confirm the direction of rotation, and act as a safety device to prevent contact with the walls. (See [3.4.4](#344how-to-drive-a-straight-line-section) for details.) Therefore, by mounting the distance sensors vertically as shown in the image above, the error is reduced. The reason for using distance sensors is that they can read within 30 cm when performing high-speed detection, so we judged them to be suitable sensors for use as a safety device.
- 
 ## 2.8:Camera
 <img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" />
 
