@@ -1447,7 +1447,17 @@ The competition imposed a 1.5 kg weight limit, which restricted the components t
 <p align="center"><b>[A place where everyone can check the corrections in Japanese]</b></p>
 
 In the document provided above, we have compiled the risks encountered by each team member. By ensuring that everyone reviews and understands these risks—and by consistently identifying and analyzing them—we are able to improve the robot's precision. Furthermore, we distribute tasks related to problems that are difficult to resolve through programming alone, which helps to alleviate the burden on our programmers.
-The table below summarizes a selection of the risks we have encountered and subsequently resolved
+The table below summarizes a selection of the risks we have encountered and subsequently resolved.
+
+ | Risk | Issue Encountered | Countermeasure |
+ |:---:|---|---|
+ | **Gyro drift** | Reduced straight-line accuracy | Resetting the angle when stopped |
+ | **Camera misidentification** | Incorrect detection of obstacles | Detection based on pixel count |
+ | **Rack-and-pinion steering** | Inability to complete turns in corner sections | Parallel steering mechanism |
+ | **Time required for starting and stopping in parking areas** | Inability to complete the course within the time limit | Adding adjustable protrusions to modify the robot's length |
+ | **Robot weight** | Reduced movement speed | Selective optimization of components |
+
+As this table demonstrates, we minimize errors by identifying, reviewing, and addressing a wide range of risks.
 
 # 5:Reference materials
 https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h
