@@ -58,8 +58,8 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
     - [2.6.1:Front wheel](#261front-wheel)
     - [2.6.2:Rear Wheel](#262rear-wheel)
   - [2.7:Sensors, sensor architecture, and sensor calibration methods](#27Sensors,-sensor-architecture,-and-sensor-calibration-methods)
-    - [2.7.1:Forward](#271forward)
-    - [2.7.2:Left and right](#272left-and-right)
+    - [2.7.1:The reason for installing the front sensor](#271The-reason-for-installing-the-front-sensor)
+    - [2.7.2:The reason for installing the left and right sensors](#272The-reason-for-installing-the-left-and-right-sensors)
     - [2.7.3:Sensor calibration methods](#273Sensor-calibration-methods)
   - [2.8:Camera](#28camera)
 - [3:Program](#3program)
@@ -312,16 +312,16 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
 
 <p align="center"><b>[Graph 1]</b></p>
 
-### 2.7.1:Forward
+### 2.7.1:The reason for installing the front sensor
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/d310ef52-c1d7-471b-88f6-9f8c3b2d1c0e" />
 
-Through repeated testing with this robot, it was discovered that during the Open Challenge rounds, the angle of incidence error would be at least ±5° when completing the corner section.  
-Therefore, to ensure that the wall could be read even with this error, a distance sensor with a wide measurement range was used, as can be seen in Graph 1.  
+After testing with this robot many times, it was found that if you finish the corner section during the Open Challenge rounds, the error of the angle of incidence will be at least ±5°.
+Therefore, in order to read and bend the wall in front of us even if there is an error, we installed and used a distance sensor in front of the robot, which has a wide range that can be measured as can be seen from Graph 1. 
 
-### 2.7.2:Left and right
+### 2.7.2:The reason for installing the left and right sensors
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/38cd2c0b-a8cf-43cb-9d08-de35d7f445a2" />
 
-The left and right distance sensors are used to determine the proximity to the left and right walls, confirm the direction of rotation, and act as a safety device to prevent contact with the walls. (See [3.4.4](#344how-to-drive-a-straight-line-section) for details.) Therefore, by mounting the distance sensors vertically as shown in the image above, the error is reduced. The reason for using distance sensors is that they can read within 30 cm when performing high-speed detection, so we judged them to be suitable sensors for use as a safety device.
+The left and right distance sensors are used as a safety device to determine the proximity to the left and right walls, check the direction of rotation, and prevent contact with the walls that are always on either side of the left and right. (See [3.4.4](#344how-to-drive-a-straight-line-section) for details.) Therefore, the error is reduced by placing the distance sensor vertically as shown in the image above. In addition, the reason for using a distance sensor is that it is a suitable sensor to use as a safety device because it can read within 30 cm for high-speed detection.
 
 ### 2.7.3:Sensor calibration methods
 In addition, we took data on the error between the reference distance (actual distance) and the actual measured value when using this distance sensor on the robot. The following is a summary of data on the actual distance and measurements for the course wall.
