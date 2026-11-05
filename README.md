@@ -122,7 +122,7 @@ Additionally, shown below is a 3D model of our robot created in Studio 2.0; this
 ## 2.2:Robot Structure and Actuation
 <div align="center"><img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" /></div>
 
-<div align="center"><img height="446" alt="image" src="https://github.com/user-attachments/assets/0d12f19a-05b1-4f6d-aa1e-61b9674fa910" /></div>
+<div align="center"><img height="446" alt="IMG_0492" src="https://github.com/user-attachments/assets/9b071c70-5171-4b5f-aa37-73eb3409209f" /></div>
 
 <p align="center"><b>[Center of gravity of the robot]</b></p>
 
