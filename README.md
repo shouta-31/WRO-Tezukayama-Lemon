@@ -168,14 +168,7 @@ For more details, please visit the link below.
 With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.  
 
 ### 2.3.2:Power Balance
-The table below summarizes the actual measured power consumption for each device.  
-Furthermore, based on the SPIKE Prime battery used in this instance [Output voltage (V): Rated 7.3V (approx. 8.4V when fully charged); Capacity: 2100mAh], the calculated power margin is 33.3%, indicating that the robot's design is safe.  
-
-$$
-\text{Margin [\\%]} = \left(1 - \frac{\text{Total maximum current consumption}}{\text{Maximum current supply capability of the power source}} \right) \times 100
-$$
-
-<div align="center">
+In order to evaluate the power consumption of the robot and achieve stable operation, we measured the power consumption of the motors, sensors, and sensors used in the robot ourselves. The following table summarizes it.
  
  |  | device | At rest (mA) | During action (mA) |
  |:---:|---|---|---|
@@ -190,6 +183,16 @@ $$
 
 </div>
 <p align="center"><b>[Table of electricity balance]</b></p>
+
+From this table, it can be seen that the power system has sufficient operating space, and that this robot is a safe design.
+
+In addition, based on the SPIKE Prime battery [output voltage (V): rated 7.3V (about 8.4V when fully charged), capacity: 2100mAh] used this time, the power margin rate is calculated, it is 33.3%, and It can be seen from the fact that the same is true.
+
+$$
+\text{Margin [\\%]} = \left(1 - \frac{\text{Total maximum current consumption}}{\text{Maximum current supply capability of the power source}} \right) \times 100
+$$
+
+<div align="center">
 
 ## 2.4:Motor
 
