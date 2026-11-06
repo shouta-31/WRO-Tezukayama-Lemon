@@ -360,7 +360,7 @@ The OpenMV Cam H7 Plus has the advantages of lower power consumption, a larger m
 
 We also measured the reliability of the camera.The graph below summarizes the number of successful detection of camera obstacles 10 times in various environments.
 
- | Experimental conditions | Number of successes (number of attempts: 10) |
+ | Experimental conditions | Number of successes |
  |:---:|---|
  | **Normal brightness** | **10** |
  | **A brighter environment than usual** | **10** |
