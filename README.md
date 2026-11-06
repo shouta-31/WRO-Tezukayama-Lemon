@@ -169,6 +169,8 @@ With the SPIKE Prime Hub, power is distributed evenly across all six ports. Addi
 
 ### 2.3.2:Power Balance
 In order to evaluate the power consumption of the robot and achieve stable operation, we measured the power consumption of the motors, sensors, and sensors used in the robot ourselves. The following table summarizes it.
+
+<div align="center">
  
  |  | device | At rest (mA) | During action (mA) |
  |:---:|---|---|---|
@@ -191,8 +193,6 @@ In addition, based on the SPIKE Prime battery [output voltage (V): rated 7.3V (a
 $$
 \text{Margin [\\%]} = \left(1 - \frac{\text{Total maximum current consumption}}{\text{Maximum current supply capability of the power source}} \right) \times 100
 $$
-
-<div align="center">
 
 ## 2.4:Motor
 
