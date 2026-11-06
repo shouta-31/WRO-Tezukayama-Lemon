@@ -49,7 +49,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
   - [2.2:Robot Structure and Actuation](#22robot-structure-and-actuation)
   - [2.3:Power Supply and Wiring](#23power-supply-and-wiring)
     - [2.3.1:Reasons for Power Supply Selection and Wiring Diagram](#231reasons-for-power-supply-selection-and-wiring-diagram)
-    - [2.3.2:Power Balance](#232power-balance)
+    - [2.3.2:Electricity balance and power supply margin rate](#232Electricity-balance-and-power-supply-margin-rate)
   - [2.4:Motor](#24motor)
     - [2.4.1:Drive Motor](#241drive-motor)
     - [2.4.2:Steering Motor](#242steering-motor)
@@ -167,7 +167,7 @@ For more details, please visit the link below.
 
 With the SPIKE Prime Hub, power is distributed evenly across all six ports. Additionally, the Open MV camera minimizes errors by utilizing only four pins.  
 
-### 2.3.2:Power Balance
+### 2.3.2:Electricity balance and power supply margin rate
 In order to evaluate the power consumption of the robot and achieve stable operation, we measured the power consumption of the motors, sensors, and sensors used in the robot ourselves. The following table summarizes it.
 
 <div align="center">
