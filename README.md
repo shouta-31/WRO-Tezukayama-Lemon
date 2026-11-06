@@ -76,7 +76,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
     - [3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained](#342a-program-that-reads-nearby-traffic-signs-and-transmits-the-values-obtained)
     - [3.4.3:Turning Method](#343turning-method)
     - [3.4.4:How to drive a straight line section](#344how-to-drive-a-straight-line-section)
-    - [3.4.5:How to prevent misidentification](#345how-to-prevent-misidentification)
+    - [3.4.5:Countermeasures against sensor false detection and abnormal values](#345Countermeasures-against-sensor-false-detection-and-abnormal-values)
     - [3.4.6:Destination setting](#346destination-setting)
     - [3.4.7:Parking](#347parking)
   - [3.5:Other ingenuity points](#35other-ingenuity-points)
@@ -1196,7 +1196,7 @@ Since the objects in the foreground have already been loaded by the time a turn 
 
 (ii) (iii) allows you to accurately avoid objects, and even if there is no object by (i), you can avoid the mistake of returning to the center when the left and right distance gets closer when you go in a straight line, and do not make a mistake before turning. I did. These make it possible to operate accurately without mistakes even when turning. In addition, (ii) (iii) has read the object in the corner section in advance, so we succeeded in reducing the number of seconds by about 10 seconds.
 
-### 3.4.5:How to prevent misidentification
+### 3.4.5:Countermeasures against sensor false detection and abnormal values
 When reading traffic signs, objects outside the course may be the same color as traffic signs. At that time, if it is subject to detection, the obstacle cannot be read correctly. Therefore, we have considered the following countermeasures.
 
 <div align="center"><img height="120" alt="image" src="https://github.com/user-attachments/assets/b406d735-02de-46f6-95e1-560e369b32e2" /></div>
