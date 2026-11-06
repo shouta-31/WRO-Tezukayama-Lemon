@@ -61,7 +61,7 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
     - [2.7.1:The reason for installing the front sensor](#271The-reason-for-installing-the-front-sensor)
     - [2.7.2:The reason for installing the left and right sensors](#272The-reason-for-installing-the-left-and-right-sensors)
     - [2.7.3:Sensor calibration methods](#273Sensor-calibration-methods)
-  - [2.8:Camera](#28camera)
+  - [2.8:Camera and its reliability](#28Camera-and-its-reliability)
 - [3:Program](#3program)
   - [3.1:Programming Software (Pybricks, OpenMV)](#31programming-software-pybricks-openmv)
     - [3.1.1:About Pybricks](#311about-pybricks)
@@ -344,7 +344,7 @@ In addition, we took data on the error between the reference distance (actual di
 
 We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
-## 2.8:Camera
+## 2.8:Camera and its reliability
 <img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" />
 
 We used a camera with the front part of the distance sensor removed and an OpenMV Cam H7 Plus attached.  
@@ -357,6 +357,19 @@ The OpenMV Cam H7 Plus has the advantages of lower power consumption, a larger m
  | **Memory capacity** | 32MB SDRAM + 1MB SRAM | 1GB/2GB/4GB/8GB It varies slightly depending on the model. | 8MB PSRAM + 520KB SRAM | 512MB |
  | **Understanding speed** | Standard (medium speed) | High speed | Low speed to medium speed | Ultra-high speed |
  | **External connection** | USB, SPI, I2C, UART, PWM, MicroSD | USB x4, HDMI ×2, LAN, Wi-Fi, Bluetooth, GPIO | Wi-Fi, Bluetooth, MicroSD, GPIO, UART | USB Type-C |
+
+We also measured the reliability of the camera.The graph below summarizes the number of successful detection of camera obstacles 10 times in various environments.
+
+ | Experimental conditions | Number of successes (number of attempts: 10) |
+ |:---:|---|
+ | **Normal brightness** | 10 |
+ | **A brighter environment than usual** | 10 |
+ | **A darker environment than usual** | 9 |
+ | **Change the angle of the obstacle** | 9 |
+ 
+<p align="center"><b>[Table of the number of successful obstacle detections in various environments]</b></p>
+
+From the above, you can see that this camera is highly reliable.
 
 ## 2.9:Starting and stopping in a parking lot
 <img width="500" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
