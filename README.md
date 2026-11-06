@@ -362,10 +362,10 @@ We also measured the reliability of the camera.The graph below summarizes the nu
 
  | Experimental conditions | Number of successes |
  |:---:|---|
- | **Normal brightness** | **10** |
- | **A brighter environment than usual** | **10** |
- | **A darker environment than usual** | **9** |
- | **Change the angle of the obstacle** | **9** |
+ | **Normal brightness** | 10 times |
+ | **A brighter environment than usual** | 10 times |
+ | **A darker environment than usual** | 9 times |
+ | **Change the angle of the obstacle** | 9 times |
  
 <p align="center"><b>[Table of the number of successful obstacle detections in various environments]</b></p>
 
