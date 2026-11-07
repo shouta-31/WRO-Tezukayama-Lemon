@@ -108,8 +108,8 @@ Also, as a strategy, in the parking lotChoosing a parking spotI did that. I will
 <p align="center"><b>[State machine diagram]</b></p>
 
 ## 1.3:Testing, Tuning, and Trade-offs
-To complete the mission more accurately, we consistently aimed to score at least 80% on each challenge and repeatedly ran test workflows such as experiments to measure the distance between the robot and objects to fine-tune our system. We also made trade-offs regarding parts and programming based on these tests.
-The table below shows the scores achieved within the time limit during the Open Challenge rounds (open) and Obstacle Challenge rounds (obstacle) across 10 test runs.
+To complete the mission more accurately, we carried out a series of test workflows—such as experiments to measure the distance between the robot and objects based on specific criteria—and performed subsequent tuning (see 3.4.1 for details). Furthermore, based on these tests, we made trade-off decisions regarding components and programming.
+The table below shows the scores achieved within the time limit across seven test runs for both the "Open Challenge" and "Obstacle Challenge" rounds.
 <img width="1184" height="792" alt="IMG_0440" src="https://github.com/user-attachments/assets/af8019d3-96aa-457c-8e61-a6926b966361" />
 
 # 2:Robot design
