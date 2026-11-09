@@ -442,6 +442,8 @@ Therefore, we determined that Part A should be at least 1.5cm long. We adjusted 
  | **Compatible devices** | SPIKE, Technic, City, Move, etc. | Each app has a fixed hub. | SPIKE Prime /Robot Inventor only |
  | **Simultaneous Bluetooth connection** | 7-8 units | Connection unavailable | Construction is extremely difficult. |
  
+(This table is based on [6].)
+
 This robot used Pybricks. The reason is that compared to other program sites, it is the best in terms of start-up time and control loop cycle, and I chose it because of the advantage that the motor synchronous control is less than 1 degree and there is almost no error.
 
 ### 3.1.2:About OpenMV
@@ -454,6 +456,8 @@ We used a camera with the front part of the distance sensor removed and an OpenM
  | **Number of lines of code required to transmit coordinate data** | 1 line | Approximately 15 lines | Approximately 10 lines |
  | **Number of lines of code required to display the debug screen** | 0 lines | Indicates no | 3 lines |
  | **Language matching with pybricks** | 〇 | × | 〇 |
+
+(This table is based on [7].)
 
 As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
@@ -1518,14 +1522,21 @@ The table below summarizes a selection of the risks we have encountered and subs
 As this table demonstrates, we minimize errors by identifying, reviewing, and addressing a wide range of risks.
 
 # 5:Reference materials
-https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h
-https://pybricks.com/
-https://openmv.io/pages/download
-https://www.switch-science.com/products/6560
-https://grabcad.com/library/h7-plus-1
-https://afrel.co.jp/product/spike/prime/
-https://github.com/GianCann/SpikePrimeHub
-https://store.bricklink.com/v2/studio/download.page
+The order is: document title, author/publisher, URL, and date accessed.
+[1] OpenMV H7 Camera Plus -- Discontinued -- Switch Science, Switch Science Co., Ltd., https://www.switch-science.com/products/6560, 2026-11-08
+
+[2] GitHub-GianCann/SpikePrimeHub:Technical info about LEGO Spike Prime Hub, GianCann, https://github.com/GianCann/SpikePrimeHub, 2026-11-08
+
+[3] SPIKE Prime M Angular Motor Specifications | Afrel Co., Ltd. | LEGO Education Authorized Dealer , Afrel Co., Ltd., https://afrel.co.jp/product/spike/technology-spike/prime/hardware/mediumangularmotor/45915/, 2026-11-08
+
+[4] SPIKE Prime L Angular Motor Specifications | Afrel Co., Ltd. | LEGO Education Authorized Dealer , Afrel Co., Ltd., https://afrel.co.jp/product/spike/technology-spike/prime/hardware/largeangularmotor/433/, 2026-11-08
+
+[5] SPIKE Prime Distance Sensor Specifications | Afrel Co., Ltd. | LEGO Education Authorized Distributor , Afrel Co., Ltd., https://afrel.co.jp/product/spike/technology-spike/prime/hardware/distancesensor/45916/ , 2026-11-08
+
+[6] Pybricks, Pybricks, https://pybricks.com/, 2026-11-08
+
+[7] Small - Affordable - Expandable – OpenMV, OpenMV, LLC, https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h, 2026-11-08
+
 
 # How to build a robot
 **① Build the robot itself**
