@@ -138,8 +138,37 @@ Furthermore, the center of gravity (indicated by the red circle) was positioned 
  | **accelerate** | Easy to spin freely | Because the weight is shifted to the rear, it is easier to accelerate. |
  | **Accuracy of straight-line movement** | It provides stability due to its high grip. | The low grip can make it unstable.  |
  
-And I chose rear-wheel drive as the drive system. This is because rear-wheel drive makes it difficult to load the front tire and reduces the numerical error of the front wheel. In addition, if you use front-wheel drive, you may hit an obstacle because it is easy to swell out in the curve. There are other four-wheel drives, but in four-wheel drive, if you use gears from the rear wheel to bring power to the front wheel, the tires of the rear wheel will move a little faster, resulting in errors such as parking.
-In order to increase the accuracy of straight ahead, the hub was slightly brought to the front wheel side to eliminate empty spinning. 
+<div align="center"><img width="599" height="565" alt="image" src="https://github.com/user-attachments/assets/2966820e-896f-4538-98b0-ee2540780eee" /></div>
+
+We chose a rear-wheel drive configuration. This reduces the load on the front tires, thereby decreasing friction. Consequently, it minimizes discrepancies in the data for the front wheels—errors that can otherwise arise when the motors are activated via the program. Furthermore, a front-wheel drive setup tends to cause the robot to drift outward when cornering, increasing the risk of collisions with obstacles.  
+
+When comparing the distances between robots using rear-wheel drive (red line) versus front-wheel drive (blue line) ...  
+
+Turning radius based on the rear axle (red line)
+
+$$
+R = \frac{L}{tanθ}
+$$
+
+* R:Turningradius
+* L:Wheelbase
+* θ:Front-wheelsteeringangle
+
+Turning radius based on the front axle (blue line)
+
+$$
+R = \frac{L}{sinθ}
+$$
+
+* R:Turningradius
+* L:Wheelbase
+* θ:Front-wheelsteeringangle
+
+With a wheelbase L=12.7 cm and a steering angle θ=30° , the turning radius is 22.0 cm when measured from the rear axle, and 25.4 cm when measured from the front axle. Consequently, a front-wheel-drive configuration results in a turning path that extends 3.40 cm further outward than that of a rear-wheel-drive configuration. In other words, front-wheel drive introduces understeer, causing the vehicle to swing significantly toward the outside of the turn. Conversely, rear-wheel drive minimizes slippage, allowing the vehicle to maintain a position closer to the center of the course. (For details regarding the steering angle in a front-wheel-drive setup, please refer to section [2.5](#25front-wheel-steering).)
+
+Four-wheel drive is another option; however, when power is transmitted from the rear wheels to the front wheels—for instance, via a gear train—the rear wheels tend to rotate slightly faster than the front wheels, which leads to discrepancies during maneuvers such as parking.
+
+Furthermore, to improve straight-line tracking accuracy, the wheel hubs were positioned slightly further toward the front, which effectively eliminated wheel spin.
  
 ## 2.3:Power Supply and Wiring
 ### 2.3.1:Reasons for Power Supply Selection and Wiring Diagram
@@ -211,40 +240,37 @@ The allowance rate must be at least 20%. Our robot goes beyond this, so you can 
 | **Performance** | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 185 RPM ±15%<br>• Current: 110 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 3.5 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 280 mA ±15%<br><br>**Stall:**<br>• Torque: 18 Ncm<br>• Speed: 0 RPM<br>• Current: 800 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* | **No load:**<br>• Torque: 0 Ncm<br>• Speed: 175 RPM ±15%<br>• Current: 135 mA ±15%<br><br>**Maximum efficiency:**<br>• Torque: 8 Ncm<br>• Speed: 135 RPM ±15%<br>• Current: 430 mA ±15%<br><br>**Stall:**<br>• Torque: 25 Ncm<br>• Speed: 0 RPM<br>• Current: 1400 mA ±15%<br><br>*(The data above is based on a 7.2 V power supply.)* |
 | **Rotation Sensor** | Resolution: 1 rotation = 360 counts<br>Accuracy: ±3 degrees<br>Update rate: 100 Hz | Resolution: 1 rotation = 360 counts<br>Accuracy: ±3 degrees<br>Update rate: 100 Hz |
 
-<p align="center"><b>[SPIKE Prime motor data]</b></p>
+<p align="center"><b>[SPIKE Prime motor data]（This table is based on [3], [4].）</b></p>
 
-As described in section [2.2](#22robot-structure-and-actuation), we used the SPIKE Prime Hub; consequently, we limited our motor selection to SPIKE Prime motors and chose specific motors for the drive and steering systems based on the aforementioned considerations. Calculations regarding the robot's weight (650.8 g) and torque—factoring in a safety margin—indicated that the required torque was 6.72 Ncm for the front wheels and 2.1 Ncm for the rear wheels.  
+As stated in Section [2.2](#22robot-structure-and-actuation), since the SPIKE Prime hub was used, the motors were limited to those designed for the SPIKE Prime system. Based on the aforementioned considerations, we selected the motors for the drive and steering systems. Calculations of the robot’s weight (650.8 g) and the required torque (incorporating a safety factor of 1.5) indicated that the front wheels require a torque of 6.72 Ncm (based on calculation (1)), while the rear wheels require 2.1 Ncm (based on calculation (2)).
 
-**1:Torque calculation formula**
-
-$$
-T = F_{\text{app}} \times r
-$$
-
-* $T = \text{Torque}$
-* $F_{\text{app}} = \text{Applied force}$
-* $r = \text{Distance from rotation axis to point of force}$
-
-**2:Speed ​​calculation formula**
+**Torque required for the rear wheel**
 
 $$
-v = \frac{\pi \times d \times n}{60}
+T_{\text{rear}} = \frac{F_{\text{total}} \times r_{\text{wheel}} \times S_{\text{factor}}}{i \times \mu}
 $$
 
-* $v = \text{Speed}$
-* $d = \text{Diameter of rotating body}$
-* $n = \text{Number of revolutions per minute}$
+- Ftotal=Faccel+Froll
+ - Faccel:ma(m:totalmassoftherobot,a:targetacceleration)
+ - Froll:rollm9.81(roll:rollingresistancecoefficient≈0.03)
+- $r_{\text{wheel}}:\text{Radius of the rear tire}
+- $S_{\text{factor}}:\text{Factor of safety}(1.5)
+- i:Gearratio(1.0,asitisadirectconnection)
+- :Geartransmissionefficiency(1.0,asitisadirectconnection)
 
-**3:Formula for calculating the torque required for the front wheel (frictional moment of resistance)**
+**The torque required for the front wheel**
 
 $$
-M = μ \times P \times \frac{d}{2}
+T_{\text{steer\\_motor}} = \frac{\mu \times W_{\text{front}} \times r_{\text{scrub}} \times S_{\text{factor}}}{i_{\text{steer}} \times \mu_{\text{steer}}}
 $$
 
-* $M = \text{Frictional resistance moment}$
-* $μ = \text{coefficient of friction of bearings}$
-* $P = \text{Load on the bearing}$
-* $d = \text{Inner diameter of the bearing}$
+- :Staticfrictioncoefficientbetweenthetireandtheroadsurface(≈0.7)
+- Wfront:Loadappliedtothefrontwheels(N)
+- rscrub:Scrubradius(cm)
+- Sfactor:Safetyfactor(1.5)
+- isteer:Reductionratioofthesteeringmechanism(1.0,asitisadirectconnection)
+- steer:Transmissionefficiencyofthesteeringsystem(1.0,asitisadirectconnection)
+
 
 ### 2.4.1:Drive Motor
 Since the drive motor only needs to perform simple forward and backward movements, I used the "SPIKE Prime M Motor," which is compact, lightweight, and easy to mount on the robot.  
