@@ -247,7 +247,7 @@ As stated in Section [2.2](#22robot-structure-and-actuation), since the SPIKE Pr
 **Torque required for the rear wheel**
 
 $$
-T_{\text{rear}} = \frac{F_{\text{total}} \times r_{\text{wheel}} \times S_{\text{factor}}}{i \times \mu} \tag{1}
+T_{\text{rear}} = \frac{F_{\text{total}} \times r_{\text{wheel}} \times S_{\text{factor}}}{i \times \mu} \qquad (1)
 $$
 
 - $F_{\text{total}}=F_{\text{accel}} ＋ F_{\text{roll}}$
@@ -262,8 +262,7 @@ $$
 **The torque required for the front wheel**
 
 $$
-T_{\text{steer\\_motor}} = \frac{\mu \times W_{\text{front}} \times r_{\text{scrub}} \times S_{\text{factor}}}{i_{\text{steer}} \times \mu_{\text{steer}}} \tag{2}
-$$
+T_{\text{steer\\_motor}} = \frac{\mu \times W_{\text{front}} \times r_{\text{scrub}} \times S_{\text{factor}}}{i_{\text{steer}} \times \mu_{\text{steer}}} \qquad (2)
 
 - $\mu: \text{Static coefficient of friction between the tire and the track surface} (\approx 0.7)$
 - $W_{\text{front}}: \text{Load applied to the front wheels}$ (N)
