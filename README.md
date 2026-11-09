@@ -160,11 +160,11 @@ $$
 R = \frac{L}{sinθ}
 $$
 
-* R:Turningradius
-* L:Wheelbase
-* θ:Front-wheelsteeringangle
+* $R: \text{Turningradius}$
+* $L: \text{Wheelbase}$
+* $θ: \text{Front-wheelsteeringangle}$
 
-With a wheelbase L=12.7 cm and a steering angle θ=30° , the turning radius is 22.0 cm when measured from the rear axle, and 25.4 cm when measured from the front axle. Consequently, a front-wheel-drive configuration results in a turning path that extends 3.40 cm further outward than that of a rear-wheel-drive configuration. In other words, front-wheel drive introduces understeer, causing the vehicle to swing significantly toward the outside of the turn. Conversely, rear-wheel drive minimizes slippage, allowing the vehicle to maintain a position closer to the center of the course. (For details regarding the steering angle in a front-wheel-drive setup, please refer to section [2.5](#25front-wheel-steering).)
+With a wheelbase $L = 12.7$ cm and a steering angle $θ = 30$ ° , the turning radius is 22.0 cm when measured from the rear axle, and 25.4 cm when measured from the front axle. Consequently, a front-wheel-drive configuration results in a turning path that extends 3.40 cm further outward than that of a rear-wheel-drive configuration. In other words, front-wheel drive introduces understeer, causing the vehicle to swing significantly toward the outside of the turn. Conversely, rear-wheel drive minimizes slippage, allowing the vehicle to maintain a position closer to the center of the course. (For details regarding the steering angle in a front-wheel-drive setup, please refer to section [2.5](#25front-wheel-steering).)
 
 Four-wheel drive is another option; however, when power is transmitted from the rear wheels to the front wheels—for instance, via a gear train—the rear wheels tend to rotate slightly faster than the front wheels, which leads to discrepancies during maneuvers such as parking.
 
@@ -250,13 +250,14 @@ $$
 T_{\text{rear}} = \frac{F_{\text{total}} \times r_{\text{wheel}} \times S_{\text{factor}}}{i \times \mu}
 $$
 
-- Ftotal=Faccel+Froll
- - Faccel:ma(m:totalmassoftherobot,a:targetacceleration)
- - Froll:rollm9.81(roll:rollingresistancecoefficient≈0.03)
-- $r_{\text{wheel}}:\text{Radius of the rear tire}
-- $S_{\text{factor}}:\text{Factor of safety}(1.5)
-- i:Gearratio(1.0,asitisadirectconnection)
-- :Geartransmissionefficiency(1.0,asitisadirectconnection)
+- $F_{\text{total}}=F_{\text{accel}} ＋ F_{\text{roll}}$
+  - $F_{\text{accel}}: m \times a (m: \text{total mass of the robot}, a: \text{target acceleration})$
+  - $F_{\text{roll}}: \mu_{\text{roll}} \times m \times 9.81 (\mu_{\text{roll}}: \text{rolling resistance coefficient} \approx 0.03)$
+- $r_{\text{wheel}}: \text{Radius of the rear tire}$
+- $S_{\text{factor}}: \text{Factor of safety}(1.5)$
+- $i: \text{Gear ratio (1.0, as it is a direct connection)}$
+- $\mu: \text{Gear transmission efficiency (1.0, as it is a direct connection)}$
+
 
 **The torque required for the front wheel**
 
@@ -264,12 +265,12 @@ $$
 T_{\text{steer\\_motor}} = \frac{\mu \times W_{\text{front}} \times r_{\text{scrub}} \times S_{\text{factor}}}{i_{\text{steer}} \times \mu_{\text{steer}}}
 $$
 
-- :Staticfrictioncoefficientbetweenthetireandtheroadsurface(≈0.7)
-- Wfront:Loadappliedtothefrontwheels(N)
-- rscrub:Scrubradius(cm)
-- Sfactor:Safetyfactor(1.5)
-- isteer:Reductionratioofthesteeringmechanism(1.0,asitisadirectconnection)
-- steer:Transmissionefficiencyofthesteeringsystem(1.0,asitisadirectconnection)
+- $\mu: \text{Static coefficient of friction between the tire and the track surface} (\approx 0.7)$
+- $W_{\text{front}}: \text{Load applied to the front wheels}$ (N)
+- $r_{\text{scrub}}: \text{Scrub radius}$ (cm)
+- $S_{\text{factor}}: \text{Safety factor}(1.5)$
+- $i: \text{Reduction ratio of the steering mechanism (1.0, due to a direct connection)}$
+- $\mu_{\text{steer}}: \text{Steering transmission efficiency (1.0, due to a direct connection)}$
 
 
 ### 2.4.1:Drive Motor
@@ -287,15 +288,15 @@ For this competition, we used "parallel steering." Previously, we used the easil
 Therefore, we decided to implement a new steering mechanism. We considered either the Ackermann steering system or the parallel steering system as suitable for this robot.
 To determine which to use, we compared the two by setting the maximum steering angle.
 
-In this case, since our robot has a length (L) of 12.7 cm, the calculation is performed as follows:
+In this case, since our robot has a length $L = 12.7$ cm, the calculation is performed as follows:
 
 $$
 R = \frac{L}{tanθ}
 $$
 
-* $θ = \text{steering angle}$
-* $L = \text{distance between the front and rear wheels}$
-* $R = \text{turning radius}$
+* $θ: \text{steering angle}$
+* $L: \text{distance between the front and rear wheels}$
+* $R: \text{turning radius}$
 
 The results of this calculation are presented in the table below.
 
