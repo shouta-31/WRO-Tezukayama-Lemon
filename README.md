@@ -189,7 +189,7 @@ Since the robot built this time did not require many sensors or motors, a large 
 
 <img width="2037" height="645" alt="IMG_0401" src="https://github.com/user-attachments/assets/ae9079a7-c838-4897-bd8e-98a3eea6d24b" />
 
-<p align="center"><b>[Wiring diagram inside the hub]&[OpenMV wiring diagram]</b></p>
+<p align="center"><b>[Wiring diagram inside the hub]&[OpenMV wiring diagram](This diagram is based on [1], [2].)</b></p>
 
 For more details, please visit the link below.
 ### ["Robot circuit diagram"](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/schemes/Schematic.md)
@@ -286,7 +286,8 @@ Since the weight of the robot rests on the steering mechanism, a motor with a to
 For this competition, we used "parallel steering." Previously, we used the easily implementable "rack and pinion" system, but the poor meshing of the pinion and rack resulted in significant sideways slippage and resistance during turns, limiting smooth turns to approximately 50%.
 Therefore, we decided to implement a new steering mechanism. We considered either the Ackermann steering system or the parallel steering system as suitable for this robot.
 To determine which to use, we compared the two by setting the maximum steering angle.
-Here, using 
+
+In this case, since our robot has a length (L) of 12.7 cm, the calculation is performed as follows:
 
 $$
 R = \frac{L}{tanθ}
@@ -296,7 +297,7 @@ $$
 * $L = \text{distance between the front and rear wheels}$
 * $R = \text{turning radius}$
 
-—and noting that for this robot, $L = 12.7 cm$—the data is as presented in the table below.
+The results of this calculation are presented in the table below.
 
  | steering angle | turning radius |
  |:---:|---|
@@ -316,14 +317,17 @@ From this graph, we can see the following:
 * 35°: Even easier to make tight turns, advantageous for turning in narrow spaces.
 * 40° or more: May increase the likelihood of tire-to-body interference and tire skidding.
 
-Therefore, based on this data, we set the maximum steering angle to 30 degrees.
+<div align="center"><img width="619" height="337" alt="image" src="https://github.com/user-attachments/assets/9b853cb2-0149-4886-967c-1e98deaa6b32" /></div>
+
+While a 35° angle offers superior turning performance, our tires have a small contact patch, which leads to lateral slippage. Furthermore, the tires would come into contact with other components, causing them to spin freely during turns. For these reasons, we opted for a 30° angle, which provides a greater overall safety margin.
 
 <div align="center"><img height="564" alt="IMG_0483" src="https://github.com/user-attachments/assets/24a054bc-1715-4ca6-92be-6945e5c78ee7" /></div>
 
-Our robot has a relatively short distance of 12.7 cm between the front and rear wheels, and the maximum steering angle is assumed to be 30°. Furthermore, the tires we use on the front wheels have a small contact area (see section 2.6.1 for details on tires), so even with a parallel steering mechanism, the robot would skid sideways, preventing significant deviations in the numerical values.
-Also, using an Ackermann steering mechanism would increase the number of parts and weight compared to the parallel steering mechanism, making numerical errors more likely due to the robot's momentum. Even if the parts are made thin, there is a possibility of breakage, so our robot uses a parallel steering mechanism.
-When we actually mounted the "parallel steering" on the robot, the number of failures decreased, and we were able to achieve a success rate of approximately 90%. Since the key to this project is how accurately the robot can turn, we decided to use this mechanism.
-Furthermore, by adding a stopper to the steering, we eliminated the need to programmatically limit the steering range.
+Our robot features a relatively short wheelbase of 12.7 cm and is designed for a maximum steering angle of 30°. Furthermore, because the tires used on the front wheels have a small contact patch (see section [2.6.1](#261front-wheel) for details on the tires), employing a parallel steering mechanism ensures that even if the robot experiences side-slip, the measured values ​​do not deviate significantly.
+Additionally, an Ackermann steering mechanism would require more components than a parallel steering setup, increasing the robot's overall weight; this, in turn, would make the system more susceptible to numerical errors caused by the robot's momentum. Moreover, attempting to reduce weight by using thinner components could lead to structural failure. For these reasons, we opted for a parallel steering mechanism.
+When implemented on the robot, this parallel steering system improved the repeatability of turns, allowing the robot to successfully navigate without colliding with walls or obstacles in 9 out of 10 attempts.
+Given that the accuracy of turns is a critical factor in this project, we decided to utilize this mechanism.
+Furthermore, by incorporating a physical stopper into the steering assembly, we eliminated the need to enforce range limits through software programming.
 
 ## 2.6:Tires
 ###  2.6.1:Front wheel
@@ -348,7 +352,7 @@ For the rear wheel, we used a tire with design ID 41897, 56mm in diameter and 28
  | **Wire** | 250 mm / Integrated with sensor (not removable) |
  | **Other** | By removing the screws on the back, the front part of the sensor can be detached, allowing a third-party<br>sensor to be attached (support timing for third-party sensors has not been determined). |
 
-<p align="center"><b>[Graph 1]</b></p>
+<p align="center"><b>[Graph 1]（This table is based on [5].)</b></p>
 
 ### 2.7.1:The reason for installing the front sensor
 <img  height="348" alt="image" src="https://github.com/user-attachments/assets/d310ef52-c1d7-471b-88f6-9f8c3b2d1c0e" />
