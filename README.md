@@ -190,12 +190,19 @@ From this table, it can be seen that the power system has sufficient operating s
 
 In addition, based on this table, the margin rate of current capacity was calculated. 33.3
 The formula for calculating the leeway rate is
+Relidance rate (%) = (maximum supplyable current - maximum consumption current) ÷ maximum supplyable current x 100
+
 $$
-\text{Margin [\\%]} = \left(1 - \frac{\text{Total maximum current consumption}}{\text{Maximum current supply capability of the power source}} \right) \times 100
+\text{Relidance rate [\\%]} = \left(\frac{\text{maximum supplyable current}} - {\text{maximum consumption current}} \right) \times 100
 $$
+
 The maximum current consumption is about 1140mA from the graph below. The maximum supplyable current was about 1710mA when measured in practice. If you substitute this to the expression, it will be as follows.
+
 $(22.5 + x) \times 1.5 \geqq 36$
+
 （1710−1140）÷1710×100＝33.333…≒33.3(%)
+
+The allowance rate must be at least 20%. Our robot goes beyond this, so you can see that it is a safe design.
 
 ## 2.4:Motor
 
