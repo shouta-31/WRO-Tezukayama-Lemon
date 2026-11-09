@@ -194,8 +194,6 @@ Relidance rate (%) = (maximum supplyable current - maximum consumption current) 
 
 $$
 \text{Relidance rate [\\%]} = \frac{\left({\text{maximum supplyable current}} - {\text{maximum consumption current}} \right)} \times 100{maximum supplyable current}
-
-\frac{\pi \times d \times n}{maximum supplyable current}
 $$
 
 The maximum current consumption is about 1140mA from the graph below. The maximum supplyable current was about 1710mA when measured in practice. If you substitute this to the expression, it will be as follows.
