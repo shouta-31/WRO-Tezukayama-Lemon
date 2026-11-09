@@ -198,7 +198,7 @@ $$
 The maximum current consumption is about 1140mA from the graph below. The maximum supplyable current was about 1710mA when measured in practice. If you substitute this to the expression, it will be as follows.
 
 $$
-\frac{\left(1710 - 1140) \times 100}{1710} ＝　33.333… ≒ 33.3 [\\%]
+\frac{(1710 - 1140) \times 100}{1710} ＝　33.333… ≒ 33.3 [\\%]
 $$
 
 （1710−1140）÷1710×100＝33.333…≒33.3(%)
