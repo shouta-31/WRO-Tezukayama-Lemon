@@ -1523,6 +1523,7 @@ As this table demonstrates, we minimize errors by identifying, reviewing, and ad
 
 # 5:Reference materials
 The order is: document title, author/publisher, URL, and date accessed.
+
 [1] OpenMV H7 Camera Plus -- Discontinued -- Switch Science, Switch Science Co., Ltd., https://www.switch-science.com/products/6560, 2026-11-08
 
 [2] GitHub-GianCann/SpikePrimeHub:Technical info about LEGO Spike Prime Hub, GianCann, https://github.com/GianCann/SpikePrimeHub, 2026-11-08
