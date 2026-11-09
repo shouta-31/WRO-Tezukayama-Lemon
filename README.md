@@ -188,11 +188,14 @@ In order to evaluate the power consumption of the robot and achieve stable opera
 
 From this table, it can be seen that the power system has sufficient operating space, and that this robot is a safe design.
 
-In addition, based on the SPIKE Prime battery [output voltage (V): rated 7.3V (about 8.4V when fully charged), capacity: 2100mAh] used this time, the power margin rate is calculated, it is 33.3%, and It can be seen from the fact that the same is true.
-
+In addition, based on this table, the margin rate of current capacity was calculated. 33.3
+The formula for calculating the leeway rate is
 $$
 \text{Margin [\\%]} = \left(1 - \frac{\text{Total maximum current consumption}}{\text{Maximum current supply capability of the power source}} \right) \times 100
 $$
+The maximum current consumption is about 1140mA from the graph below. The maximum supplyable current was about 1710mA when measured in practice. If you substitute this to the expression, it will be as follows.
+$(22.5 + x) \times 1.5 \geqq 36$
+（1710−1140）÷1710×100＝33.333…≒33.3(%)
 
 ## 2.4:Motor
 
