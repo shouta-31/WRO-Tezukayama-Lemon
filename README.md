@@ -25,19 +25,19 @@ Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot 
 <p align="center"><b>[Funny Photo]</b></p>
 
 ## Team members
-<img width="200" alt="IMG_0496" src="https://github.com/user-attachments/assets/a49e9e7f-de28-4a8f-8abc-37be97abdf54" />
+<img width="300" alt="IMG_0496" src="https://github.com/user-attachments/assets/d7530790-564d-4698-a964-32cc4fd65197" />
 
 - Kyosuke Esumi : A programmer
   - Date of birth : January 19th
   - Age : 15 years old
 
-<img width="200" alt="IMG_0496" src="https://github.com/user-attachments/assets/7ab9d7be-1d7e-4053-affa-c813e00b3d8f" />
+<img width="300" alt="IMG_0496" src="https://github.com/user-attachments/assets/6a71f207-e5c7-4d9e-a4b3-834e421cd49c" />
 
 - Shuta Morita : Document preparation
   - Date of birth : March 6th
   - Age : 15 years old
 
-<img width="200" alt="IMG_0496" src="https://github.com/user-attachments/assets/33ae2d6c-30e5-424c-a9e8-6e23d92ffbec" />
+<img width="300" alt="IMG_0496" src="https://github.com/user-attachments/assets/5b6f4e3b-84ff-4d94-a74c-e63d3b143c91" />
 
 - Shota Ueno : A builder
   - Date of birth : March 1st
