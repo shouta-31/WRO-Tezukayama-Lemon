@@ -15,12 +15,10 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
   
 # A team
 ## Team introduction
-<img width="391" alt="IMG_0496" src="https://github.com/user-attachments/assets/b3459573-38a0-4a28-9ffd-d29038d06094" />
+<div align="center"><img width="500" alt="IMG_0496" src="https://github.com/user-attachments/assets/b3459573-38a0-4a28-9ffd-d29038d06094" /></div>
 
 Hello. We are Teizukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers category. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have been testing many times, tuning each time, and preparing for the world championship by trial and error so that we can get higher scores quickly in time. We will aim to win the championship, which is our goal, by making use of this effort and preparation!
-
-<img width="425" alt="IMG_0495" src="https://github.com/user-attachments/assets/773e384c-ae9a-403f-bde3-47e307f01fc1" />
-
+<img width="500" alt="IMG_0495" src="https://github.com/user-attachments/assets/773e384c-ae9a-403f-bde3-47e307f01fc1" /></div>
 
 ## Team members
 - Kyosuke Esumi : A programmer
