@@ -1521,8 +1521,7 @@ The competition imposed a 1.5 kg weight limit, which restricted the components t
 
 <p align="center"><b>[A place where everyone can check the corrections ]</b></p>
 
-In the document provided above, we have compiled the risks encountered by each team member. By ensuring that everyone reviews and understands these risks—and by consistently identifying and analyzing them—we are able to improve the robot's precision. Furthermore, we distribute tasks related to problems that are difficult to resolve through programming alone, which helps to alleviate the burden on our programmers.
-The table below summarizes a selection of the risks we have encountered and subsequently resolved.
+We have summarized the risks faced by each team member in the document shown above. Everyone confirms and grasps this, and does not miss the identification and analysis of risks, which leads to the improvement of the accuracy of the robot. In addition, risks are ranked in order of high importance, and they are resolved in that order. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve in the program with everyone.
 
  | Risk | Issue Encountered | Countermeasure |
  |:---:|---|---|
@@ -1532,7 +1531,7 @@ The table below summarizes a selection of the risks we have encountered and subs
  | **Time required for starting and stopping in parking areas** | Inability to complete the course within the time limit | Adding adjustable protrusions to modify the robot's length |
  | **Robot weight** | Reduced movement speed | Selective optimization of components |
 
-As this table demonstrates, we minimize errors by identifying, reviewing, and addressing a wide range of risks.
+As you can see from this table, we are eliminating risks by finding, confirming, and improving various risks in the way described above, and making it more stable for robots to capture missions.
 
 # 5:Reference materials
 The order is: document title, author/publisher, URL, and date accessed.
