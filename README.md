@@ -1517,9 +1517,9 @@ Furthermore, this diagram allows others to quickly grasp the interrelationships 
 The competition imposed a 1.5 kg weight limit, which restricted the components that could be mounted on the robot. Although our initial design met this requirement, it weighed 689.2 g; consequently, while our completion times were within the allowed limits, they were somewhat longer than desired. By lowering the robot’s profile, we were able to reduce the number of parts used for securing components, bringing the total weight down to 650.8 g. This adjustment improved our average completion time by 15 seconds, enabling faster and more precise performance.
 
 ## 4.3:Risk Identification and Mitigation Measures
-<img width="1938" height="1112" alt="IMG_0493" src="https://github.com/user-attachments/assets/7094d463-38da-4a24-a35b-39fc1d7682fe" />
+<img width="1047" height="390" alt="IMG_0500" src="https://github.com/user-attachments/assets/d9ef75ea-93ef-4eea-91a6-97ad1971a502" />
 
-<p align="center"><b>[A place where everyone can check the corrections in Japanese]</b></p>
+<p align="center"><b>[A place where everyone can check the corrections ]</b></p>
 
 In the document provided above, we have compiled the risks encountered by each team member. By ensuring that everyone reviews and understands these risks—and by consistently identifying and analyzing them—we are able to improve the robot's precision. Furthermore, we distribute tasks related to problems that are difficult to resolve through programming alone, which helps to alleviate the burden on our programmers.
 The table below summarizes a selection of the risks we have encountered and subsequently resolved.
