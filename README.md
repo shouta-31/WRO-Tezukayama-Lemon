@@ -20,6 +20,7 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 <p align="center"><b>[Official Photo]</b></p>
 
 Hello. We are Tezukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers division. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have performed multiple tests and tunings, and we have been experimenting with trial and error to get higher scores quickly in time. The images below are part of our daily schedule. The original schedule is on the left, and the English translation is on the right.
+
 <img width="2120" height="612" alt="IMG_0511" src="https://github.com/user-attachments/assets/ef55a229-e3f4-4e54-ab99-7375da4ea265" />
 
 As you can see from this schedule table, we are fully prepared for the world tournament. We will aim to win the world championship, which is our goal, by making use of the results of such efforts and preparation!
@@ -1524,6 +1525,8 @@ The competition imposed a 1.5 kg weight limit, which restricted the components t
 <img width="1047" height="390" alt="IMG_0500" src="https://github.com/user-attachments/assets/d9ef75ea-93ef-4eea-91a6-97ad1971a502" />
 
 <p align="center"><b>[A place where everyone can check the corrections ]</b></p>
+
+<p align="center"><b>[ (On the left is the original Japanese image, and on the right is the English translation.) ]</b></p>
 
 We have summarized the risks faced by each team member in the document shown above. Everyone confirms and grasps this, and does not miss the identification and analysis of risks, which leads to the improvement of the accuracy of the robot. In addition, risks are ranked in order of high importance, and they are resolved in that order. In addition, we reduce the burden on programmers by sharing problems that are difficult to solve in the program with everyone.
 
