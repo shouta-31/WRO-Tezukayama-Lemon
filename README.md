@@ -42,7 +42,7 @@ As you can see from this schedule table, we are fully prepared for the world tou
   - Date of birth : March 6th
   - Age : 15 years old
 
-<img width="868" height="774" alt="IMG_0515" src="https://github.com/user-attachments/assets/cb5a4f1b-11e9-4550-b52b-f03219895f16" />
+<img width="300" alt="IMG_0515" src="https://github.com/user-attachments/assets/cb5a4f1b-11e9-4550-b52b-f03219895f16" />
 
 - Shota Ueno : A builder
   - Date of birth : March 1st
