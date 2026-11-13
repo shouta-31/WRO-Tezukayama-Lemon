@@ -21,7 +21,7 @@ This is the official repository of Teizukayama Lemon, a representative of Japan 
 
 Hello. We are Tezukayama Lemon, the representative of Japan in the World Robot Olympiad (WRO) 2026 Future Engineers division. I am very happy to be able to participate in high-level world competitions, fight, and interact with teams from various countries. Teizukayama Lemon consists of three high school students enrolled in Teizukayama High School in Japan. For six months, we have performed multiple tests and tunings, and we have been experimenting with trial and error to get higher scores quickly in time. The images below are part of our daily schedule. The original schedule is on the left, and the English translation is on the right.
 
-<img width="700" alt="IMG_0511" src="https://github.com/user-attachments/assets/ef55a229-e3f4-4e54-ab99-7375da4ea265" />
+<img width="800" alt="IMG_0511" src="https://github.com/user-attachments/assets/ef55a229-e3f4-4e54-ab99-7375da4ea265" />
 
 As you can see from this schedule table, we are fully prepared for the world tournament. We will aim to win the world championship, which is our goal, by making use of the results of such efforts and preparation!
 
