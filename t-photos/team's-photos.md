@@ -1,7 +1,8 @@
 # Team's photos
 
 ## Funny Photo
-<img width="3264" height="2448" alt="image" src="https://github.com/user-attachments/assets/178f732f-426a-4a6d-ad08-eedbde461c8c" />
+<img width="3264" alt="IMG_0517" src="https://github.com/user-attachments/assets/af07f60c-1c7f-4b5e-ba29-916e404825d5" />
+
 
 ## Official Photo
-<img width="3264" height="2448" alt="image" src="https://github.com/user-attachments/assets/a513b3b4-426a-4586-af39-9849e3c7bc3f" />
+<img width="3264" alt="IMG_0514" src="https://github.com/user-attachments/assets/7174d577-6995-4e30-99e7-67e174367e84" />
