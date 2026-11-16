@@ -397,7 +397,7 @@ In addition, we took data on the error between the reference distance (actual di
 
  <img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
 
-<p align="center"><b>[Calibration Data]</b></p>
+<p align="center"><b>[Calibration Data]（This table is based on [6],[7],[8],[9],[10],[11].)</b></p>
 
 We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
@@ -460,7 +460,7 @@ Therefore, we determined that Part A should be at least 1.5cm long. We adjusted 
  | **Compatible devices** | SPIKE, Technic, City, Move, etc. | Each app has a fixed hub. | SPIKE Prime /Robot Inventor only |
  | **Simultaneous Bluetooth connection** | 7-8 units | Connection unavailable | Construction is extremely difficult. |
  
-(This table is based on [6].)
+(This table is based on [12].)
 
 This robot used Pybricks. The reason is that compared to other program sites, it is the best in terms of start-up time and control loop cycle, and I chose it because of the advantage that the motor synchronous control is less than 1 degree and there is almost no error.
 
@@ -475,7 +475,7 @@ We used a camera with the front part of the distance sensor removed and an OpenM
  | **Number of lines of code required to display the debug screen** | 0 lines | Indicates no | 3 lines |
  | **Language matching with pybricks** | 〇 | × | 〇 |
 
-(This table is based on [7].)
+(This table is based on [13].)
 
 As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
@@ -1551,9 +1551,21 @@ The order is: document title, author/publisher, URL, and date accessed.
 
 [5] SPIKE Prime Distance Sensor Specifications | Afrel Co., Ltd. | LEGO Education Authorized Distributor , Afrel Co., Ltd., https://afrel.co.jp/product/spike/technology-spike/prime/hardware/distancesensor/45916/ , 2026-11-08
 
-[6] Pybricks, Pybricks, https://pybricks.com/, 2026-11-08
+[6]OpenMV Cam H7 Plus | OpenMV | OpenMV MicroPython Documentation 1.28 | https://docs.openmv.io/v5.0.1/openmvcam/quickref/openmv-cam-h7-plus.html
 
-[7] Small - Affordable - Expandable – OpenMV, OpenMV, LLC, https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h, 2026-11-08
+[7]Raspberry Pi 4 Model B – Product Brief | Raspberry Pi Ltd. | October 2026 Edition | https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf
+
+[8]ESP32-CAM Wi-Fi+BT SoC Module | Shenzhen Ai-Thinker Technology Co., Ltd. | Version 1.0 | https://d229kd5ey79jzj.cloudfront.net/1205/ESP32-CAM%20Product%20Specification.pdf
+
+[9]Ai-Thinker ESP32-CAM Documentation | Zephyr Project | Online Documentation (Version not specified) | https://software-dl.ti.com/zephyr-sdk/esd/MSPM33/01_00_00_02/exports/zephyr/boards/aithinker/esp32_cam/doc/index.html
+
+[10]OAK-1 | Luxonis | Online Documentation (Version not specified) | https://docs.luxonis.com/hardware/products/OAK-1
+
+[11]OAK-1 Datasheet | Luxonis | April 12, 2022 Edition | https://www.mouser.com/catalog/specsheets/Luxonis_OAK-1_Datasheet%204-12-22.pdf
+
+[12] Pybricks, Pybricks, https://pybricks.com/, 2026-11-08
+
+[13] Small - Affordable - Expandable – OpenMV, OpenMV, LLC, https://openmv.io/?srsltid=AfmBOoqMECnVVz4SrByaDgChDQRdEArLA4LqDyji2U2_NY6ZKVAIU-h, 2026-11-08
 
 
 # How to build a robot
