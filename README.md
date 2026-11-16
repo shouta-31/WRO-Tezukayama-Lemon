@@ -1558,7 +1558,7 @@ The order is: document title, author/publisher, URL, and date accessed.
 
 # How to build a robot
 **① Build the robot itself**
-* Purchase all the parts listed in `the list of sources for parts`.
+* Purchase all the parts listed in `the list of sources for parts.md`.
 * Click `Robot Assembly Instructions.pdf` and build the robot.(You don’t need to worry about the color of the parts.)
 * If you are unsure
   (Click in the order of `models` → `How to use the Robot 3Dmodel.ldr file.md` to view the 3D model of the robot.)
