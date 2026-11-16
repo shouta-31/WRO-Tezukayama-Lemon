@@ -1,2 +1,43 @@
-| Element ID or item name | Image of the part | Quantity | Link to purchase |
-| |
+| Design ID or item name | Image of the part | Quantity | Link to purchase |
+|:---:|---|---|---|
+|18654| |2|https://www.bricklink.com/search.asp?q=18654|
+|32054| |20|https://www.bricklink.com/search.asp?q=32054|
+|2780| |40|https://www.bricklink.com/search.asp?q=2780|
+|60484| |3|https://www.bricklink.com/search.asp?q=60484|
+|32039| |2|https://www.bricklink.com/search.asp?q=32039|
+|32013| |4|https://www.bricklink.com/search.asp?q=32013|
+|39793| |4|https://www.bricklink.com/search.asp?q=39793|
+|32184| |4|https://www.bricklink.com/search.asp?q=32184|
+|3707| |1|https://www.bricklink.com/search.asp?q=3707|
+|37316c01| |3|https://www.bricklink.com/search.asp?q=37316c01|
+|40490| |1|https://www.bricklink.com/search.asp?q=40490|
+|32525| |7|https://www.bricklink.com/search.asp?q=32525|
+|32523| |8|https://www.bricklink.com/search.asp?q=32523|
+|32526| |10|https://www.bricklink.com/search.asp?q=32526|
+|87083| |1|https://www.bricklink.com/search.asp?q=87083|
+|32524| |2|https://www.bricklink.com/search.asp?q=32524|
+|32140| |2|https://www.bricklink.com/search.asp?q=32140|
+|39794| |1|https://www.bricklink.com/search.asp?q=39794|
+|3713| |6|https://www.bricklink.com/search.asp?q=3713|
+|3673| |4|https://www.bricklink.com/search.asp?q=3673|
+|87082| |2|https://www.bricklink.com/search.asp?q=87082|
+|6536| |2|https://www.bricklink.com/search.asp?q=6536|
+|32316| |2|https://www.bricklink.com/search.asp?q=32316|
+|44294| |1|https://www.bricklink.com/search.asp?q=44294|
+|4519| |4|https://www.bricklink.com/search.asp?q=4519|
+|63869| |16|https://www.bricklink.com/search.asp?q=63869|
+|14720| |5|https://www.bricklink.com/search.asp?q=14720|
+|77765| |1|https://www.bricklink.com/search.asp?q=77765|
+|64179| |2|https://www.bricklink.com/search.asp?q=64179|
+|56145c02| |2|https://www.bricklink.com/search.asp?q=56145c02|
+|56908c04| |2|https://www.bricklink.com/search.asp?q=56908c04|
+|32062| |2|https://www.bricklink.com/search.asp?q=32062|
+|15462| |2|https://www.bricklink.com/search.asp?q=15462|
+|32073| |2|https://www.bricklink.com/search.asp?q=32073|
+|53444c01| |1|https://www.bricklink.com/search.asp?q=53444c01|
+|55422c01| |1|https://www.bricklink.com/search.asp?q=55422c01|
+|54696c01| |1|https://www.bricklink.com/search.asp?q=54696c01|
+|54675c01| |1|https://www.bricklink.com/search.asp?q=54675c01|
+|49283| |1|https://www.bricklink.com/search.asp?q=49283|
+|43093| |28|https://www.bricklink.com/search.asp?q=43093|
+|6558| |15|https://www.bricklink.com/search.asp?q=6558|
