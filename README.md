@@ -1551,17 +1551,17 @@ The order is: document title, author/publisher, URL, and date accessed.
 
 [5] SPIKE Prime Distance Sensor Specifications | Afrel Co., Ltd. | LEGO Education Authorized Distributor , Afrel Co., Ltd., https://afrel.co.jp/product/spike/technology-spike/prime/hardware/distancesensor/45916/ , 2026-11-08
 
-[6]OpenMV Cam H7 Plus | OpenMV | OpenMV MicroPython Documentation 1.28 | https://docs.openmv.io/v5.0.1/openmvcam/quickref/openmv-cam-h7-plus.html
+[6]OpenMV Cam H7 Plus | OpenMV | OpenMV MicroPython Documentation 1.28 | https://docs.openmv.io/v5.0.1/openmvcam/quickref/openmv-cam-h7-plus.html, 2026-11-16
 
-[7]Raspberry Pi 4 Model B – Product Brief | Raspberry Pi Ltd. | October 2026 Edition | https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf
+[7]Raspberry Pi 4 Model B – Product Brief | Raspberry Pi Ltd. | October 2026 Edition | https://pip-assets.raspberrypi.com/categories/545-raspberry-pi-4-model-b/documents/RP-008344-DS-7-raspberry-pi-4-product-brief.pdf, 2026-11-16
 
-[8]ESP32-CAM Wi-Fi+BT SoC Module | Shenzhen Ai-Thinker Technology Co., Ltd. | Version 1.0 | https://d229kd5ey79jzj.cloudfront.net/1205/ESP32-CAM%20Product%20Specification.pdf
+[8]ESP32-CAM Wi-Fi+BT SoC Module | Shenzhen Ai-Thinker Technology Co., Ltd. | Version 1.0 | https://d229kd5ey79jzj.cloudfront.net/1205/ESP32-CAM%20Product%20Specification.pdf, 2026-11-16
 
-[9]Ai-Thinker ESP32-CAM Documentation | Zephyr Project | Online Documentation (Version not specified) | https://software-dl.ti.com/zephyr-sdk/esd/MSPM33/01_00_00_02/exports/zephyr/boards/aithinker/esp32_cam/doc/index.html
+[9]Ai-Thinker ESP32-CAM Documentation | Zephyr Project | Online Documentation (Version not specified) | https://software-dl.ti.com/zephyr-sdk/esd/MSPM33/01_00_00_02/exports/zephyr/boards/aithinker/esp32_cam/doc/index.html, 2026-11-16
 
-[10]OAK-1 | Luxonis | Online Documentation (Version not specified) | https://docs.luxonis.com/hardware/products/OAK-1
+[10]OAK-1 | Luxonis | Online Documentation (Version not specified) | https://docs.luxonis.com/hardware/products/OAK-1, 2026-11-16
 
-[11]OAK-1 Datasheet | Luxonis | April 12, 2022 Edition | https://www.mouser.com/catalog/specsheets/Luxonis_OAK-1_Datasheet%204-12-22.pdf
+[11]OAK-1 Datasheet | Luxonis | April 12, 2022 Edition | https://www.mouser.com/catalog/specsheets/Luxonis_OAK-1_Datasheet%204-12-22.pdf, 2026-11-16
 
 [12] Pybricks, Pybricks, https://pybricks.com/, 2026-11-08
 
