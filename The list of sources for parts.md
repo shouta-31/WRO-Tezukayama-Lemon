@@ -1,3 +1,5 @@
+# The list of sources for parts
+
 | Design ID or item name | Image of the part | Quantity | Link to purchase |
 |:---:|---|:---:|---|
 |18654|<img width="200" alt="image" src="https://github.com/user-attachments/assets/aedc5ff5-0b01-4f74-b012-a7fa8b6dea49" />|2|https://www.bricklink.com/search.asp?q=18654|
@@ -41,3 +43,4 @@
 |49283|<img width="200" alt="image" src="https://github.com/user-attachments/assets/3b8023ca-d808-412a-8062-b5dd610bab07" />|1|https://www.bricklink.com/search.asp?q=49283|
 |43093|<img width="200" alt="image" src="https://github.com/user-attachments/assets/8ff1b1c7-6f32-4320-95f5-efadd38e6787" />|28|https://www.bricklink.com/search.asp?q=43093|
 |6558|<img width="200" alt="image" src="https://github.com/user-attachments/assets/6f443040-df3f-4dc0-ac46-630b3796e076" />|15|https://www.bricklink.com/search.asp?q=6558|
+|OpenMV Cam H7 Plus|<img width="200" alt="image" src="https://github.com/user-attachments/assets/63922c47-0183-44e5-98a3-944dabb8b64e" />|1|https://www.amazon.co.jp/SingTown-OpenMV-Genuine-5MP-Definition-Processing/dp/B09WYQMDX2|
