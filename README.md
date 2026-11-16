@@ -404,7 +404,7 @@ We considered the calibration method of the sensor and created the program, taki
 ## 2.8:Camera and its reliability
 <img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" />
 
-We used the OpenMV Cam H7 Plus attached to the back of the distance sensor (the black device at the bottom of the right image) as a camera. The back part of the distance sensor connects to the OpenMV Cam H7 Plus and the SPIKE Prime hub and plays a role in communicating with each other.  
+We used the OpenMV Cam H7 Plus attached to the back part of the distance sensor called the breakout substrate (the black device at the bottom of the image on the right) as the camera. The back part of the distance sensor connects to the OpenMV Cam H7 Plus and the SPIKE Prime hub and plays a role in communicating with each other. 
 Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it consumes less power, features a larger memory capacity—which reduces the risk of crashes—and provides high image quality, making it less likely to fail when reading traffic signs. Furthermore, it is free from issues such as packet loss or latency caused by OS overhead. The table below compares the cameras we evaluated; the "startup time" and "recognition speed" metrics in this table were measured by us directly.
 
  |  | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
