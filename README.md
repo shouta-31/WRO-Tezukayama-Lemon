@@ -1,7 +1,7 @@
 # WRO 2026 Future Engineers - Tezukayama Lemon 🇯🇵
 <div align="center"><img height="548" alt="image" src="https://github.com/user-attachments/assets/70334450-e47b-4438-85e9-7923fe3e3e13" /></div>
 
-https://www.youtube.com/watch?v=dXlHM24Sxwo
+
 
 https://www.youtube.com/watch?si=8FFSwSAH8cAZ4jsq&v=4Pf_prBRUJY&feature=youtu.be
 
