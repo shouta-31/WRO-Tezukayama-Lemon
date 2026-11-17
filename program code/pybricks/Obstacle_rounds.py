@@ -26,11 +26,17 @@ payload=p.call('blob')
 distance=0
 turn_count=0
 one_set_count=0
+obstacle=0
+color=0
 def start_right():
+    print("start_right")
     red_or_green=0
     while True:
         Yaw=hub.imu.heading()
+        payload=p.call('blob')
         front_motor.run_target(1000,35)
+        if payload[2]>500:
+            red_or_green=1
         back_motor.run(1000)
         if Yaw>40:
             back_motor.stop()
@@ -38,13 +44,15 @@ def start_right():
     while True:
         Yaw=hub.imu.heading()
         front_motor.run_target(1000,-35)
+        payload=p.call('blob')
+        if payload[2]>500:
+            red_or_green=1
         back_motor.run(-1000)
         if Yaw>60:
             back_motor.stop()
             break
-    payload=p.call('blob')
     print(payload)
-    if payload[2]>payload[5] and payload[2]>600:
+    if red_or_green==1:
         red_or_green=1
         while True:
             Yaw=hub.imu.heading()
@@ -57,8 +65,8 @@ def start_right():
                 break
         while True:
             front_motor.run_target(1000,0)
-            back_motor.run(eyes.distance())
-            if eyes.distance()<350:
+            back_motor.run(eyes.distance()*1.5)
+            if eyes.distance()<300:
                 break
     else:
         red_or_green=2
@@ -79,9 +87,9 @@ def start_right():
         back_motor.run(Yaw*15+100)
         if Yaw<0:
             back_motor.stop()
-            hub.imu.reset_heading(0)
             break            
 def start_left():
+    print("start_left")
     red_or_green=0
     while True:#yaw<-20まで前進
         Yaw=hub.imu.heading()
@@ -146,7 +154,7 @@ def start_left():
             back_motor.stop()
             break
 def left_turn():
-    print("turn")
+    print("left_turn")
     while True:#直進
         payload=p.call('blob')
         hub.light.on(Color.BLUE)
@@ -311,7 +319,7 @@ def left_turn():
                 if Yaw>10:
                     break
 def right_turn():
-    print("turn")
+    print("right_turn")
     global obstacle
     global color
     global red_or_green
@@ -403,12 +411,13 @@ def right_turn():
             front_motor.run_target(1000,direction)
             payload=p.call('blob')
             back_motor.run(1000)
-            if eyes.distance()<300:
+            if eyes.distance()<250:
                 hub.light.off()
                 left_distance=left_sensor.distance()
                 print(eyes.distance())
                 back_motor.stop()
                 break
+        print("left_distance:",left_distance)
         while True:#緑検知またはyaw>95まで後進
             payload=p.call('blob')
             Yaw=hub.imu.heading()
@@ -423,6 +432,7 @@ def right_turn():
             back_motor.run((Yaw-90)*15-100)
             if Yaw>90:
                 back_motor.stop()
+                print(payload)
                 print("緑ｐ：",payload[5])
                 break
         Yaw=hub.imu.heading()
@@ -485,13 +495,22 @@ def right_turn():
                 while True:
                     Yaw=hub.imu.heading()
                     payload=p.call('blob')
+                    back_motor.run(100)
+                    front_motor.run_target(1000,35)
+                    if Yaw>0:
+                        break
+                while True:
+                    Yaw=hub.imu.heading()
+                    payload=p.call('blob')
                     front_motor.run_target(1000,-35)
-                    back_motor.run((Yaw+0)*25+100)
+                    back_motor.run(200)
                     if Yaw<0:
+                        back_motor.stop()
                         break
                 color=1
             front_motor.run_target(1000,0)
         elif red!=1 and payload[5]>400:#緑
+            print("green")
             if payload[5]>3000:
                 near_object=1
                 while True:
@@ -545,6 +564,7 @@ def right_turn():
                     front_motor.run_target(1000,0)
                     break
         else:#その他
+            print("red")
             front_motor.run_target(1000,0)
             time=(1200-left_distance)*2.3
             if red==1:
@@ -560,21 +580,68 @@ def right_turn():
             while True:
                 Yaw=hub.imu.heading()
                 payload=p.call('blob')
-                front_motor.run_target(1000,-35)
-                if payload[2]>500 or payload[5]>500:
-                    Yaw=-60
-                back_motor.run((Yaw+40)*25+100)
-                if Yaw<-40:
+                back_motor.run(50)
+                front_motor.run_target(1000,35)
+                if Yaw>0:
                     break
+            while True:
+                Yaw=hub.imu.heading()
+                payload=p.call('blob')
+                front_motor.run_target(1000,-35)
+                back_motor.run(200)
+                if Yaw<0:
+                    back_motor.stop()
+                    break
+            payload=p.call('blob')
+            print(payload)
             if payload[2]<500 and payload[5]<500:
-                obstacle=1
+                print("a")
                 while True:
                     Yaw=hub.imu.heading()
                     payload=p.call('blob')
-                    front_motor.run_target(1000,35)
-                    back_motor.run(Yaw*-25+100)
-                    if Yaw>0:
+                    front_motor.run_target(1000,-35)
+                    back_motor.run(200)
+                    if Yaw<-5:
+                        payload=p.call('blob')
+                        print(payload)
                         break
+                if payload[2]<500 and payload[5]<500:
+                    print("b")
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        print("payload:",payload)
+                        front_motor.run_target(1000,-35)
+                        if payload[2]>500 or payload[5]>500:
+                            Yaw=-45
+                        back_motor.run((Yaw+40)*25+100)
+                        if Yaw<-40:
+                            break
+                    print(payload)
+                    if payload[2]>500 or payload[5]>500:
+                        print("c")
+                        back_motor.stop()
+                        payload=p.call('blob')
+                        print(payload)
+                        while True:
+                            Yaw=hub.imu.heading()
+                            front_motor.run_target(1000,-35)
+                            back_motor.run(-300)
+                            payload=p.call('blob')
+                            print("payload[2]:",payload[2],"payload[5]:",payload[5])
+                            if (payload[2]>500 and payload[0]>90) or (payload[5]>500 and payload[3]>90) or Yaw>0:
+                                print("payload[2]:",payload[2],"payload[5]:",payload[5])
+                                back_motor.stop()
+                                break          
+                else:
+                    obstacle=1
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        front_motor.run_target(1000,35)
+                        back_motor.run(Yaw*-25+100)
+                        if Yaw>0:
+                            break
             front_motor.run_target(1000,0)
             if turn_count==11:
                 color=1
@@ -588,15 +655,17 @@ def right_turn():
             front_motor.run_target(1000,direction)
             payload=p.call('blob')
             back_motor.run(1000)
-            if eyes.distance()<700:
+            if eyes.distance()<800:
                 hub.light.off()
                 left_distance=left_sensor.distance()
                 print(eyes.distance())
+                back_motor.stop()
                 break
+        print("left_distance:",left_distance)
         while True:#前85㎝まで後進
-            back_motor.run(-1000)
             front_motor.run_target(1000,0)
-            if eyes.distance()>750:
+            back_motor.run(-1000)
+            if eyes.distance()>800:
                 back_motor.stop()
                 break
         while True:#緑検知またはyaw>95まで後進
@@ -611,6 +680,7 @@ def right_turn():
                 Yaw=40
             back_motor.run((90-Yaw)*15+100)
             if Yaw>90:
+                print(payload)
                 print("緑ｐ：",payload[5])
                 back_motor.stop()
                 break
@@ -660,7 +730,7 @@ def right_turn():
                 color=2
             else:#その他
                 front_motor.run_target(1000,0)
-                time=(1200-left_distance)*2.3
+                time=(700-left_distance)*2.3
                 if red==1:
                     hub.light.on(Color.RED)
                 timer.reset()
@@ -674,13 +744,22 @@ def right_turn():
                 while True:
                     Yaw=hub.imu.heading()
                     payload=p.call('blob')
+                    back_motor.run(100)
+                    front_motor.run_target(1000,35)
+                    if Yaw>0:
+                        break
+                while True:
+                    Yaw=hub.imu.heading()
+                    payload=p.call('blob')
                     front_motor.run_target(1000,-35)
-                    back_motor.run((Yaw+0)*25+100)
+                    back_motor.run(200)
                     if Yaw<0:
+                        back_motor.stop()
                         break
                 color=1
             front_motor.run_target(1000,0)
         elif red!=1 and payload[5]>400:#緑
+            print("green")
             if payload[5]>3000:
                 near_object=1
                 while True:
@@ -736,6 +815,7 @@ def right_turn():
             if turn_count==11:
                 color=2
         else:#その他
+            print("red")
             front_motor.run_target(1000,0)
             time=(700-left_distance)*2.3
             if red==1:
@@ -748,49 +828,64 @@ def right_turn():
                 if timer.time()>time:
                     print(timer.time())
                     break
-            a=0
             while True:
-                Yaw=hub.imu.heading()
-                payload=p.call('blob')
-                print(payload)
-                front_motor.run_target(1000,-35)
-                if payload[2]>500 or payload[5]>500:
-                    a=1
-                    timer.reset()
-                    while True:
-                        back_motor.stop()
-                        if timer.time()>100:
-                            break
-                    Yaw=-45
-                if turn_count==11 and Yaw<0:
-                    Yaw=-50
-                back_motor.run((Yaw+40)*25+100)
-                if Yaw<-40:
-                    break
-            if a==1:
-                back_motor.stop()
-                while True:
-                    payload=p.call('blob')
-                    front_motor.run_target(1000,-35)
-                    back_motor.run(-1000)
-                    print("a")
-                    print(payload)
-                    if (payload[2]>500 and payload[0]<160) or (payload[5]>500 and payload[3]<160):
-                        back_motor.stop()
-                        break
-            elif payload[2]<500 and payload[5]<500:
-                obstacle=1
-                while True:
                     Yaw=hub.imu.heading()
                     payload=p.call('blob')
+                    back_motor.run(50)
                     front_motor.run_target(1000,35)
-                    back_motor.run(Yaw*-15+100)
-                    if Yaw>10:
+                    if Yaw>0:
                         break
+            while True:
+                    Yaw=hub.imu.heading()
+                    payload=p.call('blob')
+                    front_motor.run_target(1000,-35)
+                    back_motor.run(200)
+                    if Yaw<0:
+                        back_motor.stop()
+                        break
+            payload=p.call('blob')
+            print(payload)
+            if payload[2]<500 and payload[5]<500:
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        print("payload:",payload)
+                        front_motor.run_target(1000,-35)
+                        if payload[2]>500 or payload[5]>500:
+                            Yaw=-45
+                        if turn_count==11 and Yaw<0:
+                            Yaw=-50
+                        back_motor.run((Yaw+40)*25+100)
+                        if Yaw<-40:
+                            break
+                    if payload[2]>500 or payload[5]>500:
+                        back_motor.stop()
+                        payload=p.call('blob')
+                        print(payload)
+                        while True:
+                            Yaw=hub.imu.heading()
+                            front_motor.run_target(1000,-35)
+                            back_motor.run(-300)
+                            payload=p.call('blob')
+                            print("payload[2]:",payload[2],"payload[5]:",payload[5])
+                            if (payload[2]>500 and payload[0]>90) or (payload[5]>500 and payload[3]>90) or Yaw>0:
+                                print("payload[2]:",payload[2],"payload[5]:",payload[5])
+                                back_motor.stop()
+                                break
+                    else:
+                        obstacle=1
+                        while True:
+                            Yaw=hub.imu.heading()
+                            payload=p.call('blob')
+                            front_motor.run_target(1000,35)
+                            back_motor.run(Yaw*-15+100)
+                            if Yaw>10:
+                                break
             front_motor.run_target(1000,0)  
             if turn_count==11:
                 color=2          
 def one_set():
+    print("one_set")
     one_set_count=0
     front_motor.run_target(1000,0)
     payload=p.call('blob')
@@ -871,6 +966,7 @@ def one_set():
                 front_motor.run_target(1000,0)
                 back_motor.run(-1000)
                 if payload[2]<3000:
+                    back_motor.stop()
                     break
         while True:#赤回避
             payload=p.call('blob')
@@ -913,18 +1009,38 @@ def one_set():
                         red_or_green=2
                     if Yaw<10:
                         break
+                Yaw=hub.imu.heading()
+                if Yaw<0:
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        back_motor.run(100)
+                        front_motor.run_target(1000,35)
+                        if Yaw>0:
+                            back_motor.stop()
+                            break
+                else:
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        front_motor.run_target(1000,-35)
+                        back_motor.run(200)
+                        if Yaw<0:
+                            back_motor.stop()
+                            break
                 break
     elif payload[2]<payload[5] and payload[5]>400 and obstacle!=1:#緑
         print(eyes.distance())
         print(p.call('blob'))
-        if payload[2]>3000:
+        if payload[5]>3000:
             print("近い")
             while True:
                 payload=p.call('blob')
                 hub.light.on(Color.GREEN)
                 front_motor.run_target(1000,0)
                 back_motor.run(-1000)
-                if payload[5]<2000:
+                if payload[5]<3000:
+                    back_motor.stop()
                     break
         while True:#緑回避
             payload=p.call('blob')
@@ -968,41 +1084,33 @@ def one_set():
                         red_or_green=2
                     if Yaw>-10:
                         break
+                Yaw=hub.imu.heading()
+                if Yaw<0:
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        back_motor.run(100)
+                        front_motor.run_target(1000,35)
+                        if Yaw>0:
+                            back_motor.stop()
+                            break
+                else:
+                    while True:
+                        Yaw=hub.imu.heading()
+                        payload=p.call('blob')
+                        front_motor.run_target(1000,-35)
+                        back_motor.run(200)
+                        if Yaw<0:
+                            back_motor.stop()
+                            break
                 break
     payload=p.call('blob')
     print(eyes.distance())
     print(payload)
     print("red_or_green:",red_or_green)
 def last_right():
-    if color==1:#赤
-        front_motor.run_target(1000,0)
-        timer.reset()
-        while True:
-            Yaw=hub.imu.heading()
-            front_motor.run_target(1000,(0-Yaw))
-            back_motor.run(1000)
-            if timer.time()>1000:
-                back_motor.stop()
-                break
-        front_motor.run_target(1000,-35)
-        while True:
-            Yaw=hub.imu.heading()
-            front_motor.run_target(1000,-35)
-            back_motor.run((90-Yaw)*-25-100)
-            if Yaw>90:
-                Yaw=hub.imu.heading()
-                hub.imu.reset_heading(Yaw-90)
-                break
-        front_motor.run_target(1000,0)
-        timer.reset()
-        while True:
-            Yaw=hub.imu.heading()
-            front_motor.run_target(1000,(0-Yaw))
-            back_motor.run(1000)
-            if timer.time()>800:
-                back_motor.stop()
-                break
-    else:#緑
+    print("last_right")
+    if color==2:#緑
         while True:
             Yaw=hub.imu.heading()
             front_motor.run_target(1000,35)
@@ -1018,7 +1126,42 @@ def last_right():
                 Yaw=hub.imu.heading()
                 hub.imu.reset_heading(Yaw-90)
                 break
+    else:#赤
+        front_motor.run_target(1000,0)
+        timer.reset()
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,(0-Yaw))
+            back_motor.run(1000)
+            if timer.time()>1200:
+                back_motor.stop()
+                break
+        front_motor.run_target(1000,-35)
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,-35)
+            back_motor.run((90-Yaw)*-25-100)
+            if Yaw>90:
+                Yaw=hub.imu.heading()
+                hub.imu.reset_heading(Yaw-90)
+                break
+        while True:
+            front_motor.run_target(1000,0)
+            back_motor.run((1000-eyes.distance())*-0.5)
+            if eyes.distance()>500:
+                break
+        front_motor.run_target(1000,0)
+        timer.reset()
+        while True:
+            Yaw=hub.imu.heading()
+            front_motor.run_target(1000,0)
+            back_motor.run(-1000)
+            if timer.time()>500:
+                back_motor.stop()
+                break
+        front_motor.run_target(1000,0)
 def last_left():
+    print("last_left")
     if color==2:#緑
         front_motor.run_target(1000,0)
         timer.reset()
@@ -1064,6 +1207,7 @@ def last_left():
                 hub.imu.reset_heading(Yaw+90)
                 break
 def parking():
+    print("parking")
     hub.imu.reset_heading(0)
     front_motor.run_target(1000,-35)
     while True:
@@ -1075,7 +1219,7 @@ def parking():
             back_motor.stop()
             break
     front_motor.run_target(1000,35)
-    back_motor.run_angle(1000,-600)
+    back_motor.run_angle(1000,-800)
     while True:
         Yaw=hub.imu.heading()
         front_motor.run_target(1000,-35)
@@ -1094,6 +1238,7 @@ hub.imu.reset_heading(0)
 turn_count=0
 print(right_sensor.distance())
 print(left_sensor.distance())
+red_or_green=0
 if right_sensor.distance()>left_sensor.distance():
     start_right()
     right_turn()
