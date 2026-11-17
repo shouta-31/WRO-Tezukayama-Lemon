@@ -395,17 +395,18 @@ In addition, we took data on the error between the reference distance (actual di
  | **60 cm** | 60.7 cm |
  | **70 cm** | 70.7 cm |
 
- <img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
+<img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
 
 <p align="center"><b>[Calibration Data]（This table is based on [6],[7],[8],[9],[10],[11].)</b></p>
 
 We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
 ## 2.8:Camera and its reliability
-<img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" />
+<div align="center"><img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" /></div>
+<p align="center"><b>[Image 1]</b></p>
 
-We used the OpenMV Cam H7 Plus attached to the back part of the distance sensor called the breakout substrate (the black device at the bottom of the image on the right) as the camera. The back part of the distance sensor connects to the OpenMV Cam H7 Plus and the SPIKE Prime hub and plays a role in communicating with each other. 
-Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it consumes less power, features a larger memory capacity—which reduces the risk of crashes—and provides high image quality, making it less likely to fail when reading traffic signs. Furthermore, it is free from issues such as packet loss or latency caused by OS overhead. The table below compares the cameras we evaluated; the "startup time" and "recognition speed" metrics in this table were measured by us directly.
+For the camera, we used the "OpenMV Cam H7 Plus." It is connected to a breakout board—shown on the right in Image 1—which is mounted behind the distance sensor. This board serves as an interface between the OpenMV Cam H7 Plus and the SPIKE Prime hub, facilitating communication between the two.
+Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it consumes less power, has a larger memory capacity (which reduces the risk of crashes), and provides higher image quality, making it more reliable for reading traffic signs. Furthermore, it is free from issues such as packet loss or latency caused by operating system overhead. The table below compares the various cameras we evaluated. Please note that the figures for "startup time" and "recognition speed" in the table were measured by us independently.
 
  |  | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
  |:---:|---|---|---|---|
@@ -429,10 +430,11 @@ We also measured the reliability of the camera.The graph below summarizes the nu
 From the above, you can see that this camera is highly reliable.
 
 ## 2.9:Starting and stopping in a parking lot
-<img width="500" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" />
+<div align="center"><img width="500" alt="IMG_0454" src="https://github.com/user-attachments/assets/a73bf5e9-adaf-4039-8a8f-91c45c56b8bd" /></div>
+<p align="center"><b>[Image 2]</b></p>
 
-In the Obstacle Challenge rounds, we often struggled to complete the course within the time limit due to the time it took to launch from the parking area and park. Therefore, to increase the distance between parking areas and reduce the time, we added a protrusion (hereinafter referred to as Part A) to the robot, extending from the bottom of the front ultrasonic sensor (as shown by the blue circle in the image above), making it as thin as possible to avoid contact with the parking area.
-To determine the length of Part A, we used the following formula:
+During the obstacle challenge rounds, the robot often failed to complete the course within the time limit, largely due to the time consumed when starting from or parking in the designated parking area. To address this, we added a component—referred to hereafter as "Part A" (indicated by the blue circle in Image 2)—that extends from the bottom of the robot's front-facing ultrasonic sensor. This component was designed to be as thin as possible to avoid accidental contact with the parking area. 
+We determined the length of Part A using the following formula:
 
 $(\text{Robot's total length} + \text{Length of Part A}) \times 1.5 \geqq \text{Distance the robot is closest to the parking area}$
 
