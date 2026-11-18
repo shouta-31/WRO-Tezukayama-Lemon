@@ -411,11 +411,11 @@ We considered the calibration method of the sensor and created the program, taki
 <div align="center"><img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" /></div>
 <p align="center"><b>[Image 1]</b></p>
 
-An "OpenMV Cam H7 Plus" was used as the camera. It is connected via an adapter cable—constructed by combining the housing of the distance sensor (shown in the center of Image 1) with a breakout board (shown on the right side of Image 1). This adapter cable serves as an interface between the OpenMV Cam H7 Plus and the SPIKE Prime hub, facilitating communication between the two.
+An "OpenMV Cam H7 Plus" was used as the camera. It is connected via an adapter cable—constructed by combining the housing of the distance sensor (shown in the center of Image 1) with a breakout board (shown on the right side of Image 1). This adapter cable serves as an interface between the OpenMV Cam H7 Plus and the SPIKE Prime hub, facilitating communication between the two.  
 For instructions on how to build this adapter, please refer to:  
 OpenMV-Spike-Prime-Converter, March1709 (GitHub), https://github.com/March1709/OpenMV-Spike-Prime-Converter, 2026-11-18
 
-Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it consumes less power, has a larger memory capacity (which reduces the risk of crashes), and provides higher image quality, making it more reliable for reading traffic signs. Furthermore, it is free from issues such as packet loss or latency caused by operating system overhead. The table below compares the various cameras we evaluated. Please note that the figures for "startup time" and "recognition speed" in the table were measured by us independently.
+Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it consumes less power, has a larger memory capacity (which reduces the risk of crashes), and provides higher image quality, making it more reliable for reading traffic signs.  Furthermore, it is free from issues such as packet loss or latency caused by operating system overhead. The table below compares the various cameras we evaluated. Please note that the figures for "startup time" and "recognition speed" in the table were measured by us independently.  
 
  |  | OpenMV Cam H7 Plus | Raspberry Pi | ESP32-CAM | OAK-1 |
  |:---:|---|---|---|---|
