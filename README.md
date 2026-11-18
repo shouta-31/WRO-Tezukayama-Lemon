@@ -424,7 +424,7 @@ Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it 
 
 （This table is based on [6],[7],[8],[9],[10],[11].)
 
-We also measured the reliability of the camera.The graph below summarizes the number of successful detection of camera obstacles 10 times in various environments.
+We also measured the reliability of the camera.The table below summarizes the number of successful detection of camera obstacles 10 times in various environments.
 
  | Experimental conditions | Number of successes | Success rate |
  |:---:|---|---|
