@@ -48,8 +48,6 @@ As you can see from this schedule table, we are fully prepared for the world tou
   - Date of birth : March 1st
   - Age : 15 years old
 
-- Mr.Hiroshi Yahiro : A team coach
-  - Occupation : A teacher
 # Our Robot
 | | |
 |---|---|
