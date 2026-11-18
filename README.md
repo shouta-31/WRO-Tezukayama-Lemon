@@ -116,11 +116,17 @@ For the Open Challenge rounds, we programmed a strategy aiming for a lap time of
 We also modularized the movements into functions, enabling rapid parameter adjustments during the tuning phase. Furthermore, we implemented a deceleration routine for 90-degree turns using the gyro sensor, thereby minimizing positional errors that occur after navigating corner sections. Based on this strategy, the robot operates according to the state transition diagram shown below.  
 (For details of the program, see section [3.3](#33design-considerations-for-the-open-challenge-rounds).)
 
+Watch the Open Challenge round videos here.
+**[Video](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/video/video.md#open-challenge-rounds)**
+
 <div align="center"><img width="329" alt="IMG_0396" src="https://github.com/user-attachments/assets/4902cd1f-1dea-48a8-8247-e0e43beadcc0" /></div>
 
 ## 1.2:Obstacle challenge rounds
 The strategy of the Obstacle Challenge rounds of this tournament is mainly based on the Open Challenge rounds. In addition, I made a program aiming for the goal of 30 seconds per lap.
 In addition, as a strategy, we chose to park in the parking lot. The departure from the parking lot will be executed. On the other hand, when it comes to parking, we were initially aware of accuracy and did not have much time to park. Therefore, instead of parking, I focused on increasing the accuracy of other missions as much as possible. However, in the end, the accuracy increased and the parking time was secured, so I decided to park. In addition, as an obstacle response logic, it is working according to the following state transition diagram. For details about the program, see section [3.4](#34design-considerations-for-obstacle-challenge-rounds).)
+
+Watch the Obstacle Challenge round videos here.
+**[Video](https://github.com/shouta-31/WRO-Tezukayama-Lemon/blob/main/video/video.md#obstacle-challenge-rounds)**
 
 <img width="1749" height="1195" alt="IMG_0450" src="https://github.com/user-attachments/assets/d16fad4d-54ea-4150-bda1-f6ac368767b7" />
 <p align="center"><b>[State machine diagram]</b></p>
