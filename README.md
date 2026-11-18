@@ -408,7 +408,7 @@ In addition, we took data on the error between the reference distance (actual di
 We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
 ## 2.8:Camera and its reliability
-<div align="center"><img width="1985" height="936" alt="IMG_0436" src="https://github.com/user-attachments/assets/774ea911-0749-4429-92f4-10428d290cb2" /></div>
+<div align="center"><img width="1742" height="559" alt="IMG_0528" src="https://github.com/user-attachments/assets/f532e966-91e3-4fff-9162-4c26ee228921" /></div>
 <p align="center"><b>[Image 1]</b></p>
 
 An "OpenMV Cam H7 Plus" was used as the camera. It is connected via an adapter cable—constructed by combining the housing of the distance sensor (shown in the center of Image 1) with a breakout board (shown on the right side of Image 1). This adapter cable serves as an interface between the OpenMV Cam H7 Plus and the SPIKE Prime hub, facilitating communication between the two.  
