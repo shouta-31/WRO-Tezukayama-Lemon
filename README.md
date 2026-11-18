@@ -397,7 +397,7 @@ In addition, we took data on the error between the reference distance (actual di
 
 <img width="1202" height="795" alt="IMG_0491" src="https://github.com/user-attachments/assets/03cd795e-a513-4a51-a597-ab5718ab9d8f" />
 
-<p align="center"><b>[Calibration Data]（This table is based on [6],[7],[8],[9],[10],[11].)</b></p>
+<p align="center"><b>[Calibration Data]</b></p>
 
 We considered the calibration method of the sensor and created the program, taking into account the measured error. This allows our robot to move without being affected by this error.
 
@@ -415,6 +415,8 @@ Compared to other cameras, the OpenMV Cam H7 Plus offers several advantages: it 
  | **Memory capacity** | 32MB SDRAM + 1MB SRAM | 1GB/2GB/4GB/8GB It varies slightly depending on the model. | 8MB PSRAM + 520KB SRAM | 512MB |
  | **Understanding speed** | Standard (medium speed) | High speed | Low speed to medium speed | Ultra-high speed |
  | **External connection** | USB, SPI, I2C, UART, PWM, MicroSD | USB x4, HDMI ×2, LAN, Wi-Fi, Bluetooth, GPIO | Wi-Fi, Bluetooth, MicroSD, GPIO, UART | USB Type-C |
+
+（This table is based on [6],[7],[8],[9],[10],[11].)
 
 We also measured the reliability of the camera.The graph below summarizes the number of successful detection of camera obstacles 10 times in various environments.
 
