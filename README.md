@@ -200,7 +200,7 @@ Furthermore, to improve straight-line tracking accuracy, the wheel hubs were pos
  |  | SPIKE Prime Hub | Raspberry Pi | EV3 |
  |:---:|---|---|---|
  | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4 output ports | 1 core |
- | **Clock period** | 100MHz | 1.5GHz | 300MHz |
+ | **Clock speed** | 100MHz | 1.5GHz | 300MHz |
  | **OS** | none | Linux | Linux-based OS |
 
 </div>
