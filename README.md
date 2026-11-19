@@ -463,13 +463,13 @@ Therefore, we determined that Part A should be at least 1.5cm long. We adjusted 
 ## 3.1:Programming Software (Pybricks, OpenMV)
 ### 3.1.1:About Pybricks
 
- |  | Pybricks | LEGO Official App | Micro Python |
+ |  | Pybricks | LEGO Official App | MicroPython |
  |:---:|---|---|---|
  | **Programming language** | Python | Visual Language | Python, C++, etc. |
  | **Startup time** | Approximately 0.5 to 1 second | Approximately 5 to 10 seconds | Approximately 2 to 5 seconds |
  | **Control loop period** | per second Processing 200 to 1000 times | per second 20 to 50 times is the limit. | per second 100-200 processing cycles |
  | **Motor synchronous control** | Less than once | Degree 3 to 5 | Degree 1 to 3 |
- | **Compatible devices** | SPIKE, Technic, City, Move, etc. | Each app has a fixed hub. | SPIKE Prime /Robot Inventor only |
+ | **Compatible devices** | SPIKE Prime, Technic, City, Move, etc. | Each app has a fixed hub. | SPIKE Prime /Robot Inventor only |
  | **Simultaneous Bluetooth connection** | 7-8 units | Connection unavailable | Construction is extremely difficult. |
  
 (This table is based on [12].)
