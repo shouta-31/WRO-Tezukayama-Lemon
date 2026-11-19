@@ -1477,10 +1477,10 @@ while True:#前80cmまで前進
     direction=(0-Yaw)*0.5
     front_motor.run_target (1000,direction)
     payload=p.call('blob')
-    back motor.run(1000)
+    back_motor.run(1000)
     if eyes.distance()<700:
         hub.light.off()
-        left distance=left_sensor.distance()
+        left_distance=left_sensor.distance()
         print(eyes.distance())
         break
 ```
