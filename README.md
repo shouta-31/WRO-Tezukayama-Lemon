@@ -498,7 +498,7 @@ As you can see from this table, we chose OpenMV because of its advantages, such 
 As a communication method, the main program in the OpenMV receives data from the three modules of OpenMV. And OpenMV sends the data to Pybricks via pupremote.
 
 ## 3.2:Gyro
-We tried to accurately control the course of the aircraft using the "yaw angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" that occurs in the gyro sensor, only 4 out of 10 times succeeded. Therefore, we took measures based on the following iteration cycle.
+We tried to accurately control the robot's path using the yaw angle obtained from the built-in gyroscope. However, due to the risk of "drift error" that occurs in the gyro sensor, only 4 out of 10 times succeeded. Therefore, we took measures based on the following iteration cycle.
 
 * Risk "Drift Error" : The angle changes slightly when turning, and in the latter half of the competition straight line accuracy decreases.
 
