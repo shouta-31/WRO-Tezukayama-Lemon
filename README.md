@@ -88,7 +88,7 @@ As you can see from this schedule table, we are fully prepared for the world tou
     - [3.3.1:P control using a gyro sensor](#331p-control-using-a-gyro-sensor)
     - [3.3.2:Turning method](#332turning-method)
   - [3.4:Design considerations for Obstacle Challenge rounds](#34design-considerations-for-obstacle-challenge-rounds)
-    - [3.4.1:Measuring the distance to traffic signs based on the number of pixel](#341measuring-the-distance-to-traffic-signs-based-on-the-number-of-pixel)
+    - [3.4.1:Measuring the distance to traffic signs based on the number of pixels](#341measuring-the-distance-to-traffic-signs-based-on-the-number-of-pixels)
     - [3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained](#342a-program-that-reads-nearby-traffic-signs-and-transmits-the-values-obtained)
     - [3.4.3:Turning Method](#343turning-method)
     - [3.4.4:How to drive a straight line section](#344how-to-drive-a-straight-line-section)
@@ -199,7 +199,7 @@ Furthermore, to improve straight-line tracking accuracy, the wheel hubs were pos
 
  |  | SPIKE Prime Hub | Raspberry Pi | EV3 |
  |:---:|---|---|---|
- | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4output ports | 1 core |
+ | **Number of ports** | 6 ports | GPIO 40-pin | 4 input ports, 4 output ports | 1 core |
  | **Clock period** | 100MHz | 1.5GHz | 300MHz |
  | **OS** | none | Linux | Linux-based OS |
 
@@ -482,23 +482,23 @@ We used a camera with the front part of the distance sensor removed and an OpenM
  |  | OpenMV | HuskyLens | Raspberry Pi |
  |:---:|---|---|---|
  | **Number of program lines required to send data for one obstacle** | Approximately 20 lines | Approximately 50 lines | Approximately 60 lines |
- | **Number of lines of code for the image lines recognition part** | 3 lines | 0 lines | Approximately 15v lines |
+ | **Number of lines of code for the image lines recognition part** | 3 lines | 0 lines | Approximately 15 lines |
  | **Number of lines of code required to transmit coordinate data** | 1 line | Approximately 15 lines | Approximately 10 lines |
  | **Number of lines of code required to display the debug screen** | 0 lines | Indicates no | 3 lines |
  | **Language matching with pybricks** | 〇 | × | 〇 |
 
 (This table is based on [13].)
 
-As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
+As you can see from this table, we chose OpenMV because of its advantages, such as requiring fewer lines of code for data transmission and significantly less code than other cameras for transmitting coordinate data. Furthermore, since it uses the same language as Pybricks, we didn't need to learn a new language, allowing us to dedicate more time to editing other programs.
 （For the reasons for its use (from a robot's perspective), please refer to section [2.8](#28camera).）
 
 ### 3.1.3:Communication Method
 <img width="2056" height="1210" alt="IMG_0421" src="https://github.com/user-attachments/assets/d5c9773c-a531-4fde-bfc2-78ca0d4cada8" />
 <img width="1371" height="1140" alt="IMG_0422" src="https://github.com/user-attachments/assets/0ad3b567-a031-48e7-85db-4fabb50f9b42" />
-As a communication method, the main program in the Open MV receives data from the three modules of Open MV. And Open MV sends the data to pybricks via pupremote.
+As a communication method, the main program in the OpenMV receives data from the three modules of OpenMV. And OpenMV sends the data to Pybricks via pupremote.
 
 ## 3.2:Gyro
-We tried to accurately control the course of the aircraft using the "yo angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" that occurs in the gyro sensor, only 4 out of 10 times succeeded. Therefore, we took measures based on the following iteration cycle.
+We tried to accurately control the course of the aircraft using the "yaw angle" obtained from the built-in gyro sensor. However, due to the risk of "drift error" that occurs in the gyro sensor, only 4 out of 10 times succeeded. Therefore, we took measures based on the following iteration cycle.
 
 * Risk "Drift Error" : The angle changes slightly when turning, and in the latter half of the competition straight line accuracy decreases.
 
@@ -567,7 +567,7 @@ By utilizing the variable on line 14 of Code 1, we implemented a program that in
 ## 3.4:Design considerations for Obstacle Challenge rounds
 In the Obstacle Challenge rounds, we believed the key was how to simplify the process of dynamically recognizing traffic signs using cameras and switching between complex driving patterns accordingly. Based on this, we implemented the following improvements.  
 
-### 3.4.1:Measuring the distance to traffic signs based on the number of pixel
+### 3.4.1:Measuring the distance to traffic signs based on the number of pixels
 To accurately determine the actual physical distance between the robot and the sign, we conducted repeated experiments using the robot, input the following distance data, and obtained the results shown in Table 1 below. 
 
 <div align="center">
@@ -588,7 +588,7 @@ This test made it possible to avoid it without hitting an object, saying, "by us
 ### 3.4.2:A program that reads nearby traffic signs and transmits the values ​​obtained
 There are instances where two objects of the same color appear simultaneously within the OpenMV camera's field of view. To address this, the program identifies the most relevant traffic sign from the list of detected color blobs by selecting the one with the largest pixel area (as implemented in "Code 2"), and then extracts its X-coordinate, Y-coordinate, and pixel count. Furthermore, since the data transmitted to Pybricks includes the X-coordinate, Y-coordinate, and pixel count for both red and green objects, the program is designed—as shown in the red-boxed section of "Code 3"—to compare the pixel counts on the Pybricks side and prioritize the object with the larger pixel count. These measures effectively eliminate edge cases where a distant sign might be incorrectly prioritized, potentially causing the system to fail to avoid an obstacle located closer to the camera.  
 <img width="1317" height="218" alt="IMG_0462" src="https://github.com/user-attachments/assets/e553c7fd-1dc7-49f6-895d-678325cc13ea" />
-<p align="center"><b>[Code 2 [Countermeasures in openMV]]</b></p>
+<p align="center"><b>[Code 2 [Countermeasures in OpenMV]]</b></p>
 
 <img width="1195" height="107" alt="IMG_0463" src="https://github.com/user-attachments/assets/903ac714-2f6a-4cd9-a3c2-7987eb75ec1f" />
 <p align="center"><b>[Code 3 [Countermeasures with pybricks]]</b></p>
