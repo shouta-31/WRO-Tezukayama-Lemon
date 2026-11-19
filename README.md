@@ -285,6 +285,7 @@ $$
 
 $$
 T_{\text{steer\\_motor}} = \frac{\mu \times W_{\text{front}} \times r_{\text{scrub}} \times S_{\text{factor}}}{i_{\text{steer}} \times \mu_{\text{steer}}} \qquad (2)
+$$ 
 
 - $\mu: \text{Static coefficient of friction between the tire and the track surface} (\approx 0.7)$
 - $W_{\text{front}}: \text{Load applied to the front wheels}$ (N)
